@@ -10,6 +10,8 @@
     - [Hardware considerations](#hardware-considerations)
     - [Configurations and Tweaks](#configurations-and-tweaks)
         - [Alacritty](#alacritty)
+            - [Main Config from here:](#main-config-from-here)
+            - [Other interesting configs:](#other-interesting-configs)
         - [Spacemacs](#spacemacs)
             - [Section 1](#section-1)
             - [Section 2](#section-2)
