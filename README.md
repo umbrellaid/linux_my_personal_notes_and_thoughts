@@ -3,6 +3,9 @@
 
 - [Linux my personal notes and thoughts](#linux-my-personal-notes-and-thoughts)
     - [Apps List](#apps-list)
+    - [Apps within Apps](#apps-within-apps)
+        - [neovim](#neovim)
+        - [emacs](#emacs)
     - [Fonts](#fonts)
     - [Hardware considerations](#hardware-considerations)
 
@@ -11,32 +14,40 @@
 
 ## Apps List ##
 
-- rename
-- neovim
-  - lazyvim distribution
-- emacs
-  - spacemacs distribution
-  - greader
-  - notmuch
-- vmware horizon client
+- Adobe DNG Convertor (windows app run through emulation on wine)
+- Alacritty terminal emulator
+- GIMP
+- Geeqie - fast image viewer including raw files
+- Handbrake
+- MEGA (online backup)
 - Microsoft Edge Browser
 - Opera Browser
 - Vivaldi Browser
-- notmuch
-- espeak
-- mbsync
-- MEGA (online backup)
-- Alacritty terminal emulator
-- newsboat
-- python
-- wine (windows emulation)
-- Adobe DNG Convertor (windows app run through emulation on wine)
-- fish
-- Geeqie - fast image viewer including raw files
-- GIMP
-- Handbrake
 - Zathura - pdf viewer
 - audacity - sound editor downloaded an app image last time
+- emacs
+- espeak
+- fish
+- mbsync
+- neovim
+- newsboat
+- notmuch
+- python
+- rename
+- vmware horizon client
+- wine (windows emulation)
+
+## Apps within Apps ##
+
+### neovim ###
+
+- lazyvim distribution
+
+### emacs ###
+
+- greader
+- notmuch
+- spacemacs distribution
 
 ## Fonts ##
 
