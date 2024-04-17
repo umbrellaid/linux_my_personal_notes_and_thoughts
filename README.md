@@ -2,7 +2,7 @@
 **Table of Contents**
 
 - [Linux my personal notes and thoughts](#linux-my-personal-notes-and-thoughts)
-    - [Apps List](#apps-list)
+    - [Apps](#apps)
     - [Apps within Apps](#apps-within-apps)
         - [neovim](#neovim)
         - [emacs](#emacs)
@@ -12,7 +12,7 @@
 <!-- markdown-toc end -->
 # Linux my personal notes and thoughts #
 
-## Apps List ##
+## Apps ##
 
 - Adobe DNG Convertor (windows app run through emulation on wine)
 - Alacritty terminal emulator
