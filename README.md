@@ -1,3 +1,12 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Linux my personal notes and thoughts](#linux-my-personal-notes-and-thoughts)
+    - [Apps List](#apps-list)
+    - [Fonts](#fonts)
+    - [Hardware considerations](#hardware-considerations)
+
+<!-- markdown-toc end -->
 # Linux my personal notes and thoughts #
 
 ## Apps List ##
@@ -27,6 +36,7 @@
 - GIMP
 - Handbrake
 - Zathura - pdf viewer
+- audacity - sound editor downloaded an app image last time
 
 ## Fonts ##
 
