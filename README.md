@@ -45,8 +45,8 @@
 - Opera Browser
 - Python
 - Rename
-- Ripgrep (rg): Has some similarities to grep, but also includes its own defaults and optimizations that make it behave slightly differently in some cases. [https://github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
-- The Silver Searcher (ag): Behavior and syntax are very close to GNU grep. [https://github.com/ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
+- Ripgrep (rg) Has some similarities to grep, but also includes its own defaults and optimizations that make it behave slightly differently in some cases. [https://github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
+- The Silver Searcher (ag) Behavior and syntax are very close to GNU grep. [https://github.com/ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 - Vivaldi Browser
 - Vmware horizon client
 - Wine (windows emulation)
@@ -77,11 +77,11 @@
 
 ### Alacritty ###
 
-#### Main Config from here: ####
+#### Main Config from here ####
 
 - [https://github.com/Widkidone/AlacrittyToml/blob/main/alacritty.toml](https://github.com/Widkidone/AlacrittyToml/blob/main/alacritty.toml) 
 
-#### Other interesting configs: ####
+#### Other interesting configs ####
 
 - [https://github.com/sabinpocris/alacritty.toml/blob/main/alacritty.toml](https://github.com/sabinpocris/alacritty.toml/blob/main/alacritty.toml)
 - [https://github.com/scalarwaves/dotfiles/blob/main/alacritty/alacritty.toml](https://github.com/scalarwaves/dotfiles/blob/main/alacritty/alacritty.toml)
