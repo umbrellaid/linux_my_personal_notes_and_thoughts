@@ -8,6 +8,16 @@
         - [emacs](#emacs)
     - [Fonts](#fonts)
     - [Hardware considerations](#hardware-considerations)
+    - [Configurations and Tweaks](#configurations-and-tweaks)
+        - [Alacritty](#alacritty)
+        - [Spacemacs](#spacemacs)
+            - [Section 1](#section-1)
+            - [Section 2](#section-2)
+            - [Section 3](#section-3)
+            - [Section 4](#section-4)
+            - [Section 5](#section-5)
+        - [Fish config](#fish-config)
+    - [contact me](#contact-me)
 
 <!-- markdown-toc end -->
 # Linux my personal notes and thoughts #
