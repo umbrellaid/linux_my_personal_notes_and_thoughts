@@ -111,7 +111,8 @@ style = "Regular"
 
 #### Section 1 ####
 
-Uncomment anything in dotspacemacs-configuration-layers and a few additions are noted below in addition to the default listing
+Uncomment anything in dotspacemacs-configuration-layers and a few additions are
+noted below in addition to the default listing
 
 ``` emacs-lisp
 emoji
@@ -170,7 +171,10 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
 #### Section 4 ####
 
-After that section is this section where I set a variable for greader and I add a custom function that wraps http links so that the link has both the [] and () for markdown files. Otherwise when I am in format checkers it throws an error for urls that are not in the right format.
+After that section is this section where I set a variable for greader and I add
+a custom function that wraps http links so that the link has both the [] and ()
+for markdown files. Otherwise when I am in format checkers it throws an error
+for urls that are not in the right format.
 
 ``` emacs-lisp
 (defun dotspacemacs/user-config ()
@@ -207,6 +211,7 @@ set -gx PATH $PATH /home/<myusername>/.local/bin
 ```
 ## contact me ##
 
-If you have any interesting linux, text editor or technology related information to share please let me know.
+If you have any interesting linux, text editor or technology related
+information to share please let me know.
 
 [Email Dave](mailto:david.rrrrrr@yandex.com?subject=Hello%20From%20[GitHub])
