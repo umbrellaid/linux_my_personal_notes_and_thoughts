@@ -27,7 +27,8 @@
 ## Apps ##
 
 - Adobe DNG Convertor (windows app run through emulation on wine)
-- Alacritty terminal emulator (installed from snap) - neovim seems to works better in terminal emulators like Alacritty or Kitty.
+- Alacritty terminal emulator (installed from snap) - neovim seems to works
+better in terminal emulators like Alacritty or Kitty.
 - Audacity - sound editor downloaded an app image last time
 - Emacs
 - Espeak
@@ -45,7 +46,10 @@
 - Opera Browser
 - Python
 - Rename
-- Ripgrep (rg) Has some similarities to grep, but also includes its own defaults and optimizations that make it behave slightly differently in some cases. [https://github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
+- Ripgrep (rg) Has some similarities to grep, but also includes its own
+defaults and optimizations that make it behave slightly differently in some
+cases.
+[https://github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
 - The Silver Searcher (ag) Behavior and syntax are very close to GNU grep. [https://github.com/ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 - Vivaldi Browser
 - Vmware horizon client
@@ -79,7 +83,7 @@
 
 #### Main Config from here ####
 
-- [https://github.com/Widkidone/AlacrittyToml/blob/main/alacritty.toml](https://github.com/Widkidone/AlacrittyToml/blob/main/alacritty.toml) 
+- [https://github.com/Widkidone/AlacrittyToml/blob/main/alacritty.toml](https://github.com/Widkidone/AlacrittyToml/blob/main/alacritty.toml)
 
 #### Other interesting configs ####
 
@@ -193,6 +197,7 @@ before packages are loaded."
 
 )
 ```
+
 Everything else is the standard configuration file without any changes.
 
 #### Section 5 ####
@@ -209,6 +214,7 @@ set TERM xterm-256color
 set -Ua fish_user_paths /opt/nvim-linux64/bin $fish_user_paths
 set -gx PATH $PATH /home/<myusername>/.local/bin
 ```
+
 ## contact me ##
 
 If you have any interesting linux, text editor or technology related
