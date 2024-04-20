@@ -64,8 +64,6 @@ cases.
 
 ### emacs ###
 
-- greader
-- notmuch
 - spacemacs distribution
 
 ## Fonts ##
