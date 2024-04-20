@@ -94,19 +94,19 @@ Neovim does not work fully without a Nerd Font
 
 ``` toml
 [font.bold]
-family = "SauceCodePro Nerd Font"
+family = "UbuntuMono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "SauceCodePro Nerd Font"
+family = "UbuntuMono Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "SauceCodePro Nerd Font"
+family = "UbuntuMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "SauceCodePro Nerd Font"
+family = "UbuntuMono Nerd Font"
 style = "Regular"
 ```
 
