@@ -70,8 +70,9 @@ cases.
 
 ## Fonts ##
 
-- Source Code Pro ttf
-- SauceCodePro Nerd Font ttf
+- Ubuntu Monospace [https://design.ubuntu.com/font](https://design.ubuntu.com/font)
+- Nerd Font version of Ubuntu Monospace is Listed as UbuntuMono Nerd Font
+  [https://www.nerdfonts.com/font-downloads](https://www.nerdfonts.com/font-downloads)
 
 ## Hardware considerations ##
 
@@ -119,10 +120,17 @@ Uncomment anything in dotspacemacs-configuration-layers and a few additions are
 noted below in addition to the default listing
 
 ``` emacs-lisp
-emoji
-markdown
-python
-(evil-snipe
+     auto-completion
+     better-defaults
+     emacs-lisp
+     git
+     helm
+     multiple-cursors
+     spell-checking
+     emoji
+     markdown
+     python
+     (evil-snipe
       :variables
       evil-snipe-enable-alternate-f-and-t-behaviors t)
      notmuch
@@ -139,6 +147,7 @@ python
                             ("https://sachachua.com/blog/feed" emacs)
                            )
              )
+     treemacs)
 ```
 
 #### Section 2 ####
@@ -148,6 +157,7 @@ After that section this section I add an app from MELPA
 ``` emacs-lisp
 dotspacemacs-additional-packages '(
                                       greader
+                                      sqlite3
                                       )
 ```
 
@@ -162,12 +172,6 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-  ;; Make evil-mode up/down operate in screen lines instead of logical lines
-  (define-key evil-motion-state-map "j" 'evil-next-visual-line)
-  (define-key evil-motion-state-map "k" 'evil-previous-visual-line)
-  ;; Also in visual mode
-  (define-key evil-visual-state-map "j" 'evil-next-visual-line)
-  (define-key evil-visual-state-map "k" 'evil-previous-visual-line)
   ;; For python
   (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
 )
