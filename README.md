@@ -214,7 +214,7 @@ function fish_user_key_bindings
 end
 set TERM xterm-256color
 set -Ua fish_user_paths /opt/nvim-linux64/bin $fish_user_paths
-set -gx PATH $PATH /home/<myusername>/.local/bin
+set -gx PATH $PATH /home/<username>/.local/bin
 ```
 
 ## contact me ##
