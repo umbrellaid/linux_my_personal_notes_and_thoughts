@@ -113,8 +113,7 @@ style = "Regular"
 
 #### Section 1 ####
 
-Uncomment anything in dotspacemacs-configuration-layers and a few additions are
-noted below in addition to the default listing
+dotspacemacs-configuration-layers
 
 ``` emacs-lisp
      ranger
@@ -150,7 +149,7 @@ noted below in addition to the default listing
 
 #### Section 2 ####
 
-After that section this section I add an app from MELPA
+After that section this section I add apps from MELPA
 
 ``` emacs-lisp
 dotspacemacs-additional-packages '(
