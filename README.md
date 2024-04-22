@@ -26,45 +26,44 @@
 
 ## Apps ##
 
-- Adobe DNG Convertor (windows app run through emulation on wine)
-- Alacritty terminal emulator (installed from snap) - neovim seems to works
-better in terminal emulators like Alacritty or Kitty.
-- Audacity - sound editor downloaded an app image last time
-- Emacs
-- Espeak
+- Adobe DNG Convertor (windows app run through emulation on wine) - https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html - https://helpx.adobe.com/camera-raw/digital-negative.html - https://www.adobe.com/creativecloud/file-types/image/raw/dng-file.html
+- Alacritty terminal emulator - installed from snap - neovim seems to works better in terminal emulators like Alacritty or Kitty. - https://alacritty.org/
+- Audacity - sound editor - appimage - https://www.audacityteam.org/download/
+- Emacs - https://www.emacswiki.org/emacs/BuildingEmacs - https://practical.li/blog/build-emacs-from-source-on-debian-linux/
+- Espeak - installed from system package manager
 - FD find entries on your file system [https://github.com/sharkdp/fd](https://github.com/sharkdp/fd)
-- Fish
-- GIMP
+- Fish - https://fishshell.com/
+- GIMP - https://www.gimp.org/downloads/
 - Geeqie - fast image viewer including raw files
-- Handbrake
-- MEGA (online backup)
-- Mbsync
-- Microsoft Edge Browser
-- Neovim
-- Newsboat
-- Notmuch
-- Opera Browser
-- Python
-- Rename
-- Ripgrep (rg) Has some similarities to grep, but also includes its own
-defaults and optimizations that make it behave slightly differently in some
-cases.
-[https://github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
+- Handbrake - https://handbrake.fr/downloads.php - Flatpak
+- MEGA (online backup) - https://help.mega.io/installs-apps/desktop-syncing - https://help.mega.io/installs-apps/desktop-syncing/linux - https://mega.io/desktop#download - https://mega.nz/linux/repo/
+- Mbsync - installed from system package manager
+- Microsoft Edge Browser - https://www.microsoft.com/en-us/edge/download?form=MA13FJ
+- Neovim - https://github.com/neovim/neovim/blob/master/INSTALL.md
+- Newsboat - installed from snap
+- Notmuch - installed from system package manager
+- Opera Browser - https://www.opera.com/download - RPM is hidden further down on page
+- Pandoc - https://pandoc.org/installing.html
+- Python - installed from system package manager
+- Ranger - installed from system package manager
+- Rename - installed from system package manager
+- Ripgrep (rg) Has some similarities to grep, but also includes its own defaults and optimizations that make it behave slightly differently in some cases. [https://github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
+- Texlive - installed from system package manager
 - The Silver Searcher (ag) Behavior and syntax are very close to GNU grep. [https://github.com/ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
-- Vivaldi Browser
-- Vmware horizon client
-- Wine (windows emulation)
-- Zathura - pdf viewer
+- Vivaldi Browser - https://vivaldi.com/download/
+- Vmware horizon client - https://customerconnect.vmware.com/en/downloads/info/slug/desktop_end_user_computing/vmware_horizon_clients/horizon_8?cd=1&hl=en&ct=clnk&gl=us
+- Wine (windows emulation) - https://wiki.winehq.org/Download
+- Zathura - pdf viewer - https://github.com/pwmt/zathura - installed from system package manager
 
 ## Apps within Apps ##
 
 ### neovim ###
 
-- lazyvim distribution
+- lazyvim distribution - https://www.lazyvim.org/
 
 ### emacs ###
 
-- spacemacs distribution
+- spacemacs distribution - https://www.spacemacs.org/
 
 ## Fonts ##
 
@@ -118,6 +117,7 @@ Uncomment anything in dotspacemacs-configuration-layers and a few additions are
 noted below in addition to the default listing
 
 ``` emacs-lisp
+     ranger
      auto-completion
      better-defaults
      emacs-lisp
