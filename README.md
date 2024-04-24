@@ -1,4 +1,4 @@
-  <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
 - [Linux my personal notes and thoughts](#linux-my-personal-notes-and-thoughts)
@@ -19,7 +19,6 @@
             - [Section 3](#section-3)
             - [Section 4](#section-4)
             - [Section 5](#section-5)
-        - [Fish config](#fish-config)
     - [contact me](#contact-me)
 
 <!-- markdown-toc end -->
