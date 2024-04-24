@@ -1,7 +1,8 @@
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+  <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
 - [Linux my personal notes and thoughts](#linux-my-personal-notes-and-thoughts)
+    - [openSUSE Leap 15.5 x86_64 Plasma KDE](#opensuse-leap-155-x86_64-plasma-kde)
     - [Apps](#apps)
     - [Apps within Apps](#apps-within-apps)
         - [neovim](#neovim)
@@ -24,36 +25,37 @@
 <!-- markdown-toc end -->
 # Linux my personal notes and thoughts #
 
+## openSUSE Leap 15.5 x86_64 Plasma KDE ##
+
+[openSUSE Leap](https://www.opensuse.org/#Leap)
+
+[Install Snap on openSUSE](https://snapcraft.io/install/snap-store/opensuse)
+
+[Install Flatpak on openSUSE](https://flatpak.org/setup/openSUSE)
+
 ## Apps ##
 
-- Adobe DNG Convertor (windows app run through emulation on wine) - https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html - https://helpx.adobe.com/camera-raw/digital-negative.html - https://www.adobe.com/creativecloud/file-types/image/raw/dng-file.html
-- Alacritty terminal emulator - installed from snap - neovim seems to works better in terminal emulators like Alacritty or Kitty. - https://alacritty.org/
-- Audacity - sound editor - appimage - https://www.audacityteam.org/download/
-- Emacs - https://www.emacswiki.org/emacs/BuildingEmacs - https://practical.li/blog/build-emacs-from-source-on-debian-linux/
+- Adobe DNG Convertor (windows app run through emulation on wine) - [https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html](https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html) - [https://helpx.adobe.com/camera-raw/digital-negative.html](https://helpx.adobe.com/camera-raw/digital-negative.html) - [https://www.adobe.com/creativecloud/file-types/image/raw/dng-file.html](https://www.adobe.com/creativecloud/file-types/image/raw/dng-file.html)
+- Alacritty terminal emulator - installed from snap - neovim seems to works better in terminal emulators like Alacritty. - [https://alacritty.org/](https://alacritty.org/)
+- Brave Browser - [https://brave.com/linux/](https://brave.com/linux/)
+- Emacs - installed from snap - [https://snapcraft.io/emacs](https://snapcraft.io/emacs)
 - Espeak - installed from system package manager
-- FD find entries on your file system [https://github.com/sharkdp/fd](https://github.com/sharkdp/fd)
-- Fish - https://fishshell.com/
-- GIMP - https://www.gimp.org/downloads/
-- Geeqie - fast image viewer including raw files
-- Handbrake - https://handbrake.fr/downloads.php - Flatpak
-- MEGA (online backup) - https://help.mega.io/installs-apps/desktop-syncing - https://help.mega.io/installs-apps/desktop-syncing/linux - https://mega.io/desktop#download - https://mega.nz/linux/repo/
-- Mbsync - installed from system package manager
-- Microsoft Edge Browser - https://www.microsoft.com/en-us/edge/download?form=MA13FJ
-- Neovim - https://github.com/neovim/neovim/blob/master/INSTALL.md
-- Newsboat - installed from snap
+- FD find entries on your file system [https://github.com/sharkdp/fd](https://github.com/sharkdp/fd) - installed from system package manager
+- Geeqie - fast image viewer including raw files - [https://flathub.org/apps/org.geeqie.Geeqie](https://flathub.org/apps/org.geeqie.Geeqie)
+- Handbrake - [https://handbrake.fr/downloads.php](https://handbrake.fr/downloads.php) - Flatpak - [https://flathub.org/apps/fr.handbrake.ghb](https://flathub.org/apps/fr.handbrake.ghb)
+- MEGA (online backup) - [https://help.mega.io/installs-apps/desktop-syncing](https://help.mega.io/installs-apps/desktop-syncing) - [https://help.mega.io/installs-apps/desktop-syncing/linux](https://help.mega.io/installs-apps/desktop-syncing/linux) - [https://mega.io/desktop#download](https://mega.io/desktop#download) - [https://mega.nz/linux/repo/](https://mega.nz/linux/repo/)
+- Mbsync - installed from system package manager - called isync in package manager
+- Microsoft Edge Browser - [https://www.microsoft.com/en-us/edge/download?form=MA13FJ](https://www.microsoft.com/en-us/edge/download?form=MA13FJ)
+- Neovim - [https://github.com/neovim/neovim/blob/master/INSTALL.md](https://github.com/neovim/neovim/blob/master/INSTALL.md)
+- Newsboat - installed from snap - [https://snapcraft.io/newsboat](https://snapcraft.io/newsboat)
 - Notmuch - installed from system package manager
-- Opera Browser - https://www.opera.com/download - RPM is hidden further down on page
-- Pandoc - https://pandoc.org/installing.html
-- Python - installed from system package manager
+- Opera Browser - [https://www.opera.com/download](https://www.opera.com/download) - RPM is hidden further down on page or can be installed from snap - [https://snapcraft.io/opera](https://snapcraft.io/opera)
+- Pandoc - [https://pandoc.org/installing.html](https://pandoc.org/installing.html) - installed from system package manager
 - Ranger - installed from system package manager
-- Rename - installed from system package manager
-- Ripgrep (rg) Has some similarities to grep, but also includes its own defaults and optimizations that make it behave slightly differently in some cases. [https://github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
-- Texlive - installed from system package manager
+- Ripgrep (rg) Has some similarities to grep, but also includes its own defaults and optimizations that make it behave slightly differently in some cases. [https://github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) - installed from system package manager
 - The Silver Searcher (ag) Behavior and syntax are very close to GNU grep. [https://github.com/ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
-- Vivaldi Browser - https://vivaldi.com/download/
-- Vmware horizon client - https://customerconnect.vmware.com/en/downloads/info/slug/desktop_end_user_computing/vmware_horizon_clients/horizon_8?cd=1&hl=en&ct=clnk&gl=us
-- Wine (windows emulation) - https://wiki.winehq.org/Download
-- Zathura - pdf viewer - https://github.com/pwmt/zathura - installed from system package manager
+- Vivaldi Browser - [https://vivaldi.com/download/](https://vivaldi.com/download/) - [https://help.vivaldi.com/desktop/install-update/manual-setup-vivaldi-linux-repositories/](https://help.vivaldi.com/desktop/install-update/manual-setup-vivaldi-linux-repositories/) 
+- Wine (windows emulation) - [https://wiki.winehq.org/Download](https://wiki.winehq.org/Download)
 
 ## Apps within Apps ##
 
@@ -68,8 +70,9 @@
 ## Fonts ##
 
 - Ubuntu Monospace [https://design.ubuntu.com/font](https://design.ubuntu.com/font)
-- Nerd Font version of Ubuntu Monospace is Listed as UbuntuMono Nerd Font
-  [https://www.nerdfonts.com/font-downloads](https://www.nerdfonts.com/font-downloads)
+  - Nerd Font version of Ubuntu Monospace is Listed as UbuntuMono Nerd Font [https://www.nerdfonts.com/font-downloads](https://www.nerdfonts.com/font-downloads)
+- Fira Code [https://github.com/tonsky/FiraCode](https://github.com/tonsky/FiraCode) 
+  - Nerd Font version of Fira Code is Listed as FiraCode Nerd Font [https://www.nerdfonts.com/font-downloads](https://www.nerdfonts.com/font-downloads)
 
 ## Hardware considerations ##
 
@@ -88,7 +91,7 @@
 - [https://github.com/sabinpocris/alacritty.toml/blob/main/alacritty.toml](https://github.com/sabinpocris/alacritty.toml/blob/main/alacritty.toml)
 - [https://github.com/scalarwaves/dotfiles/blob/main/alacritty/alacritty.toml](https://github.com/scalarwaves/dotfiles/blob/main/alacritty/alacritty.toml)
 
-Neovim does not work fully without a Nerd Font
+Neovim does not work fully without a Nerd Font set as your terminal font
 [https://www.nerdfonts.com/](https://www.nerdfonts.com/)
 
 ``` toml
@@ -116,16 +119,31 @@ style = "Regular"
 dotspacemacs-configuration-layers
 
 ``` emacs-lisp
-     ranger
+   ;; List of configuration layers to load.
+   dotspacemacs-configuration-layers
+   '(
+     ;; ----------------------------------------------------------------
+     ;; Example of useful layers you may want to use right away.
+     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
+     ;; `M-m f e R' (Emacs style) to install them.
+     ;; ----------------------------------------------------------------
      auto-completion
      better-defaults
      emacs-lisp
      git
      helm
-     multiple-cursors
-     spell-checking
-     emoji
+     lsp
      markdown
+     multiple-cursors
+     org
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
+     spell-checking
+     syntax-checking
+     version-control
+     ranger
+     emoji
      python
      (evil-snipe
       :variables
@@ -142,7 +160,7 @@ dotspacemacs-configuration-layers
                             ("https://dotfyle.com/this-week-in-neovim/rss.xml" neovim)
                             ("https://protesilaos.com/master.xml" emacs)
                             ("https://sachachua.com/blog/feed" emacs)
-                           )
+                            )
              )
      treemacs)
 ```
@@ -204,17 +222,6 @@ Everything else is the standard configuration file without any changes.
 #### Section 5 ####
 
 After install run this command once SPC SPC all-the-icons-install-fonts
-
-### Fish config ###
-
-``` fish
-function fish_user_key_bindings
-    fish_vi_key_bindings
-end
-set TERM xterm-256color
-set -Ua fish_user_paths /opt/nvim-linux64/bin $fish_user_paths
-set -gx PATH $PATH /home/<username>/.local/bin
-```
 
 ## contact me ##
 
