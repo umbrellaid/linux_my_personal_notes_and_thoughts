@@ -3,12 +3,14 @@
 
 - [Linux my personal notes and thoughts](#linux-my-personal-notes-and-thoughts)
     - [openSUSE Leap 15.5 x86_64 Plasma KDE](#opensuse-leap-155-x86_64-plasma-kde)
+        - [Random Commands](#random-commands)
+        - [other links, including but not limited to stuff I have not looked into but might need - I am not sure](#other-links-including-but-not-limited-to-stuff-i-have-not-looked-into-but-might-need---i-am-not-sure)
+    - [linux distributions](#linux-distributions)
     - [Apps](#apps)
     - [Apps within Apps](#apps-within-apps)
         - [neovim](#neovim)
         - [emacs](#emacs)
     - [Fonts](#fonts)
-    - [Hardware considerations](#hardware-considerations)
     - [Configurations and Tweaks](#configurations-and-tweaks)
         - [Alacritty](#alacritty)
             - [Main Config from here](#main-config-from-here)
@@ -31,6 +33,74 @@
 [Install Snap on openSUSE](https://snapcraft.io/install/snap-store/opensuse)
 
 [Install Flatpak on openSUSE](https://flatpak.org/setup/openSUSE)
+
+### Random Commands ###
+
+Here are a bunch of commands I have run recently just for future reference. I
+may or may not have continued using some of these, but you have to sometimes
+play around and try differen toptions to find out what is helpful. Some of this
+is general command line and some is openSUSE specific.
+
+``` bash
+cat /etc/os-release
+sudo zypper refresh
+sudo zypper update # if you are running tumbleweed sudo zypper dup --allow-vendor-change dup stands for distribution upgrades whereas zypper up is for package updates
+cnf <command> # command not found - it will tell you what to install to make a certain command available to you
+sudo zypper install git-core
+git --version
+git config --global user.name "David R Rrrrr"
+git config --global user.email "david.rrrrrr@yandex.com"
+git config --global core.editor "vim"
+git config --global user.name
+git config --global user.email
+git config --global core.editor
+sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo zypper refresh
+sudo zypper install gh
+gh auth login
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo zypper addrepo https://packages.microsoft.com/yumrepos/edge microsoft-edge
+sudo zypper refresh
+sudo zypper install microsoft-edge-stable
+sudo zypper install opi
+opi codecs
+sudo zypper install fetchmsttfonts
+sudo zypper install fira-code-fonts
+sudo zypper install the_silver_searcher
+sudo zypper install ripgrep
+find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \) -print # to make sure there are no emacs files that need to be deleted before I install spacemacs
+sudo zypper install pandoc
+sudo zypper install notmuch
+sudo zypper install isync # mbsync
+sudo zypper install espeak
+sudo zypper install ranger
+sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:/Wine/15.4/Emulators:Wine.repo
+sudo zypper refresh
+sudo zypper install wine-staging
+wine --version
+winecfg # adjust windows version to latest
+wine AdobeDNGConverter_x64_16_2_1.exe
+sudo rsync -av <copy from path> <copy to path>
+```
+### other links, including but not limited to stuff I have not looked into but might need - I am not sure ###
+
+- [https://en.opensuse.org/Additional_package_repositories](https://en.opensuse.org/Additional_package_repositories)
+
+- [https://www.techhut.tv/opensuse-5-things-you-must-do-after-installing/](https://www.techhut.tv/opensuse-5-things-you-must-do-after-installing/)
+
+## linux distributions ##
+
+We are lucky there are so many great distributions out there, here a few but there are many more.
+
+- [https://fedoraproject.org/](https://fedoraproject.org/)
+
+- [https://www.linuxmint.com/](https://www.linuxmint.com/)
+
+- [https://pop.system76.com/](https://pop.system76.com/)
+
+- [https://system76.com/](https://system76.com/) - company sells computers with pop os pre-installed
+
+- [https://ubuntu.com/](https://ubuntu.com/)
 
 ## Apps ##
 
@@ -72,10 +142,6 @@
   - Nerd Font version of Ubuntu Monospace is Listed as UbuntuMono Nerd Font [https://www.nerdfonts.com/font-downloads](https://www.nerdfonts.com/font-downloads)
 - Fira Code [https://github.com/tonsky/FiraCode](https://github.com/tonsky/FiraCode) 
   - Nerd Font version of Fira Code is Listed as FiraCode Nerd Font [https://www.nerdfonts.com/font-downloads](https://www.nerdfonts.com/font-downloads)
-
-## Hardware considerations ##
-
-- Printer HP Smart Tank 6000 Series
 
 ## Configurations and Tweaks ##
 
