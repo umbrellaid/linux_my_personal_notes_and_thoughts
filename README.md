@@ -4,12 +4,12 @@
 - [Linux My Personal Notes and Thoughts](#linux-my-personal-notes-and-thoughts)
     - [Opensuse Leap 15.5 x86_64 Plasma KDE](#opensuse-leap-155-x86_64-plasma-kde)
         - [Random Commands](#random-commands)
-        - [other links, including but not limited to stuff I have not looked into but might need - I am not sure](#other-links-including-but-not-limited-to-stuff-i-have-not-looked-into-but-might-need---i-am-not-sure)
-    - [linux distributions](#linux-distributions)
+        - [Other Links, Including But Not Limited To Stuff I Have Not Looked Into But Might Need - I Am Not Sure](#other-links-including-but-not-limited-to-stuff-i-have-not-looked-into-but-might-need---i-am-not-sure)
+    - [Linux Distributions](#linux-distributions)
     - [Apps](#apps)
-    - [Apps within Apps](#apps-within-apps)
-        - [neovim](#neovim)
-        - [emacs](#emacs)
+    - [Apps Within Apps](#apps-within-apps)
+        - [Neovim](#neovim)
+        - [Emacs](#emacs)
     - [Fonts](#fonts)
     - [Configurations and Tweaks](#configurations-and-tweaks)
         - [Alacritty](#alacritty)
@@ -89,13 +89,13 @@ wine AdobeDNGConverter_x64_16_2_1.exe
 sudo rsync -av <copy from path> <copy to path>
 sudo zypper install aspell
 ```
-### other links, including but not limited to stuff I have not looked into but might need - I am not sure ###
+### Other Links, Including But Not Limited To Stuff I Have Not Looked Into But Might Need - I Am Not Sure ###
 
 - [https://en.opensuse.org/Additional_package_repositories](https://en.opensuse.org/Additional_package_repositories)
 
 - [https://www.techhut.tv/opensuse-5-things-you-must-do-after-installing/](https://www.techhut.tv/opensuse-5-things-you-must-do-after-installing/)
 
-## linux distributions ##
+## Linux Distributions ##
 
 We are lucky there are so many great distributions out there, here a few but there are many more.
 
@@ -133,13 +133,13 @@ We are lucky there are so many great distributions out there, here a few but the
 - Vivaldi Browser - [https://vivaldi.com/download/](https://vivaldi.com/download/) - [https://help.vivaldi.com/desktop/install-update/manual-setup-vivaldi-linux-repositories/](https://help.vivaldi.com/desktop/install-update/manual-setup-vivaldi-linux-repositories/) 
 - Wine (windows emulation) - [https://wiki.winehq.org/Download](https://wiki.winehq.org/Download)
 
-## Apps within Apps ##
+## Apps Within Apps ##
 
-### neovim ###
+### Neovim ###
 
 - lazyvim distribution - https://www.lazyvim.org/
 
-### emacs ###
+### Emacs ###
 
 - spacemacs distribution - https://www.spacemacs.org/
 
