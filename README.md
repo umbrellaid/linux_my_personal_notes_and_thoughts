@@ -1,8 +1,8 @@
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
-- [Linux my personal notes and thoughts](#linux-my-personal-notes-and-thoughts)
-    - [openSUSE Leap 15.5 x86_64 Plasma KDE](#opensuse-leap-155-x86_64-plasma-kde)
+- [Linux My Personal Notes and Thoughts](#linux-my-personal-notes-and-thoughts)
+    - [Opensuse Leap 15.5 x86_64 Plasma KDE](#opensuse-leap-155-x86_64-plasma-kde)
         - [Random Commands](#random-commands)
         - [other links, including but not limited to stuff I have not looked into but might need - I am not sure](#other-links-including-but-not-limited-to-stuff-i-have-not-looked-into-but-might-need---i-am-not-sure)
     - [linux distributions](#linux-distributions)
@@ -13,20 +13,20 @@
     - [Fonts](#fonts)
     - [Configurations and Tweaks](#configurations-and-tweaks)
         - [Alacritty](#alacritty)
-            - [Main Config from here](#main-config-from-here)
-            - [Other interesting configs](#other-interesting-configs)
+            - [Main Configuration From Here](#main-configuration-from-here)
+            - [Other Interesting Configurations](#other-interesting-configurations)
         - [Spacemacs](#spacemacs)
             - [Section 1](#section-1)
             - [Section 2](#section-2)
             - [Section 3](#section-3)
             - [Section 4](#section-4)
             - [Section 5](#section-5)
-    - [contact me](#contact-me)
+    - [Contact Me](#contact-me)
 
 <!-- markdown-toc end -->
-# Linux my personal notes and thoughts #
+# Linux My Personal Notes and Thoughts #
 
-## openSUSE Leap 15.5 x86_64 Plasma KDE ##
+## Opensuse Leap 15.5 x86_64 Plasma KDE ##
 
 [openSUSE Leap](https://www.opensuse.org/#Leap)
 
@@ -34,11 +34,15 @@
 
 [Install Flatpak on openSUSE](https://flatpak.org/setup/openSUSE)
 
+[Unofficial guide - Appendix A: Help and Docs](https://opensuse-guide.org/help.php)
+
+[Unofficial guide - Appendix E: Getting Involved](https://opensuse-guide.org/contribute.php)
+
 ### Random Commands ###
 
 Here are a bunch of commands I have run recently just for future reference. I
 may or may not have continued using some of these, but you have to sometimes
-play around and try differen toptions to find out what is helpful. Some of this
+play around and try different options to find out what is helpful. Some of this
 is general command line and some is openSUSE specific.
 
 ``` bash
@@ -46,6 +50,8 @@ cat /etc/os-release
 sudo zypper refresh
 sudo zypper update # if you are running tumbleweed sudo zypper dup --allow-vendor-change dup stands for distribution upgrades whereas zypper up is for package updates
 cnf <command> # command not found - it will tell you what to install to make a certain command available to you
+sudo zypper install patterns-devel-base-devel_basis # minimal set of tools for compiling and linking applications needed for make, make install commands
+sudo zypper install hplip - tool for hp printer
 sudo zypper install git-core
 git --version
 git config --global user.name "David R Rrrrr"
@@ -81,6 +87,7 @@ wine --version
 winecfg # adjust windows version to latest
 wine AdobeDNGConverter_x64_16_2_1.exe
 sudo rsync -av <copy from path> <copy to path>
+sudo zypper install aspell
 ```
 ### other links, including but not limited to stuff I have not looked into but might need - I am not sure ###
 
@@ -138,8 +145,6 @@ We are lucky there are so many great distributions out there, here a few but the
 
 ## Fonts ##
 
-- Ubuntu Monospace [https://design.ubuntu.com/font](https://design.ubuntu.com/font)
-  - Nerd Font version of Ubuntu Monospace is Listed as UbuntuMono Nerd Font [https://www.nerdfonts.com/font-downloads](https://www.nerdfonts.com/font-downloads)
 - Fira Code [https://github.com/tonsky/FiraCode](https://github.com/tonsky/FiraCode) 
   - Nerd Font version of Fira Code is Listed as FiraCode Nerd Font [https://www.nerdfonts.com/font-downloads](https://www.nerdfonts.com/font-downloads)
 
@@ -147,11 +152,11 @@ We are lucky there are so many great distributions out there, here a few but the
 
 ### Alacritty ###
 
-#### Main Config from here ####
+#### Main Configuration From Here ####
 
 - [https://github.com/Widkidone/AlacrittyToml/blob/main/alacritty.toml](https://github.com/Widkidone/AlacrittyToml/blob/main/alacritty.toml)
 
-#### Other interesting configs ####
+#### Other Interesting Configurations ####
 
 - [https://github.com/sabinpocris/alacritty.toml/blob/main/alacritty.toml](https://github.com/sabinpocris/alacritty.toml/blob/main/alacritty.toml)
 - [https://github.com/scalarwaves/dotfiles/blob/main/alacritty/alacritty.toml](https://github.com/scalarwaves/dotfiles/blob/main/alacritty/alacritty.toml)
@@ -161,19 +166,19 @@ Neovim does not work fully without a Nerd Font set as your terminal font
 
 ``` toml
 [font.bold]
-family = "UbuntuMono Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "UbuntuMono Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "UbuntuMono Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "UbuntuMono Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Regular"
 ```
 
@@ -288,7 +293,7 @@ Everything else is the standard configuration file without any changes.
 
 After install run this command once SPC SPC all-the-icons-install-fonts
 
-## contact me ##
+## Contact Me ##
 
 If you have any interesting linux, text editor or technology related
 information to share please let me know.
