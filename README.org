@@ -1,0 +1,343 @@
+* Linux My Personal Notes and Thoughts                                  :TOC:
+:PROPERTIES:
+:TOC:      :include all
+:CUSTOM_ID: linux-my-personal-notes-and-thoughts
+:END:
+:CONTENTS:
+
+  - [[#opensuse-leap-155-x86_64-plasma-kde][Opensuse Leap 15.5 x86_64 Plasma KDE]]
+    - [[#random-commands][Random Commands]]
+    - [[#other-random-opensuse-links][Other Random openSUSE Links]]
+  - [[#linux-distributions][Linux Distributions]]
+  - [[#apps][Apps]]
+  - [[#apps-within-apps][Apps Within Apps]]
+    - [[#neovim][Neovim]]
+    - [[#emacs][Emacs]]
+  - [[#fonts][Fonts]]
+  - [[#configurations-and-tweaks][Configurations and Tweaks]]
+    - [[#alacritty][Alacritty]]
+      - [[#main-configuration-from-here][Main Configuration From Here]]
+      - [[#other-interesting-configurations][Other Interesting Configurations]]
+    - [[#spacemacs][Spacemacs]]
+      - [[#section-1][Section 1]]
+      - [[#section-2][Section 2]]
+      - [[#section-3][Section 3]]
+      - [[#section-4][Section 4]]
+      - [[#section-5][Section 5]]
+  - [[#contact-me][Contact Me]]
+
+** Opensuse Leap 15.5 x86_64 Plasma KDE
+[[https://www.opensuse.org/#Leap][openSUSE Leap]]
+
+[[https://snapcraft.io/install/snap-store/opensuse][Install Snap on
+openSUSE]]
+
+[[https://flatpak.org/setup/openSUSE][Install Flatpak on openSUSE]]
+
+[[https://opensuse-guide.org/help.php][Unofficial guide - Appendix A:
+Help and Docs]]
+
+[[https://opensuse-guide.org/contribute.php][Unofficial guide - Appendix
+E: Getting Involved]]
+
+*** Random Commands
+Here are a bunch of commands I have run recently just for future
+reference. I may or may not have continued using some of these, but you
+have to sometimes play around and try different options to find out what
+is helpful. Some of this is general command line and some is openSUSE
+specific.
+
+#+begin_src sh
+  cat /etc/os-release
+  sudo zypper refresh
+  sudo zypper update # if you are running tumbleweed sudo zypper dup
+  # --allow-vendor-change dup stands for distribution upgrades whereas zypper up is for package updates
+  cnf <command> # command not found - it will tell you what to install to make a
+  # certain command available to you
+  sudo zypper install patterns-devel-base-devel_basis # minimal set of tools for
+  # compiling and linking applications needed for make, make install commands
+  # install command detox for fixing filenames https://github.com/dharple/detox
+  mkdir ~/build
+  cd ~/build
+  wget https://github.com/dharple/detox/releases/download/v2.0.0/detox-2.0.0.tar.gz
+  tar xzvf detox-2.0.0.tar.gz
+  cd detox-2.0.0
+  ./configure
+  make
+  sudo make install
+  # close and open any terminals and then it should work
+  # detox -n or --dry-run to see what is going to do before running a command
+  # live example detox -vrn path/ then detox -vr path/
+  sudo zypper install hplip - tool for hp printer
+  sudo zypper install git-core
+  git --version
+  git config --global user.name "David R Rrrrr"
+  git config --global user.email "david.rrrrrr@yandex.com"
+  git config --global core.editor "vim"
+  git config --global user.name
+  git config --global user.email
+  git config --global core.editor
+  sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
+  sudo zypper refresh
+  sudo zypper install gh
+  gh auth login
+  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+  sudo zypper addrepo https://packages.microsoft.com/yumrepos/edge microsoft-edge
+  sudo zypper refresh
+  sudo zypper install microsoft-edge-stable
+  sudo zypper install opi
+  opi codecs
+  sudo zypper install fetchmsttfonts
+  sudo zypper install fira-code-fonts
+  sudo zypper install the_silver_searcher
+  sudo zypper install ripgrep
+  find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \) -print
+  # to make sure there are no emacs files that need to be deleted before I install spacemacs
+  sudo zypper install pandoc
+  sudo zypper install notmuch
+  sudo zypper install isync # mbsync
+  sudo zypper install espeak
+  sudo zypper install ranger
+  sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:/Wine/15.4/Emulators:Wine.repo
+  sudo zypper refresh
+  sudo zypper install wine-staging
+  wine --version
+  winecfg # adjust windows version to latest
+  wine AdobeDNGConverter_x64_16_2_1.exe
+  sudo rsync -av <copy from path> <copy to path>
+  sudo zypper install aspell
+  pandoc -f markdown -t org -o note.org /tmp/md_note.md
+  python3 -m pip install exifread
+#+end_src
+
+*** Other Random openSUSE Links
+- [[https://en.opensuse.org/Additional_package_repositories]]
+
+- [[https://www.techhut.tv/opensuse-5-things-you-must-do-after-installing/]]
+
+** Linux Distributions
+We are lucky there are so many great distributions out there, here a few
+but there are many more.
+
+- [[https://fedoraproject.org/]]
+
+- [[https://www.linuxmint.com/]]
+
+- [[https://pop.system76.com/]]
+
+- [[https://system76.com/]] - company sells computers with pop os
+  pre-installed
+
+- [[https://ubuntu.com/]]
+
+** Apps
+- Adobe DNG Converter (windows app run through emulation on wine)
+  - [[https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html]]
+  - [[https://helpx.adobe.com/camera-raw/digital-negative.html]]
+  - [[https://www.adobe.com/creativecloud/file-types/image/raw/dng-file.html]]
+- Alacritty terminal emulator
+  - installed from snap - neovim seems to works better in terminal
+    emulators like Alacritty.
+  - [[https://alacritty.org/]]
+- Brave Browser
+  - [[https://brave.com/linux/]]
+- Emacs - installed from snap
+  - [[https://snapcraft.io/emacs]]
+- Espeak
+  - installed from system package manager
+- FD find entries on your file system
+  - [[https://github.com/sharkdp/fd]] - installed from system package
+    manager
+- Geeqie - fast image viewer including raw files
+  - [[https://flathub.org/apps/org.geeqie.Geeqie]]
+- Handbrake
+  - [[https://handbrake.fr/downloads.php]]
+  - Flatpak - [[https://flathub.org/apps/fr.handbrake.ghb]]
+- MEGA (online backup)
+  - [[https://help.mega.io/installs-apps/desktop-syncing]] -
+    [[https://help.mega.io/installs-apps/desktop-syncing/linux]] -
+    [[https://mega.io/desktop#download]] -
+    [[https://mega.nz/linux/repo/]]
+- Mbsync
+  - installed from system package manager - called isync in package
+    manager
+- Microsoft Edge Browser
+  - [[https://www.microsoft.com/en-us/edge/download?form=MA13FJ]]
+- Neovim
+  - [[https://github.com/neovim/neovim/blob/master/INSTALL.md]]
+- Newsboat
+  - installed from snap - [[https://snapcraft.io/newsboat]]
+- Notmuch
+  - installed from system package manager
+- Opera Browser
+  - [[https://www.opera.com/download]]
+  - RPM is hidden further down on page or can be installed from snap
+  - [[https://snapcraft.io/opera]]
+- Pandoc
+  - [[https://pandoc.org/installing.html]]
+  - installed from system package manager
+- Ranger
+  - installed from system package manager
+- Ripgrep (rg)
+  - Has some similarities to grep, but also includes its own defaults
+    and optimizations that make it behave slightly differently in some
+    cases.
+  - [[https://github.com/BurntSushi/ripgrep]]
+  - installed from system package manager
+- The Silver Searcher (ag)
+  - Behavior and syntax are very close to GNU grep.
+  - [[https://github.com/ggreer/the_silver_searcher]]
+- Vivaldi Browser
+  - [[https://vivaldi.com/download/]]
+  - [[https://help.vivaldi.com/desktop/install-update/manual-setup-vivaldi-linux-repositories/]]
+- Wine (windows emulation)
+  - [[https://wiki.winehq.org/Download]]
+
+** Apps Within Apps
+*** Neovim
+- lazyvim distribution - https://www.lazyvim.org/
+
+*** Emacs
+- spacemacs distribution - https://www.spacemacs.org/
+
+** Fonts
+- Fira Code [[https://github.com/tonsky/FiraCode]]
+  - Nerd Font version of Fira Code is Listed as FiraCode Nerd Font
+    [[https://www.nerdfonts.com/font-downloads]]
+
+** Configurations and Tweaks
+*** Alacritty
+**** Main Configuration From Here
+- [[https://github.com/Widkidone/AlacrittyToml/blob/main/alacritty.toml]]
+
+**** Other Interesting Configurations
+- [[https://github.com/sabinpocris/alacritty.toml/blob/main/alacritty.toml]]
+- [[https://github.com/scalarwaves/dotfiles/blob/main/alacritty/alacritty.toml]]
+
+Neovim does not work fully without a Nerd Font set as your terminal font
+[[https://www.nerdfonts.com/]]
+
+#+begin_example
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "FiraCode Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "FiraCode Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Regular"
+#+end_example
+
+*** Spacemacs
+**** Section 1
+dotspacemacs-configuration-layers
+
+#+begin_src emacs-lisp
+   ;; List of configuration layers to load.
+   dotspacemacs-configuration-layers
+   '(
+     ;; ----------------------------------------------------------------
+     ;; Example of useful layers you may want to use right away.
+     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
+     ;; `M-m f e R' (Emacs style) to install them.
+     ;; ----------------------------------------------------------------
+     auto-completion
+     better-defaults
+     emacs-lisp
+     git
+     helm
+     lsp
+     markdown
+     multiple-cursors
+     org
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
+     spell-checking
+     syntax-checking
+     version-control
+     ranger
+     emoji
+     python
+     (evil-snipe
+      :variables
+      evil-snipe-enable-alternate-f-and-t-behaviors t)
+     notmuch
+     (elfeed :variables
+             elfeed-feeds '(
+                            ("http://nullprogram.com/feed/" emacs)
+                            ("https://planet.emacslife.com/atom.xml" emacs)
+                            ("https://www.reddit.com/r/emacs.rss" emacs)
+                            ("https://www.reddit.com/r/neovim.rss" neovim)
+                            ("https://www.reddit.com/r/vim.rss" vim)
+                            ("https://neovim.io/news.xml" neovim)
+                            ("https://dotfyle.com/this-week-in-neovim/rss.xml" neovim)
+                            ("https://protesilaos.com/master.xml" emacs)
+                            ("https://sachachua.com/blog/feed" emacs)
+                            ("https://www.reddit.com/r/orgmode.rss" emacs)
+                            )
+             )
+     treemacs)
+#+end_src
+
+**** Section 2
+After that section this section I add apps from MELPA
+
+#+begin_src emacs-lisp
+dotspacemacs-additional-packages '(
+                                      greader
+                                      sqlite3
+                                      org-make-toc
+                                      )
+#+end_src
+
+**** Section 3
+After that section is this section where I adjust a couple of settings:
+
+#+begin_src emacs-lisp
+(defun dotspacemacs/user-init ()
+  "Initialization for user code:
+This function is called immediately after `dotspacemacs/init', before layer
+configuration.
+It is mostly for variables that should be set before packages are loaded.
+If you are unsure, try setting them in `dotspacemacs/user-config' first."
+  ;; For python
+  (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+)
+#+end_src
+
+**** Section 4
+After that section is this section where I set a variable for greader
+and I add a custom function that wraps http links so that the link has
+both the [] and () for markdown files. Otherwise when I am in format
+checkers it throws an error for urls that are not in the right format.
+
+#+begin_src emacs-lisp
+(defun dotspacemacs/user-config ()
+  "Configuration for user code:
+This function is called at the very end of Spacemacs startup, after layer
+configuration.
+Put your configuration code here, except for variables that should be set
+before packages are loaded."
+  (setq greader-espeak-rate 350)
+)
+#+end_src
+
+Everything else is the standard configuration file without any changes.
+
+**** Section 5
+After install run this command once SPC SPC all-the-icons-install-fonts
+
+** Contact Me
+If you have any interesting linux, text editor or technology related
+information to share please let me know.
+
+[[mailto:david.rrrrrr@yandex.com?subject=Hello%20From%20%5BGitHub%5D][Email
+Dave]]
