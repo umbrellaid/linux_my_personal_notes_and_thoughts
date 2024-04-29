@@ -27,87 +27,84 @@
   - [[#contact-me][Contact Me]]
 
 ** Opensuse Leap 15.5 x86_64 Plasma KDE
-[[https://www.opensuse.org/#Leap][openSUSE Leap]]
+- [[https://www.opensuse.org/#Leap][openSUSE Leap]]
 
-[[https://snapcraft.io/install/snap-store/opensuse][Install Snap on
-openSUSE]]
+- [[https://snapcraft.io/install/snap-store/opensuse][Install Snap on openSUSE]]
 
-[[https://flatpak.org/setup/openSUSE][Install Flatpak on openSUSE]]
+- [[https://flatpak.org/setup/openSUSE][Install Flatpak on openSUSE]]
 
-[[https://opensuse-guide.org/help.php][Unofficial guide - Appendix A:
-Help and Docs]]
+- [[https://opensuse-guide.org/help.php][Unofficial guide - Appendix A: Help and Docs]]
 
-[[https://opensuse-guide.org/contribute.php][Unofficial guide - Appendix
-E: Getting Involved]]
+- [[https://opensuse-guide.org/contribute.php][Unofficial guide - Appendix E: Getting Involved]]
 
 *** Random Commands
-Here are a bunch of commands I have run recently just for future
-reference. I may or may not have continued using some of these, but you
-have to sometimes play around and try different options to find out what
-is helpful. Some of this is general command line and some is openSUSE
-specific.
+Here are a bunch of commands I have run recently just for future reference. I
+may or may not have continued using some of these, but you have to sometimes
+play around and try different options to find out what is helpful. Some of this
+is general command line and some is openSUSE specific.
 
 #+begin_src sh
-  cat /etc/os-release
-  sudo zypper refresh
-  sudo zypper update # if you are running tumbleweed sudo zypper dup
-  # --allow-vendor-change dup stands for distribution upgrades whereas zypper up is for package updates
-  cnf <command> # command not found - it will tell you what to install to make a
-  # certain command available to you
-  sudo zypper install patterns-devel-base-devel_basis # minimal set of tools for
-  # compiling and linking applications needed for make, make install commands
-  # install command detox for fixing filenames https://github.com/dharple/detox
-  mkdir ~/build
-  cd ~/build
-  wget https://github.com/dharple/detox/releases/download/v2.0.0/detox-2.0.0.tar.gz
-  tar xzvf detox-2.0.0.tar.gz
-  cd detox-2.0.0
-  ./configure
-  make
-  sudo make install
-  # close and open any terminals and then it should work
-  # detox -n or --dry-run to see what is going to do before running a command
-  # live example detox -vrn path/ then detox -vr path/
-  sudo zypper install hplip - tool for hp printer
-  sudo zypper install git-core
-  git --version
-  git config --global user.name "David R Rrrrr"
-  git config --global user.email "david.rrrrrr@yandex.com"
-  git config --global core.editor "vim"
-  git config --global user.name
-  git config --global user.email
-  git config --global core.editor
-  sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
-  sudo zypper refresh
-  sudo zypper install gh
-  gh auth login
-  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-  sudo zypper addrepo https://packages.microsoft.com/yumrepos/edge microsoft-edge
-  sudo zypper refresh
-  sudo zypper install microsoft-edge-stable
-  sudo zypper install opi
-  opi codecs
-  sudo zypper install fetchmsttfonts
-  sudo zypper install fira-code-fonts
-  sudo zypper install the_silver_searcher
-  sudo zypper install ripgrep
-  find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \) -print
-  # to make sure there are no emacs files that need to be deleted before I install spacemacs
-  sudo zypper install pandoc
-  sudo zypper install notmuch
-  sudo zypper install isync # mbsync
-  sudo zypper install espeak
-  sudo zypper install ranger
-  sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:/Wine/15.4/Emulators:Wine.repo
-  sudo zypper refresh
-  sudo zypper install wine-staging
-  wine --version
-  winecfg # adjust windows version to latest
-  wine AdobeDNGConverter_x64_16_2_1.exe
-  sudo rsync -av <copy from path> <copy to path>
-  sudo zypper install aspell
-  pandoc -f markdown -t org -o note.org /tmp/md_note.md
-  python3 -m pip install exifread
+    cat /etc/os-release
+    sudo zypper refresh
+    sudo zypper update # if you are running tumbleweed sudo zypper dup
+    # --allow-vendor-change dup stands for distribution upgrades whereas zypper up is for package updates
+    cnf <command> # command not found - it will tell you what to install to make a
+    # certain command available to you
+    sudo zypper install patterns-devel-base-devel_basis # minimal set of tools for
+    # compiling and linking applications needed for make, make install commands
+    # install command detox for fixing filenames https://github.com/dharple/detox
+    mkdir ~/build
+    cd ~/build
+    wget https://github.com/dharple/detox/releases/download/v2.0.0/detox-2.0.0.tar.gz
+    tar xzvf detox-2.0.0.tar.gz
+    cd detox-2.0.0
+    ./configure
+    make
+    sudo make install
+    # close and open any terminals and then it should work
+    # detox -n or --dry-run to see what is going to do before running a command
+    # live example detox -vrn path/ then detox -vr path/
+    sudo zypper install hplip
+    # tool for hp printer
+    sudo zypper install git-core
+    git --version
+    git config --global user.name "David R Rrrrr"
+    git config --global user.email "david.rrrrrr@yandex.com"
+    git config --global core.editor "vim"
+    git config --global user.name
+    git config --global user.email
+    git config --global core.editor
+    sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
+    sudo zypper refresh
+    sudo zypper install gh
+    gh auth login
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    sudo zypper addrepo https://packages.microsoft.com/yumrepos/edge microsoft-edge
+    sudo zypper refresh
+    sudo zypper install microsoft-edge-stable
+    sudo zypper install opi
+    opi codecs
+    sudo zypper install fetchmsttfonts
+    sudo zypper install fira-code-fonts
+    sudo zypper install the_silver_searcher
+    sudo zypper install ripgrep
+    find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \) -print
+    # to make sure there are no emacs files that need to be deleted before I install spacemacs
+    sudo zypper install pandoc
+    sudo zypper install notmuch
+    sudo zypper install isync # mbsync
+    sudo zypper install espeak
+    sudo zypper install ranger
+    sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:/Wine/15.4/Emulators:Wine.repo
+    sudo zypper refresh
+    sudo zypper install wine-staging
+    wine --version
+    winecfg # adjust windows version to latest
+    wine AdobeDNGConverter_x64_16_2_1.exe
+    sudo rsync -av <copy from path> <copy to path>
+    sudo zypper install aspell
+    pandoc -f markdown -t org -o note.org /tmp/md_note.md
+    python3 -m pip install exifread
 #+end_src
 
 *** Other Random openSUSE Links
@@ -116,8 +113,8 @@ specific.
 - [[https://www.techhut.tv/opensuse-5-things-you-must-do-after-installing/]]
 
 ** Linux Distributions
-We are lucky there are so many great distributions out there, here a few
-but there are many more.
+We are lucky there are so many great distributions out there, here a few but
+there are many more.
 
 - [[https://fedoraproject.org/]]
 
@@ -125,8 +122,8 @@ but there are many more.
 
 - [[https://pop.system76.com/]]
 
-- [[https://system76.com/]] - company sells computers with pop os
-  pre-installed
+- [[https://system76.com/]]
+  - company sells computers with pop OS pre-installed
 
 - [[https://ubuntu.com/]]
 
@@ -136,8 +133,8 @@ but there are many more.
   - [[https://helpx.adobe.com/camera-raw/digital-negative.html]]
   - [[https://www.adobe.com/creativecloud/file-types/image/raw/dng-file.html]]
 - Alacritty terminal emulator
-  - installed from snap - neovim seems to works better in terminal
-    emulators like Alacritty.
+  - installed from snap - neovim seems to works better in terminal emulators
+    like Alacritty.
   - [[https://alacritty.org/]]
 - Brave Browser
   - [[https://brave.com/linux/]]
@@ -146,8 +143,8 @@ but there are many more.
 - Espeak
   - installed from system package manager
 - FD find entries on your file system
-  - [[https://github.com/sharkdp/fd]] - installed from system package
-    manager
+  - [[https://github.com/sharkdp/fd]]
+  - installed from system package manager
 - Geeqie - fast image viewer including raw files
   - [[https://flathub.org/apps/org.geeqie.Geeqie]]
 - Handbrake
@@ -159,8 +156,8 @@ but there are many more.
     [[https://mega.io/desktop#download]] -
     [[https://mega.nz/linux/repo/]]
 - Mbsync
-  - installed from system package manager - called isync in package
-    manager
+  - installed from system package manager
+  - called isync in package manager
 - Microsoft Edge Browser
   - [[https://www.microsoft.com/en-us/edge/download?form=MA13FJ]]
 - Neovim
@@ -179,9 +176,8 @@ but there are many more.
 - Ranger
   - installed from system package manager
 - Ripgrep (rg)
-  - Has some similarities to grep, but also includes its own defaults
-    and optimizations that make it behave slightly differently in some
-    cases.
+  - Has some similarities to grep, but also includes its own defaults and
+    optimizations that make it behave slightly differently in some cases.
   - [[https://github.com/BurntSushi/ripgrep]]
   - installed from system package manager
 - The Silver Searcher (ag)
@@ -217,7 +213,7 @@ but there are many more.
 Neovim does not work fully without a Nerd Font set as your terminal font
 [[https://www.nerdfonts.com/]]
 
-#+begin_example
+#+begin_src toml
 [font.bold]
 family = "FiraCode Nerd Font"
 style = "Bold"
@@ -233,7 +229,7 @@ style = "Italic"
 [font.normal]
 family = "FiraCode Nerd Font"
 style = "Regular"
-#+end_example
+#+end_src
 
 *** Spacemacs
 **** Section 1
@@ -336,8 +332,6 @@ Everything else is the standard configuration file without any changes.
 After install run this command once SPC SPC all-the-icons-install-fonts
 
 ** Contact Me
-If you have any interesting linux, text editor or technology related
-information to share please let me know.
+If you have any interesting information to share please let me know.
 
-[[mailto:david.rrrrrr@yandex.com?subject=Hello%20From%20%5BGitHub%5D][Email
-Dave]]
+[[mailto:david.rrrrrr@yandex.com?subject=Hello%20From%20%5BGitHub%5D][Email Dave]]
