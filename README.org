@@ -1,10 +1,8 @@
 * Linux My Personal Notes and Thoughts                                  :TOC:
 :PROPERTIES:
 :TOC:      :include all
-:CUSTOM_ID: linux-my-personal-notes-and-thoughts
 :CONTENTS:
 :END:
-
   - [[#opensuse-leap-155-x86_64-plasma-kde][Opensuse Leap 15.5 x86_64 Plasma KDE]]
     - [[#random-commands][Random Commands]]
     - [[#other-random-opensuse-links][Other Random openSUSE Links]]
