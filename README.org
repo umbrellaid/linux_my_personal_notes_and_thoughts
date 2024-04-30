@@ -2,8 +2,8 @@
 :PROPERTIES:
 :TOC:      :include all
 :CUSTOM_ID: linux-my-personal-notes-and-thoughts
-:END:
 :CONTENTS:
+:END:
 
   - [[#opensuse-leap-155-x86_64-plasma-kde][Opensuse Leap 15.5 x86_64 Plasma KDE]]
     - [[#random-commands][Random Commands]]
@@ -337,4 +337,4 @@ After install run this command once SPC SPC all-the-icons-install-fonts
 ** Contact Me
 If you have any interesting information to share please let me know.
 
-[[mailto:david.rrrrrr@yandex.com?subject=Hello%20From%20%5BGitHub%5D][Email Dave]]
+[[mailto:david.rrrrrr@yandex.com][Email Dave]]
