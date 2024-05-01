@@ -3,8 +3,9 @@
 :TOC:      :include all
 :CONTENTS:
 :END:
-  - [[#opensuse-leap-155-x86_64-plasma-kde][Opensuse Leap 15.5 x86_64 Plasma KDE]]
+  - [[#opensuse-leap-155-x86_64-plasma-kde][openSUSE Leap 15.5 x86_64 Plasma KDE]]
     - [[#random-commands][Random Commands]]
+    - [[#trash-cli-commands][Trash-cli commands]]
     - [[#other-random-opensuse-links][Other Random openSUSE Links]]
   - [[#linux-distributions][Linux Distributions]]
   - [[#apps][Apps]]
@@ -24,23 +25,18 @@
       - [[#section-5][Section 5]]
   - [[#contact-me][Contact Me]]
 
-** Opensuse Leap 15.5 x86_64 Plasma KDE
+** openSUSE Leap 15.5 x86_64 Plasma KDE
 - [[https://www.opensuse.org/#Leap][openSUSE Leap]]
-
 - [[https://snapcraft.io/install/snap-store/opensuse][Install Snap on openSUSE]]
-
 - [[https://flatpak.org/setup/openSUSE][Install Flatpak on openSUSE]]
-
 - [[https://opensuse-guide.org/help.php][Unofficial guide - Appendix A: Help and Docs]]
-
 - [[https://opensuse-guide.org/contribute.php][Unofficial guide - Appendix E: Getting Involved]]
-
+- [[https://build.opensuse.org/][Build openSUSE.org]]
 *** Random Commands
 Here are a bunch of commands I have run recently just for future reference. I
 may or may not have continued using some of these, but you have to sometimes
 play around and try different options to find out what is helpful. Some of this
 is general command line and some is openSUSE specific.
-
 #+begin_src sh
   cat /etc/os-release
   sudo zypper refresh
@@ -82,7 +78,10 @@ is general command line and some is openSUSE specific.
   sudo zypper addrepo https://packages.microsoft.com/yumrepos/edge microsoft-edge
   sudo zypper refresh
   sudo zypper install microsoft-edge-stable
+  # alternative method for obtaining edge below
   sudo zypper install opi
+  opi msedge
+  # other interesting options for opi - brave, megasync, vivaldi, vscode, yandex-browser
   opi codecs
   sudo zypper install fetchmsttfonts
   sudo zypper install fira-code-fonts
@@ -105,29 +104,33 @@ is general command line and some is openSUSE specific.
   sudo rsync -av <copy from path> <copy to path>
   sudo zypper install aspell
   pandoc -f markdown -t org -o note.org /tmp/md_note.md
-  python3 -m pip install exifread
+  python3.11 -m pip install exifread
+  python3.11 -m pip install hyfetch
+  python3.11 -m pip install trash-cli
+  sudo rsync -av --delete /run/media/david/140a6cd2-c07c-4339-bb9a-c87b592bafe5/ /run/media/david/01d0e521-1a65-41ad-a1b2-e77f68c41894/
 #+end_src
-
+*** Trash-cli commands
+- trash-put           trash files and directories.
+- trash-empty         empty the trashcan(s).
+- trash-list          list trashed files.
+- trash-restore       restore a trashed file.
+- trash-rm            remove individual files from the trashcan.
+#+begin_src bash
+  # add to .bashrc
+  alias rm='echo "use trash-put or backslash rm to use rm normally"; false'
+#+end_src
 *** Other Random openSUSE Links
 - [[https://en.opensuse.org/Additional_package_repositories]]
-
 - [[https://www.techhut.tv/opensuse-5-things-you-must-do-after-installing/]]
-
 ** Linux Distributions
 We are lucky there are so many great distributions out there, here a few but
 there are many more.
-
 - [[https://fedoraproject.org/]]
-
 - [[https://www.linuxmint.com/]]
-
 - [[https://pop.system76.com/]]
-
 - [[https://system76.com/]]
   - company sells computers with pop OS pre-installed
-
 - [[https://ubuntu.com/]]
-
 ** Apps
 - Adobe DNG Converter (windows app run through emulation on wine)
   - [[https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html]]
@@ -189,53 +192,41 @@ there are many more.
   - [[https://help.vivaldi.com/desktop/install-update/manual-setup-vivaldi-linux-repositories/]]
 - Wine (windows emulation)
   - [[https://wiki.winehq.org/Download]]
-
 ** Apps Within Apps
 *** Neovim
 - lazyvim distribution - https://www.lazyvim.org/
-
 *** Emacs
 - spacemacs distribution - https://www.spacemacs.org/
-
 ** Fonts
 - Fira Code [[https://github.com/tonsky/FiraCode]]
   - Nerd Font version of Fira Code is Listed as FiraCode Nerd Font
     [[https://www.nerdfonts.com/font-downloads]]
-
 ** Configurations and Tweaks
 *** Alacritty
 **** Main Configuration From Here
 - [[https://github.com/Widkidone/AlacrittyToml/blob/main/alacritty.toml]]
-
 **** Other Interesting Configurations
 - [[https://github.com/sabinpocris/alacritty.toml/blob/main/alacritty.toml]]
 - [[https://github.com/scalarwaves/dotfiles/blob/main/alacritty/alacritty.toml]]
-
 Neovim does not work fully without a Nerd Font set as your terminal font
 [[https://www.nerdfonts.com/]]
-
 #+begin_src toml
   [font.bold]
   family = "FiraCode Nerd Font"
   style = "Bold"
-
   [font.bold_italic]
   family = "FiraCode Nerd Font"
   style = "Bold Italic"
-
   [font.italic]
   family = "FiraCode Nerd Font"
   style = "Italic"
-
   [font.normal]
   family = "FiraCode Nerd Font"
   style = "Regular"
 #+end_src
-
 *** Spacemacs
 **** Section 1
 dotspacemacs-configuration-layers
-
 #+begin_src emacs-lisp
   ;; List of configuration layers to load.
   dotspacemacs-configuration-layers
@@ -283,10 +274,8 @@ dotspacemacs-configuration-layers
             )
     treemacs)
 #+end_src
-
 **** Section 2
 After that section this section I add apps from MELPA
-
 #+begin_src emacs-lisp
   dotspacemacs-additional-packages '(
                                      greader
@@ -294,10 +283,8 @@ After that section this section I add apps from MELPA
                                      org-make-toc
                                      )
 #+end_src
-
 **** Section 3
 After that section is this section where I adjust a couple of settings:
-
 #+begin_src emacs-lisp
   (defun dotspacemacs/user-init ()
     "Initialization for user code:
@@ -309,13 +296,11 @@ After that section is this section where I adjust a couple of settings:
     (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
     )
 #+end_src
-
 **** Section 4
 After that section is this section where I set a variable for greader
 and I add a custom function that wraps http links so that the link has
 both the [] and () for markdown files. Otherwise when I am in format
 checkers it throws an error for urls that are not in the right format.
-
 #+begin_src emacs-lisp
   (defun dotspacemacs/user-config ()
     "Configuration for user code:
@@ -324,15 +309,12 @@ checkers it throws an error for urls that are not in the right format.
   Put your configuration code here, except for variables that should be set
   before packages are loaded."
     (setq greader-espeak-rate 500)
+    (setq python-shell-interpreter "/usr/bin/python3.11")
     )
 #+end_src
-
 Everything else is the standard configuration file without any changes.
-
 **** Section 5
 After install run this command once SPC SPC all-the-icons-install-fonts
-
 ** Contact Me
 If you have any interesting information to share please let me know.
-
 [[mailto:david.rrrrrr@yandex.com][Email Dave]]
