@@ -131,6 +131,7 @@ there are many more.
 - [[https://system76.com/]]
   - company sells computers with pop OS pre-installed
 - [[https://ubuntu.com/]]
+- [[https://manjaro.org/][https://manjaro.org/]]
 ** Apps
 - Adobe DNG Converter (windows app run through emulation on wine)
   - [[https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html]]
