@@ -29,10 +29,10 @@
 - [[https://opensuse-guide.org/contribute.php][Unofficial guide - Appendix E: Getting Involved]]
 - [[https://build.opensuse.org/][Build openSUSE.org]]
 *** Random Commands
-Here are a bunch of commands I have run recently just for future reference. I
-may or may not have continued using some of these, but you have to sometimes
-play around and try different options to find out what is helpful. Some of this
-is general command line and some is openSUSE specific.
+Here are a bunch of commands I have run recently just for future reference.
+I may or may not have continued using some of these, but you have to sometimes
+play around and try different options to find out what is helpful.
+Some of this is general command line and some is openSUSE specific.
 #+begin_src sh
   cat /etc/os-release
   sudo zypper refresh
@@ -293,10 +293,11 @@ After that section is this section where I adjust a couple of settings:
     )
 #+end_src
 **** Section 4
-After that section is this section where I set a variable for greader
-and I add a custom function that wraps http links so that the link has
-both the [] and () for markdown files. Otherwise when I am in format
-checkers it throws an error for urls that are not in the right format.
+After that section is this section where I set a variable for greader and I add
+a custom function that wraps http links so that the link has both the [] and ()
+for markdown files.
+Otherwise when I am in format checkers it throws an error for urls that are not
+in the right format.
 #+begin_src emacs-lisp
   (defun dotspacemacs/user-config ()
     "Configuration for user code:
