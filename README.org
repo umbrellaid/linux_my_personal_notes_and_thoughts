@@ -1,34 +1,52 @@
 * Linux My Personal Notes and Thoughts                                  :TOC:
-  - [[#opensuse-leap-155-x86_64-plasma-kde][openSUSE Leap 15.5 x86_64 Plasma KDE]]
-    - [[#random-commands][Random Commands]]
-    - [[#trash-cli-commands][Trash-cli commands]]
-    - [[#other-random-opensuse-links][Other Random openSUSE Links]]
-  - [[#linux-distributions][Linux Distributions]]
-  - [[#apps][Apps]]
-  - [[#apps-within-apps][Apps Within Apps]]
-    - [[#neovim][Neovim]]
-    - [[#emacs][Emacs]]
-  - [[#fonts][Fonts]]
-  - [[#configurations-and-tweaks][Configurations and Tweaks]]
-    - [[#alacritty][Alacritty]]
-      - [[#main-configuration-from-here][Main Configuration From Here]]
-      - [[#other-interesting-configurations][Other Interesting Configurations]]
-    - [[#spacemacs][Spacemacs]]
-      - [[#section-1][Section 1]]
-      - [[#section-2][Section 2]]
-      - [[#section-3][Section 3]]
-      - [[#section-4][Section 4]]
-      - [[#section-5][Section 5]]
+  - [[#linux-notes--thoughts][Linux Notes / Thoughts]]
+    - [[#opensuse-leap-155-x86_64-plasma-kde][openSUSE Leap 15.5 x86_64 Plasma KDE]]
+      - [[#random-commands][Random Commands]]
+      - [[#trash-cli-commands][Trash-cli commands]]
+      - [[#other-random-opensuse-links][Other Random openSUSE Links]]
+    - [[#linux-distributions][Linux Distributions]]
+    - [[#apps][Apps]]
+    - [[#apps-within-apps][Apps Within Apps]]
+      - [[#neovim][Neovim]]
+      - [[#emacs][Emacs]]
+    - [[#fonts][Fonts]]
+    - [[#configurations-and-tweaks][Configurations and Tweaks]]
+      - [[#alacritty][Alacritty]]
+        - [[#main-configuration-from-here][Main Configuration From Here]]
+        - [[#other-interesting-configurations][Other Interesting Configurations]]
+      - [[#spacemacs][Spacemacs]]
+        - [[#section-1][Section 1]]
+        - [[#section-2][Section 2]]
+        - [[#section-3][Section 3]]
+        - [[#section-4][Section 4]]
+        - [[#section-5][Section 5]]
+  - [[#text-editing-resources][Text Editing Resources]]
+    - [[#introduction-text][Introduction Text]]
+      - [[#links][Links]]
+    - [[#learning-the-vim-keybindings---video-game-for-vim-keybindings][Learning The Vim Keybindings - Video Game For Vim Keybindings]]
+      - [[#videos-from-vomikod][Videos From Vomikod]]
+      - [[#file-formats-for-note-taking][File Formats For Note Taking]]
+        - [[#short-videos-note-taking][Short Videos Note Taking]]
+          - [[#is-neovim-the-ultimate-note-taking-tool][Is Neovim The Ultimate Note Taking Tool?]]
+        - [[#long-videos-note-taking][Long Videos Note Taking]]
+          - [[#videos-of-interest][Videos Of Interest]]
+    - [[#neovim-distributions][Neovim Distributions]]
+    - [[#rss-feeds][RSS Feeds]]
+    - [[#the-primeagen-related-links---michael-paulson][The Primeagen Related Links - Michael Paulson]]
+    - [[#greader-notes][Greader Notes]]
+      - [[#my-greader-workflow-in-spacemacs-in-detail][My Greader Workflow In Spacemacs In Detail]]
+    - [[#additional-links][Additional Links]]
   - [[#contact-me][Contact Me]]
 
-** openSUSE Leap 15.5 x86_64 Plasma KDE
+** Linux Notes / Thoughts
+*** openSUSE Leap 15.5 x86_64 Plasma KDE
 - [[https://www.opensuse.org/#Leap][openSUSE Leap]]
 - [[https://snapcraft.io/install/snap-store/opensuse][Install Snap on openSUSE]]
 - [[https://flatpak.org/setup/openSUSE][Install Flatpak on openSUSE]]
 - [[https://opensuse-guide.org/help.php][Unofficial guide - Appendix A: Help and Docs]]
 - [[https://opensuse-guide.org/contribute.php][Unofficial guide - Appendix E: Getting Involved]]
 - [[https://build.opensuse.org/][Build openSUSE.org]]
-*** Random Commands
+**** Random Commands
 Here are a bunch of commands I have run recently just for future reference.
 I may or may not have continued using some of these, but you have to sometimes
 play around and try different options to find out what is helpful.
@@ -105,7 +123,7 @@ Some of this is general command line and some is openSUSE specific.
   python3.11 -m pip install trash-cli
   sudo rsync -av --delete /run/media/david/140a6cd2-c07c-4339-bb9a-c87b592bafe5/ /run/media/david/01d0e521-1a65-41ad-a1b2-e77f68c41894/
 #+end_src
-*** Trash-cli commands
+**** Trash-cli commands
 - trash-put           trash files and directories.
 - trash-empty         empty the trashcan(s).
 - trash-list          list trashed files.
@@ -115,10 +133,10 @@ Some of this is general command line and some is openSUSE specific.
   # add to .bashrc
   alias rm='echo "use trash-put or backslash rm to use rm normally"; false'
 #+end_src
-*** Other Random openSUSE Links
+**** Other Random openSUSE Links
 - [[https://en.opensuse.org/Additional_package_repositories]]
 - [[https://www.techhut.tv/opensuse-5-things-you-must-do-after-installing/]]
-** Linux Distributions
+*** Linux Distributions
 We are lucky there are so many great distributions out there, here a few but
 there are many more.
 - [[https://fedoraproject.org/]]
@@ -128,7 +146,7 @@ there are many more.
   - company sells computers with pop OS pre-installed
 - [[https://ubuntu.com/]]
 - [[https://manjaro.org/][https://manjaro.org/]]
-** Apps
+*** Apps
 - Adobe DNG Converter (windows app run through emulation on wine)
   - [[https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html]]
   - [[https://helpx.adobe.com/camera-raw/digital-negative.html]]
@@ -189,20 +207,20 @@ there are many more.
   - [[https://help.vivaldi.com/desktop/install-update/manual-setup-vivaldi-linux-repositories/]]
 - Wine (windows emulation)
   - [[https://wiki.winehq.org/Download]]
-** Apps Within Apps
-*** Neovim
+*** Apps Within Apps
+**** Neovim
 - lazyvim distribution - https://www.lazyvim.org/
-*** Emacs
+**** Emacs
 - spacemacs distribution - https://www.spacemacs.org/
-** Fonts
+*** Fonts
 - Fira Code [[https://github.com/tonsky/FiraCode]]
   - Nerd Font version of Fira Code is Listed as FiraCode Nerd Font
     [[https://www.nerdfonts.com/font-downloads]]
-** Configurations and Tweaks
-*** Alacritty
-**** Main Configuration From Here
+*** Configurations and Tweaks
+**** Alacritty
+***** Main Configuration From Here
 - [[https://github.com/Widkidone/AlacrittyToml/blob/main/alacritty.toml]]
-**** Other Interesting Configurations
+***** Other Interesting Configurations
 - [[https://github.com/sabinpocris/alacritty.toml/blob/main/alacritty.toml]]
 - [[https://github.com/scalarwaves/dotfiles/blob/main/alacritty/alacritty.toml]]
 Neovim does not work fully without a Nerd Font set as your terminal font
@@ -221,8 +239,8 @@ Neovim does not work fully without a Nerd Font set as your terminal font
   family = "FiraCode Nerd Font"
   style = "Regular"
 #+end_src
-*** Spacemacs
-**** Section 1
+**** Spacemacs
+***** Section 1
 dotspacemacs-configuration-layers
 #+begin_src emacs-lisp
   ;; List of configuration layers to load.
@@ -271,7 +289,7 @@ dotspacemacs-configuration-layers
             )
     treemacs)
 #+end_src
-**** Section 2
+***** Section 2
 After that section this section I add apps from MELPA
 #+begin_src emacs-lisp
   dotspacemacs-additional-packages '(
@@ -279,7 +297,7 @@ After that section this section I add apps from MELPA
                                      sqlite3
                                      )
 #+end_src
-**** Section 3
+***** Section 3
 After that section is this section where I adjust a couple of settings:
 #+begin_src emacs-lisp
   (defun dotspacemacs/user-init ()
@@ -292,7 +310,7 @@ After that section is this section where I adjust a couple of settings:
     (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
     )
 #+end_src
-**** Section 4
+***** Section 4
 After that section is this section where I set a variable for greader and I add
 a custom function that wraps http links so that the link has both the [] and ()
 for markdown files.
@@ -310,8 +328,411 @@ in the right format.
     )
 #+end_src
 Everything else is the standard configuration file without any changes.
-**** Section 5
+***** Section 5
 After install run this command once SPC SPC all-the-icons-install-fonts
+** Text Editing Resources
+*** Introduction Text
+Text editing is incredibly valuable for programming, note taking, organizing and
+reviewing written information.
+Here is a collection of thoughts and links I have found to be valuable.
+
+A lot of people on reddit and on forums ask if it is worth learning the vim
+normal mode keybindings.
+I believe if you work in a text a certain amount of time it is worth learning,
+but if you only do small amounts of time in a text editor it may not be worth
+it.
+Here is a way to think about this, if you do programming in a text editor more
+than a couple hours a week I would say it is worth learning.
+If you write notes or read a lot of text more than a couple of hours a week then
+it may also be worth learning.
+However, please note that folks who do not program are a little more mixed on
+whether it is worth the time to learn and use, whereas programmers tend to find
+it worth the time to learn.
+It is not just a productivity boost, it is also more engaging and fun as you
+work through code.
+
+If you are a programmer I recommend trying and learning the basics of all three
+major text editors which are Visual Studio Code, neovim (or original vim) and emacs.
+If you are a writer there are specific setups (distributions) that you can find
+for these tools that are targeted for that type of work.
+I mostly program and take notes so that is how I focus on these tools.
+If you are a programmer the Visual Studio Code with the add-on (extension)
+vscodevim provides a setup that you can have up and running super fast that
+allow you to learn the ways of vim but have all of the modern conveniences of a
+high end text editor working right away.
+Make sure you go through all of the extensions settings and turn on some of the
+plugins if you want to get familiar with them.
+They are not all enabled by default.
+Emacs with vi emulation.
+Emacs has a robust platform with tremendous built in functionality.
+Plus you can extend it with add-ons and you can have custom functions you can
+easily add.
+OpenAI ChatGPT, Google Gemini can generate custom functions you can add to your
+emacs configuration.
+Make sure you add a unique prefix to any custom functions so you do not create
+any name conflicts.
+If you do not like the vim keybindings Emacs has the most other options
+available including variations of the vim keybindings and keybindings that are
+completely different or can be customized to suite your needs.
+The only slight downside if you go these routes is that they are only readily
+available for emacs, but luckily emacs can be infinitely customized and
+extended.
+I will admit that I have learned some of the other systems and went back to vim
+style keybindings so that I can move between the three programs using similar
+keybindings.
+
+Examples of other keybinding options: First a quick note on the vanilla Emacs
+keybindings.
+I have spent time learning them and they are really hard on your hands.
+The only way you can sort of mitigate that issue is by having a custom keyboard
+where you can reprogram the buttons so you do not put strain on your pinky.
+God mode and devil mode can also solve the hand fatigue problem.
+Yes, emacs pinky is actually a problem and hand fatigue in general.
+I have to be honest and say that I feel strongly you should use another system
+other than the default keybindings.
+If you do want to learn the vanilla keybindings they are very logical once you
+get used to them and they pair well with either god mode or devil mode.
+
+Xah Fly Keys is the most efficient system for programmers, but only readily
+available for emacs.
+I like the flexibility of moving between neovim, visual studio code and emacs so
+I prefer vim keybindings even though they are less efficient.
+I would only consider learning Xah Fly Keys if you program more than 80% of your
+time and you are ok being locked into emacs.
+The author asks for donations for folks who use his tools.
+Of course it is requested that people donate to all open source projects that
+help them if they can afford to do so.
+
+Boon is a well thought out system, again only for emacs.
+I like some of the thoughts and layouts that are in the system.
+It is clearly a smart design, but I do feel that the benefits it gives you are
+not really worth the effort learning it.
+
+Meow is a variation on the vim keybindings.
+The only problem I have with that is if I switch between Meow and standard vim
+it is too confusing to my brain because they are so similar.
+It is almost easier to keep two different systems distinguished in your brain if
+they are totally different.
+A lot of people really like Meow and it is really easy to make adjustments to
+the setup of it.
+I would say if you are leaving vim and not going to go back you might really
+enjoy the improvements that Meow makes.
+**** Links
+- [[https://github.com/darkstego/wakib-keys]]
+- [[https://github.com/darkstego/wakib-emacs]]
+- [[https://www.youtube.com/watch?v=rK51Lp_lreI][Intro to Wakib, an Emacs Starter Kit]]
+- [[https://ergoemacs.github.io/]]
+- [[https://github.com/xahlee/xah-fly-keys]]
+- [[https://www.youtube.com/watch?v=-iDJV2GPjEY][The Most Efficient Emacs Workflow, more efficient than vim]]
+- [[https://www.youtube.com/watch?v=deg74diF_2Q&t=1445s][Xah Talk Show 2023-10-25 Xah Fly Keys, Bill Gosper Equations, Game of Life]]
+- [[https://www.youtube.com/watch?v=TXKlr67qSlc&t=14s][Xah Talk Show Ep532 What Happens When You Blog for 25 Years]]
+- [[https://www.youtube.com/watch?v=giwqQY1inn0][intro to svalboard datahand, best input device]]
+- [[https://www.youtube.com/watch?v=KZA6tojsGfU][Xah Talk Show Ep541, emacs org-mode key, WolframLang tiling, plane curves, math]]
+- [[https://www.youtube.com/watch?v=ypjsgrpG1r4][xah emacs talk show 2019-01-07 xah-html-mode vs org mode]]
+- [[https://www.youtube.com/watch?v=-vQ56wu30Lg][emacs xah fly keys intro]]
+- [[https://github.com/emacsorphanage/god-mode]]
+- [[https://github.com/jyp/boon]]
+- [[https://github.com/susam/devil]]
+- [[https://www.youtube.com/watch?v=MPSkyfOp5H8][Emacs Packages for Modal Editing - System Crafters Live!]]
+- [[https://systemcrafters.net/live-streams/april-21-2023/]]
+I think it is important to try out multiple setups and it is ok to use multiple
+approaches.
+I recommend learning emacs, neovim and trying out Visual Studio Code as well.
+I rotate between all three and I have learned the most this way.
+Some problems I know how to solve in all three, some problems I only know how to
+solve in one of the three.
+Whenever I am trying to learn how to do something efficiently I search for the
+solution in emacs plus neovim to learn whatever I can.
+If I have time I will look later at Visual Studio code as well to see how folks
+solve the problem in that ecosystem.
+Emacs and neovim are first only because they are the most flexible and
+extendable.
+
+Emacs can read written text out loud in audio format text-to-speech.
+It has a robotic voice, but I actually prefer that when I am trying to study or
+review certain kinds of information.
+
+You can take a video and extract the audio and then transcribe it with a paid
+service like this one [[https://turboscribe][https://turboscribe.ai]].
+Then you can read it or have Emacs perform text-to-speech.
+This allows you to review the information at different speeds.
+It allows a more consistent pace to be possible.
+It allows for searching through information.
+
+Emacs has a built in web browser, it is handy if you have a text heavy document
+that you want open side by side with a place to take notes in emacs.
+It does not replace full featured web browsers but is still helpful for
+reference document review.
+
+Neovim and Emacs both have distributions.
+A lot of people tell you to build your own configuration.
+It can take a long time to really understand how to setup your own configuration
+to best optimize your workflows.
+I like how the distributions usually offer keybindings decided on with a logical
+layout.
+It is helpful to build your own config because you learn so much.
+I think the best answer is to do both a custom config and try using the
+distributions to learn as much as possible.
+- [[https://gitlab.com/public-repositories/emacs-groundup/-/blob/main/src/docs/emacs-groundup.org]]
+*** Learning The Vim Keybindings - Video Game For Vim Keybindings
+- [[https://vim-adventures.com/]]
+I highly recommend playing this game.
+I have to confess that I find the game frustrating, but it helps you learn, so I
+feel it is worth the trouble of playing the game and paying for it.
+As long as you know you want to build vim skills, then it is worth the trouble
+to play the game in my opinion.
+You can play the game a little while for free, after that you have to pay.
+At first I was not willing to pay for it, but I decided to just do it anyway and
+I am really glad I did.
+It forces you to learn the vim motions in a different context and makes you more
+effective in text editing contexts.
+
+The reason why I find the game frustrating is the author does not give you
+enough information for you to know what you are supposed to do.
+He does this on purpose to challenge you, but I wish he added more of a hint
+system in the game to give you a bit more information to work with, but please
+do not let this detour you from working through the challenges.
+
+I recommend you play the game and struggle as much as possible before trying to
+find any answers online.
+
+I have some mental/brain challenges with working through a game like this, so I
+know others may also experience challenges where it may be very difficult for
+you to figure out what to do in the game.
+
+First take a break and try the problem again.
+Look at the motions available to you and think about creative ways to use them.
+
+Instead of looking up an answer you can also email the author for a hint.
+He tries not to give you the answer but prefers just to give you a hint so you
+can try to figure it out.
+- [[https://github.com/pepers/vim-adventures]]
+This has answers in text form from Level 8 to the Last Level of the main story
+line.
+This does not cover the Macro puzzles.
+There are some small mistakes in the document, but it is mostly correct.
+**** Videos From Vomikod
+Playlist
+- [[https://youtube.com/playlist?list=PLl3Gy8rm8g9THKPnmbegeeiu0NvmbLg-V&si=Kc9uqQXNbWAoJTA7]]
+Plays through levels 1 -- Last Level, videos are not in English -- there is at
+least one puzzle that had a small change implemented since he recorded these
+videos, but it is mostly accurate to the current game.
+The game authors YouTube Channel:
+- [[https://www.youtube.com/@DoronLinder/videos][https://www.youtube.com/@DoronLinder/videos]]
+Videos of note:
+- Video Explaining the Game
+- Level 1 -- How to cross the ocean information
+- Explains Level 5 where is the hidden key
+**** File Formats For Note Taking
+Org and markdown are two popular formats for taking notes.
+You can use plain text documents (txt) if you just want to copy and paste a
+bunch of information into a file that you can search or grep later to find.
+If you are organizing information that you are going share with others or need
+the document to be more structured for your own reference then org and markdown
+formats are worth learning and using.
+If you need highly structured control over formatting above what markdown and
+org can provide then look into LaTeX.
+***** Short Videos Note Taking
+****** Is Neovim The Ultimate Note Taking Tool?
+- [[https://www.youtube.com/watch?v=vdBkQ4jT2OE]]
+Org style notation that can be exported to other formats Author has transitioned
+to this system instead now (I like the simpler approach above, but this does
+offer more):
+- [[https://www.youtube.com/watch?v=5ht8NYkU9wQ&t=5s]]
+***** Long Videos Note Taking
+- [[https://www.youtube.com/@mischavandenburg/videos][https://www.youtube.com/@mischavandenburg/videos]]
+****** Videos Of Interest
+- FULL NEOVIM Configuration Walkthrough As A DevOps Engineer On MacOS
+- Ultimate Notetaking: My Neovim Zettelkasten Based on Obsidian - Complete Walkthrough
+- My Entire Neovim + Tmux Workflow As A DevOps Engineer On MacOS
+I like the style and approach of how he uses markdown and his workflows.
+When you install neovim it is bare bones, so you can add distribution layer on
+top of the base that makes it easy to use and awesome right away, you can still
+customize it further to meet your needs but it gives you a good out of the box
+experience.
+*** Neovim Distributions
+- [[https://nvchad.com/]]
+- [[https://www.lunarvim.org/]]
+- [[https://astronvim.com/]]
+- [[https://www.lazyvim.org/]]
+funny video about note taking if you jump to 14:43 his explanation of emacs and
+21:20 for neovim or watch the whole thing for entertainment and additional
+context:
+- [[https://www.youtube.com/watch?v=XRpHIa-2XCE]]
+Popular series on doom Emacs:
+- [[https://www.youtube.com/@DistroTube/videos][https://www.youtube.com/@DistroTube/videos]]
+Japanese app author shares his neovim setups, his app is a note taking app, very
+inspirational:
+- [[https://www.youtube.com/@devaslife/videos][https://www.youtube.com/@devaslife/videos]]
+*** RSS Feeds
+- [[https://nullprogram.com/feed/]]
+- [[https://planet.emacslife.com/atom.xml]]
+- [[https://www.reddit.com/r/emacs.rss]]
+- [[https://www.reddit.com/r/neovim.rss]]
+- [[https://www.reddit.com/r/vim.rss]]
+- [[https://neovim.io/news.xml]]
+- [[https://dotfyle.com/this-week-in-neovim/rss.xml]]
+- [[https://protesilaos.com/master.xml]]
+- [[https://sachachua.com/blog/feed]]
+*** The Primeagen Related Links - Michael Paulson
+- [[https://youtube.com/@ThePrimeagen/videos]]
+- [[https://www.youtube.com/@ThePrimeTimeagen/videos][https://www.youtube.com/@ThePrimeTimeagen/videos]]
+- [[https://www.youtube.com/@TheVimeagen/videos][https://www.youtube.com/@TheVimeagen/videos]]
+- [[https://www.twitch.tv/theprimeagen]]
+- [[https://kinesis-ergo.com/prime360/][Discount Codes on Kinesis Official Website - they have many types of keyboards so make sure you look through all of the options.]]
+- [[https://twitter.com/ThePrimeagen]]
+- [[https://www.instagram.com/ThePrimeagen/]]
+- [[https://www.tiktok.com/@theprimeagen][https://www.tiktok.com/@theprimeagen]]
+- [[https://discord.gg/ThePrimeagen]]
+- [[https://linktr.ee/ThePrimeagen]]
+- [[https://github.com/ThePrimeagen]]
+- [[https://github.com/ThePrimeagen?tab=repositories]]
+- [[https://github.com/ThePrimeagen/ThePrimeagen]]
+- [[https://github.com/ThePrimeagen/yt]]
+- [[https://frontendmasters.com/courses/vim-fundamentals/]]
+- [[https://frontendmasters.com/teachers/the-primeagen/]]
+- [[https://github.com/hakluke/how-to-exit-vim][How to exit vim - just a silly lol article - if you do need to quit ESC :q! (quit do not save changes) or ESC :wq (write/save your changes and quit)]]
+- [[https://www.youtube.com/watch?v=ZRnWmNdf5IE][From Vim To Zed]]
+- [[https://www.boot.dev/?promo=PRIME][Boot.dev - Learn Backend Development the Smart Way - Primeagen Discount Link]]
+*** Greader Notes
+First you have to install espeak on your system.
+Then install greader.
+**** My Greader Workflow In Spacemacs In Detail
+Opening keybinding notes: when you have evil mode on you can do your LEADER KEY
+which can be set to anything but the default is =SPACE= (space bar key).
+If you have evil mode off you can do =ALT-m= (called Meta-m or M-m the M- part
+represents the Meta keybinding which is actually the alt key on modern
+keyboards - there were old keyboards that had this extra key that are not widely
+used anymore).
+
+Open Spacemacs then open the text file I want to have read to me with the
+robotic voice.
+Note the reading speed of the robot is set in your dot spacemacs (.spacemacs)
+config file.
+You press =SPC f e d= to open your configuration file.
+You then go to the ~defun dotspacemacs/user-config ()~ and add ~(setq
+greader-espeak-rate 500)~.
+You vary the number to whatever suites your preferred speaking pace.
+I would keep in mind that since it is reading text it is not perfectly
+comparable to the rate that people talk or what speed you would normally read.
+So just try different speeds until you find what works best for you.
+Press =SPC SPC= and type =turn-off-evil-mode= and =ENTER=.
+You have to turn off evil mode for using greader - well you could use it by
+customizing a bunch of stuff, but I just disable and re-enable it when I am
+done.
+=M-x= type =greader-mode ENTER=.
+To have it start reading you do =C-r SPACE= and to have it stop you do =SPACE=.
+
+Another customization I like to use it to do =SPC w c C= which is toggling
+distraction free settings to be active.
+This centers the text and gets rid of distractions and makes the reading and
+listening experience better.
+=SPC SPC visual-line-mode ENTER= also fixes the word wrapping for me so words
+are not cut off in the middle of letters and it wraps on whole words.
+ I actually like the default wrapping for programming but for reading and
+writing prose I find visual-line-mode more effective most of the time.
+
+I press =C-l= two or three times in a row to move the screen of text back up to
+the top (you can press it twice to get it into the middle and three times to get
+the text to the top) once the reading part gets to the bottom so it is easier
+for me to continue reading and following it.
+*** Additional Links
+- Vim/Neovim: [[https://github.com/YanivZalach/Vim_Config_NO_PLUGINS]]
+- Vim/Neovim: [[https://github.com/YanivZalach/Vim_Config]]
+- Neovim: [[https://github.com/YanivZalach/Nvim_Config]]
+- Emacs: [[https://www.spacemacs.org/]]
+- Emacs: [[https://github.com/doomemacs/doomemacs]]
+- Emacs: [[https://github.com/corgi-emacs/corgi]]
+- Markdown: [[https://www.markdownguide.org/]]
+- Org Mode: [[https://orgmode.org/]]
+- LaTeX (if you need precise formatting control): [[https://www.latex-project.org/]]
+- Github Markdown: [[https://docs.github.com/en/get-started/writing-on-github]]
+- Markdown Cheat Sheet: [[https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet]]
+- Markdown Here: [[https://github.com/adam-p/markdown-here]]
+- Emacs: [[https://distro.tube/]]
+- Emacs: [[https://emacsconf.org/2023/talks/]]
+- Emacs: [[https://emacs.stackexchange.com/]]
+- Emacs: [[https://github.com/daviwil/dotfiles/]]
+- Emacs: [[https://github.com/daviwil/emacs-from-scratch]]
+- Emacs: [[https://github.com/Gavinok/emacs.d]]
+- Emacs: [[https://github.com/susam/dotfiles]]
+- Emacs: [[https://github.com/susam/emfy]]
+- Emacs: [[https://github.com/SystemCrafters/crafted-emacs]]
+- Emacs: [[https://gitlab.com/Clsmith1]]
+- Emacs: [[https://gitlab.com/dwt1]]
+- Emacs: [[https://gitlab.com/protesilaos/dotfiles]]
+- Emacs: [[https://planet.emacslife.com/]]
+- Emacs: [[https://protesilaos.com/]]
+- Emacs: [[https://protesilaos.com/emacs/]]
+- Emacs: [[https://protesilaos.com/emacs/iosevka-comfy-pictures]]
+- Emacs: [[https://systemcrafters.net/emacs-from-scratch/]]
+- Emacs: [[https://www.masteringemacs.org/]]
+- Emacs: [[https://www.masteringemacs.org/book]]
+- Font GNU Unifont on Wikipedia:
+  [[https://en.wikipedia.org/wiki/GNU_Unifont]]
+- Font Unifont Download: [[https://ftp.gnu.org/gnu/unifont/]]
+- Font Unifont: [[http://unifoundry.com/unifont/index.html]]
+- Font YouTube Video about Unifont: [[https://www.youtube.com/watch?v=ckrkW8VHRIs]]
+- YouTube Channel: [[https://www.youtube.com/@bwestbro/videos][https://www.youtube.com/@bwestbro/videos]]
+- YouTube Channel: [[https://www.youtube.com/@DistroTube/videos][https://www.youtube.com/@DistroTube/videos]]
+- YouTube Channel: [[https://www.youtube.com/@linuxtechgeek/videos][https://www.youtube.com/@linuxtechgeek/videos]]
+- YouTube Channel: [[https://www.youtube.com/@protesilaos/videos][https://www.youtube.com/@protesilaos/videos]]
+- YouTube Channel: [[https://www.youtube.com/@SystemCrafters/videos][https://www.youtube.com/@SystemCrafters/videos]]
+- YouTube Channel: [[https://www.youtube.com/@mzamansky/videos][https://www.youtube.com/@mzamansky/videos]]
+- YouTube Channel: [[https://www.youtube.com/@abcdw/videos][https://www.youtube.com/@abcdw/videos]]
+- YouTube Channel: [[https://www.youtube.com/@GavinFreeborn/videos][https://www.youtube.com/@GavinFreeborn/videos]]
+- YouTube Channel: [[https://www.youtube.com/@emacselements/videos][https://www.youtube.com/@emacselements/videos]]
+- Neovim: [[https://github.com/rvbug/neovim]]
+- Neovim: [[https://github.com/NormalNvim/NormalNvim]]
+- Neovim: [[https://github.com/rockerBOO/awesome-neovim]]
+- Neovim:
+  [[https://dotfyle.com/neovim/plugins/top?categories=preconfigured]]
+- Vim: [[https://github.com/ibhagwan/vim-cheatsheet]]
+- Vim: [[https://github.com/vbd/Fieldnotes/blob/main/vim.md]]
+- Emacs: [[http://yummymelon.com/devnull/announcing-casual-an-opinionated-porcelain-for-emacs-calc.html]]
+- Emacs: [[https://xenodium.com/my-emacs-eye-candy/]]
+- Emacs: [[https://github.com/xenodium/dotsies]]
+- Neovim: [[https://github.com/itsvinayak/TurboNvimConfig.nvim]]
+- Vim/Neovim: [[https://www.youtube.com/watch?v=5BU2gBOe9RU][YouTube Video: Vim Tips I Wish I Knew Earlier by Sebastian Daschner]]
+- Neovim: [[https://www.youtube.com/watch?v=6pAG3BHurdM][YouTube Video: How I Setup Neovim On My Mac To Make It AMAZING In 2024 by Josean Martinez]]
+- [[https://github.com/trishume/trishume.github.com/blob/master/_posts%2F2015-03-07-configuring-spacemacs-a-tutorial.md]]
+- [[https://github.com/trishume/dotfiles]]
+- [[https://github.com/trishume]]
+- [[https://www.spacemacs.org/doc/DOCUMENTATION.html#orgheadline21]]
+- [[https://www.spacemacs.org/doc/LAYERS.html]]
+- [[https://elpa.gnu.org/packages/greader.html]]
+- [[https://github.com/emacs-straight/greader]]
+- [[https://github.com/emacs-straight]]
+- [[https://espeak.sourceforge.net/]]
+- [[https://github.com/espeak-ng/espeak-ng]]
+- [[https://github.com/thinkhuman/writingwithemacs]]
+- [[https://www.gnu.org/manual/manual.html][GNU Manuals Online]]
+- [[https://www.gnu.org/doc/doc.html][Documentation of the GNU Project]]
+- [[https://www.gnu.org/software/emacs/documentation.html][GNU Emacs Documentation & Support]]
+- [[https://www.gnu.org/software/emacs/manual/index.html][GNU Emacs Manuals Online]]
+- [[https://www.gnu.org/software/emacs/refcards/index.html][GNU Emacs Reference Cards]]
+- [[https://www.gnu.org/doc/other-free-books.html][Free Books from Other Publishers]]
+- [[https://github.com/SilverSnake0/File-Automated-Assistant-Mover][SilverSnake0/File-Automated-Assistant-Mover Excellent Python Toolkit for Organizing and Searching Files - You can run it on a folder and it will sort all of the loose files into file type sub folders and it will not mess with your existing subfolders - it also has tools for searching and finding through sets of files uses python 3]]
+- [[https://www.youtube.com/@cantucodes/videos][Cantu Codes - Weekly Neovim Plugin Series]]
+- [[https://github.com/alextricity25/nvim_weekly_plugin_configs][Alex Cantu Github for Code from the Weekly Neovim Plugin Series]]
+- [[https://www.youtube.com/watch?v=jgogUgeuBPo][goparism youtube channel video: Where To Learn Emacs in 2024]]
+- [[https://www.youtube.com/@goparism/videos][goparism youtube channel]]
+- [[https://francopasut.netlify.app/post/markdown-vim-emacs-sublime-vscode/][Markdown with Vim, Emacs, Sublime Text 4 and Visual Studio Code - Franco Pasut]]
+- [[https://karl-voit.at/2017/09/23/orgmode-as-markup-only/][Article Org Mode Syntax Is One of the Most Reasonable Markup Languages to Use for Text]]
+- [[https://missing.csail.mit.edu/2020/editors/]]
+- [[https://www.youtube.com/watch?v=aiBt8CieE7U][Gavin Freeborn - Double Your Productivity With Emacs Org-Mode]]
+- [[https://www.youtube.com/watch?v=DEeStDz_imQ][Gavin Freeborn - 5 Reasons I Love Emacs Orgmode]]
+- [[https://www.youtube.com/watch?v=0-brF21ShRk][Gavin Freeborn - You Should Really Learn Org Mode - It's Easy]]
+- [[https://protesilaos.com/codelog/2024-04-24-re-what-keeps-you-emacs/][Protesilaos Stavrou - Re: what keeps you coming back to Emacs?]]
+- [[https://protesilaos.com/commentary/2024-04-10-joy-of-writing/][Protesilaos Stavrou - The joy of writing]]
+- [[https://www.youtube.com/watch?v=-ybCiHPWKNA][TheVimeagen - Teaching Neovim From Scratch To A Noob]]
+- [[https://gitlab.com/publicvoit/orgdown/-/blob/master/README.org][https://gitlab.com/publicvoit/orgdown/-/blob/master/README.org]]
+  - Orgdown (in short “OD) is a lightweight markup language similar to Markdown
+    but it’s consistent, easy to learn, simple to type even without
+    tool-support, and it is based on its older brother: Org-mode
+  - The purpose of this site is to provide basic information on the Orgdown
+    syntax, supported software programs, mobile apps, services, and parsers.
+- [[https://www.youtube.com/watch?v=mmqDYw9C30I][Josean Martinez - 7 Amazing CLI Tools You Need To Try]]
 ** Contact Me
 If you have any interesting information to share please let me know.
 [[mailto:david.rrrrrr@yandex.com][Email Dave]]
