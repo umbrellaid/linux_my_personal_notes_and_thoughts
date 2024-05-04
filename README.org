@@ -355,7 +355,8 @@ It is not just a productivity boost, it is also more engaging and fun as you
 work through code.
 
 If you are a programmer I recommend trying and learning the basics of all three
-major text editors which are Visual Studio Code, neovim (or original vim) and emacs.
+major text editors which are Visual Studio Code, neovim (or original vim) and
+emacs.
 If you are a writer there are specific setups (distributions) that you can find
 for these tools that are targeted for that type of work.
 I mostly program and take notes so that is how I focus on these tools.
@@ -742,13 +743,12 @@ Emacs.
 It offers the most customization, flexibility, add-ons/plugins... basically an
 incredible ecosystem.
 The wide variety of tools can help in many areas, for example:
-You can set a text to speech to read to you.
-You can use a variety of terminals.
-You can edit text using any methodology you want including vim keybindings.
-You can navigate your file system using dired or ranger or both.
-You can optimize your workflows by having more tasks inside of Emacs.
-You have full org mode support for text tasks which then can be exported to a
-myriad of formats.
+- You can set a text to speech to read to you.
+- You can use a variety of terminals.
+- You can edit text using any methodology you want including vim keybindings.
+- You can navigate your file system using dired or ranger or both.
+- You can optimize your workflows by having more tasks inside of Emacs.
+- You have full org mode support for text tasks which then can be exported to a myriad of formats.
 *** Which text format do you recommend the most?
 The org format from Emacs org mode.
 It is a more consistent implementation compared to markdown.
