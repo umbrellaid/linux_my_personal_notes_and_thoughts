@@ -1,8 +1,4 @@
 * Linux My Personal Notes and Thoughts                                  :TOC:
-:PROPERTIES:
-:TOC:      :include all
-:CONTENTS:
-:END:
   - [[#opensuse-leap-155-x86_64-plasma-kde][openSUSE Leap 15.5 x86_64 Plasma KDE]]
     - [[#random-commands][Random Commands]]
     - [[#trash-cli-commands][Trash-cli commands]]
@@ -281,7 +277,6 @@ After that section this section I add apps from MELPA
   dotspacemacs-additional-packages '(
                                      greader
                                      sqlite3
-                                     org-make-toc
                                      )
 #+end_src
 **** Section 3
