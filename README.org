@@ -36,6 +36,9 @@
     - [[#greader-notes][Greader Notes]]
       - [[#my-greader-workflow-in-spacemacs-in-detail][My Greader Workflow In Spacemacs In Detail]]
     - [[#additional-links][Additional Links]]
+  - [[#faqs][FAQs]]
+    - [[#which-text-editor-do-you-recommend-the-most][Which text editor do you recommend the most?]]
+    - [[#which-text-format-do-you-recommend-the-most][Which text format do you recommend the most?]]
   - [[#contact-me][Contact Me]]
 
 ** Linux Notes / Thoughts
@@ -733,6 +736,34 @@ for me to continue reading and following it.
   - The purpose of this site is to provide basic information on the Orgdown
     syntax, supported software programs, mobile apps, services, and parsers.
 - [[https://www.youtube.com/watch?v=mmqDYw9C30I][Josean Martinez - 7 Amazing CLI Tools You Need To Try]]
+** FAQs
+*** Which text editor do you recommend the most?
+Emacs.
+It offers the most customization, flexibility, add-ons/plugins... basically an
+incredible ecosystem.
+The wide variety of tools can help in many areas, for example:
+You can set a text to speech to read to you.
+You can use a variety of terminals.
+You can edit text using any methodology you want including vim keybindings.
+You can navigate your file system using dired or ranger or both.
+You can optimize your workflows by having more tasks inside of Emacs.
+You have full org mode support for text tasks which then can be exported to a
+myriad of formats.
+*** Which text format do you recommend the most?
+The org format from Emacs org mode.
+It is a more consistent implementation compared to markdown.
+Although markdown is not really that bad, Emacs has a robust markdown mode if
+you do need that format.
+You can also convert from org documents to markdown.
+Org mode can seem a little overwhelming at first because it can do so much.
+However, learning the basics can allow you to do the same things that markdown
+allows but have the flexibility to expand what you use it for if needed.
+Look at Orgdown if you want a simpler starting point then full org mode.
+Another interesting feature is you can use code blocks and then tangle them
+to export the code blocks to a separate file.
+This is called literate programming allows you to create one file and then have
+different exports for documentation and for code.
+You only have to maintain one file, but you create whatever exports you need.
 ** Contact Me
 If you have any interesting information to share please let me know.
 [[mailto:david.rrrrrr@yandex.com][Email Dave]]
