@@ -1,7 +1,9 @@
 * Linux My Personal Notes and Thoughts                                  :TOC:
   - [[#linux-notes--thoughts][Linux Notes / Thoughts]]
-    - [[#opensuse-leap-155-x86_64-plasma-kde][openSUSE Leap 15.5 x86_64 Plasma KDE]]
-      - [[#random-commands][Random Commands]]
+    - [[#manjaro-linux-plasma-kde][Manjaro Linux Plasma KDE]]
+    - [[#opensuse-linux-leap-155-x86_64-plasma-kde][openSUSE Linux Leap 15.5 x86_64 Plasma KDE]]
+    - [[#random-linux-commands-flag-notes][Random Linux Commands Flag Notes]]
+    - [[#random-linux-commands][Random Linux Commands]]
       - [[#trash-cli-commands][Trash-cli commands]]
       - [[#other-random-opensuse-links][Other Random openSUSE Links]]
     - [[#linux-distributions][Linux Distributions]]
@@ -48,14 +50,38 @@
   - [[#contact-me][Contact Me]]
 
 ** Linux Notes / Thoughts
-*** openSUSE Leap 15.5 x86_64 Plasma KDE
+*** Manjaro Linux Plasma KDE
+- open graphical pamac
+  - official repositories
+    - refresh mirrors list (or sudo pacman-mirrors --fasttrack)
+- hamburger menu
+  - preferences
+    - enable aur support
+- terminal
+  - sudo pacman -Syyu
+- open graphical pamac
+  - ttf-ms-fonts (or yay -S ttf-ms-fonts or ttf-ms-win10-auto)
+- terminal
+  - sudo pacman -S base-devel
+  - sudo pacman -S yay
+  - lsb_release -drc
+  - yay -S vmware-horizon-client
+*** openSUSE Linux Leap 15.5 x86_64 Plasma KDE
 - [[https://www.opensuse.org/#Leap][openSUSE Leap]]
 - [[https://snapcraft.io/install/snap-store/opensuse][Install Snap on openSUSE]]
 - [[https://flatpak.org/setup/openSUSE][Install Flatpak on openSUSE]]
 - [[https://opensuse-guide.org/help.php][Unofficial guide - Appendix A: Help and Docs]]
 - [[https://opensuse-guide.org/contribute.php][Unofficial guide - Appendix E: Getting Involved]]
 - [[https://build.opensuse.org/][Build openSUSE.org]]
-**** Random Commands
+*** Random Linux Commands Flag Notes
+grep [options] [pattern] [file or folder or .]
+- I ignore binary files from search
+- L files-without-match - just list filenames that do not contain matches
+- i ignore-case
+- l files-with-matches - just list filenames that contain matches
+- r recursive
+- v instead of returning matches return everything that does NOT match (invert-match)
+*** Random Linux Commands
 Here are a bunch of commands I have run recently just for future reference.
 I may or may not have continued using some of these, but you have to sometimes
 play around and try different options to find out what is helpful.
@@ -124,14 +150,23 @@ Some of this is general command line and some is openSUSE specific.
   wine --version
   winecfg # adjust windows version to latest
   wine AdobeDNGConverter_x64_16_2_1.exe
-  sudo rsync -av <copy from path> <copy to path>
   sudo zypper install aspell
   pandoc -f markdown -t org -o note.org /tmp/md_note.md
   python3.11 -m pip install exifread
   python3.11 -m pip install hyfetch
   python3.11 -m pip install trash-cli
-  sudo rsync -av --delete /run/media/david/140a6cd2-c07c-4339-bb9a-c87b592bafe5/ /run/media/david/01d0e521-1a65-41ad-a1b2-e77f68c41894/
-#+end_src
+  sudo rsync -avh --delete <copy from path> <copy to path>
+  sudo rsync -avh --delete /run/media/david/140a6cd2-c07c-4339-bb9a-c87b592bafe5/ /run/media/david/01d0e521-1a65-41ad-a1b2-e77f68c41894/
+  sudo rsync -avh --delete --exclude='.cache/' --exclude='*~' /home/david/ .
+  sudo mkdir /mnt/internal_data/
+  sudo blkid # find drive uuid
+  # edit /etc/fstab - man fstab for details if needed
+  # add line:
+  # openSUSE
+  UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  user                          0  0
+  # manjaro
+  UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  users                         0  0
+  #+end_src
 **** Trash-cli commands
 - trash-put           trash files and directories.
 - trash-empty         empty the trashcan(s).
@@ -608,11 +643,13 @@ inspirational:
 - auto-fill-mode - automatically inserts line lines at specified line width
 - avy-copy-line
 - check-parens
+- dired
 - display-fill-column-indicator-mode
 - eshell
 - greader-mode
 - org-lint
 - query-replace-regexp
+- ranger
 - set-variable
 - sort-fields
 - sort-lines
@@ -749,9 +786,6 @@ for me to continue reading and following it.
 "https://www.youtube.com/feeds/videos.xml?channel_id=UCgHJi_FdfoFGyRl_RYp361A" ;Teo Crawford
 "https://www.youtube.com/feeds/videos.xml?channel_id=UC-0cdtgZF01T3N8drruyikg" ;The Hybrid Shooter
 "https://www.youtube.com/feeds/videos.xml?channel_id=UCylGUf9BvQooEFjgdNudoQg" ;The Linux Cast
-"https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ" ;ThePrimeTime
-"https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw" ;ThePrimeagen
-"https://www.youtube.com/feeds/videos.xml?channel_id=UCVk4b-svNJoeytrrlOixebQ" ;TheVimeagen
 "https://www.youtube.com/feeds/videos.xml?channel_id=UCCaZ_-RGI5tc-KIzYBNXkOA" ;Tin House Studio
 "https://www.youtube.com/feeds/videos.xml?channel_id=UCo71RUe6DX4w-Vd47rFLXPg" ;Typecraft
 "https://www.youtube.com/feeds/videos.xml?channel_id=UC-Jmw9-Jcq7lCuK-8t7_kiA" ;Ulanzi
