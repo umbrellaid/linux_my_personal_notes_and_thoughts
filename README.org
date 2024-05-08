@@ -81,6 +81,12 @@ grep [options] [pattern] [file or folder or .]
 - l files-with-matches - just list filenames that contain matches
 - r recursive
 - v instead of returning matches return everything that does NOT match (invert-match)
+detox
+- detox -n or --dry-run to see what is going to do before running a command
+- detox -rvn path/ then once you are sure changes are ok detox -rv path/
+- n --dry-run does not change anything
+- r recursive into subfolders (any folders starting with . such as .git and .cache are skipped by default)
+- v be verbose about files being renamed
 *** Random Linux Commands
 Here are a bunch of commands I have run recently just for future reference. I
 may or may not have continued using some of these, but you have to sometimes
@@ -89,13 +95,15 @@ is general command line and some is openSUSE specific.
 #+begin_src sh
   cat /etc/os-release
   sudo zypper refresh
-  sudo zypper update # if you are running tumbleweed sudo zypper dup
+  # if you are running tumbleweed sudo zypper dup
   # --allow-vendor-change dup stands for distribution upgrades whereas
   # zypper up is for package updates
-  cnf <command> # command not found - it will tell you what to install to make a
+  sudo zypper update
+  # command not found - it will tell you what to install to make a
   # certain command available to you
-  sudo zypper install patterns-devel-base-devel_basis # minimal set of tools for
+  cnf <command>
   # compiling and linking applications needed for make, make install commands
+  sudo zypper install patterns-devel-base-devel_basis # minimal set of tools for
   # install command detox for fixing filenames https://github.com/dharple/detox
   mkdir ~/build
   cd ~/build
@@ -105,12 +113,8 @@ is general command line and some is openSUSE specific.
   ./configure
   make
   sudo make install
-  # close and open any terminals and then it should work
-  # detox -n or --dry-run to see what is going to do before running a
-  # command
-  # live example detox -vrn path/ then detox -vr path/
-  sudo zypper install hplip
   # tool for hp printer
+  sudo zypper install hplip
   sudo zypper install git-core
   git --version
   git config --global user.name "David R Rrrrr"
@@ -136,9 +140,9 @@ is general command line and some is openSUSE specific.
   sudo zypper install fira-code-fonts
   sudo zypper install the_silver_searcher
   sudo zypper install ripgrep
-  find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \) -print
   # to make sure there are no emacs files that need to be deleted before I
   # install spacemacs
+  find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \) -print
   sudo zypper install pandoc
   sudo zypper install notmuch
   sudo zypper install isync # mbsync
@@ -148,7 +152,8 @@ is general command line and some is openSUSE specific.
   sudo zypper refresh
   sudo zypper install wine-staging
   wine --version
-  winecfg # adjust windows version to latest
+  # adjust windows version to latest
+  winecfg
   wine AdobeDNGConverter_x64_16_2_1.exe
   sudo zypper install aspell
   pandoc -f markdown -t org -o note.org /tmp/md_note.md
