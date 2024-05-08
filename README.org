@@ -82,10 +82,10 @@ grep [options] [pattern] [file or folder or .]
 - r recursive
 - v instead of returning matches return everything that does NOT match (invert-match)
 *** Random Linux Commands
-Here are a bunch of commands I have run recently just for future reference.
-I may or may not have continued using some of these, but you have to sometimes
-play around and try different options to find out what is helpful.
-Some of this is general command line and some is openSUSE specific.
+Here are a bunch of commands I have run recently just for future reference. I
+may or may not have continued using some of these, but you have to sometimes
+play around and try different options to find out what is helpful. Some of this
+is general command line and some is openSUSE specific.
 #+begin_src sh
   cat /etc/os-release
   sudo zypper refresh
@@ -357,9 +357,8 @@ After that section is this section where I adjust a couple of settings:
 ***** Section 4
 After that section is this section where I set a variable for greader and I add
 a custom function that wraps http links so that the link has both the [] and ()
-for markdown files.
-Otherwise when I am in format checkers it throws an error for urls that are not
-in the right format.
+for markdown files. Otherwise when I am in format checkers it throws an error
+for urls that are not in the right format.
 #+begin_src emacs-lisp
   (defun dotspacemacs/user-config ()
     "Configuration for user code:
@@ -377,91 +376,76 @@ After install run this command once SPC SPC all-the-icons-install-fonts
 ** Text Editing Resources
 *** Introduction Text
 Text editing is incredibly valuable for programming, note taking, organizing and
-reviewing written information.
-Here is a collection of thoughts and links I have found to be valuable.
+reviewing written information. Here is a collection of thoughts and links I have
+found to be valuable.
 
 A lot of people on reddit and on forums ask if it is worth learning the vim
-normal mode keybindings.
-I believe if you work in a text a certain amount of time it is worth learning,
-but if you only do small amounts of time in a text editor it may not be worth
-it.
-Here is a way to think about this, if you do programming in a text editor more
-than a couple hours a week I would say it is worth learning.
-If you write notes or read a lot of text more than a couple of hours a week then
-it may also be worth learning.
-However, please note that folks who do not program are a little more mixed on
-whether it is worth the time to learn and use, whereas programmers tend to find
-it worth the time to learn.
-It is not just a productivity boost, it is also more engaging and fun as you
-work through code.
+normal mode keybindings. I believe if you work in a text a certain amount of
+time it is worth learning, but if you only do small amounts of time in a text
+editor it may not be worth it. Here is a way to think about this, if you do
+programming in a text editor more than a couple hours a week I would say it is
+worth learning. If you write notes or read a lot of text more than a couple of
+hours a week then it may also be worth learning. However, please note that folks
+who do not program are a little more mixed on whether it is worth the time to
+learn and use, whereas programmers tend to find it worth the time to learn. It
+is not just a productivity boost, it is also more engaging and fun as you work
+through code.
 
 If you are a programmer I recommend trying and learning the basics of all three
 major text editors which are Visual Studio Code, neovim (or original vim) and
-emacs.
-If you are a writer there are specific setups (distributions) that you can find
-for these tools that are targeted for that type of work.
-I mostly program and take notes so that is how I focus on these tools.
-If you are a programmer the Visual Studio Code with the add-on (extension)
-vscodevim provides a setup that you can have up and running super fast that
-allow you to learn the ways of vim but have all of the modern conveniences of a
-high end text editor working right away.
-Make sure you go through all of the extensions settings and turn on some of the
-plugins if you want to get familiar with them.
-They are not all enabled by default.
-Emacs with vi emulation.
-Emacs has a robust platform with tremendous built in functionality.
-Plus you can extend it with add-ons and you can have custom functions you can
-easily add.
-OpenAI ChatGPT, Google Gemini can generate custom functions you can add to your
-emacs configuration.
-Make sure you add a unique prefix to any custom functions so you do not create
-any name conflicts.
-If you do not like the vim keybindings Emacs has the most other options
-available including variations of the vim keybindings and keybindings that are
-completely different or can be customized to suite your needs.
-The only slight downside if you go these routes is that they are only readily
-available for emacs, but luckily emacs can be infinitely customized and
-extended.
-I will admit that I have learned some of the other systems and went back to vim
-style keybindings so that I can move between the three programs using similar
+emacs. If you are a writer there are specific setups (distributions) that you
+can find for these tools that are targeted for that type of work. I mostly
+program and take notes so that is how I focus on these tools. If you are a
+programmer the Visual Studio Code with the add-on (extension) vscodevim provides
+a setup that you can have up and running super fast that allow you to learn the
+ways of vim but have all of the modern conveniences of a high end text editor
+working right away. Make sure you go through all of the extensions settings and
+turn on some of the plugins if you want to get familiar with them. They are not
+all enabled by default. Emacs with vi emulation. Emacs has a robust platform
+with tremendous built in functionality. Plus you can extend it with add-ons and
+you can have custom functions you can easily add. OpenAI ChatGPT, Google Gemini
+can generate custom functions you can add to your emacs configuration. Make sure
+you add a unique prefix to any custom functions so you do not create any name
+conflicts. If you do not like the vim keybindings Emacs has the most other
+options available including variations of the vim keybindings and keybindings
+that are completely different or can be customized to suite your needs. The only
+slight downside if you go these routes is that they are only readily available
+for emacs, but luckily emacs can be infinitely customized and extended. I will
+admit that I have learned some of the other systems and went back to vim style
+keybindings so that I can move between the three programs using similar
 keybindings.
 
 Examples of other keybinding options: First a quick note on the vanilla Emacs
-keybindings.
-I have spent time learning them and they are really hard on your hands.
-The only way you can sort of mitigate that issue is by having a custom keyboard
-where you can reprogram the buttons so you do not put strain on your pinky.
-God mode and devil mode can also solve the hand fatigue problem.
-Yes, emacs pinky is actually a problem and hand fatigue in general.
-I have to be honest and say that I feel strongly you should use another system
-other than the default keybindings.
-If you do want to learn the vanilla keybindings they are very logical once you
-get used to them and they pair well with either god mode or devil mode.
+keybindings. I have spent time learning them and they are really hard on your
+hands. The only way you can sort of mitigate that issue is by having a custom
+keyboard where you can reprogram the buttons so you do not put strain on your
+pinky. God mode and devil mode can also solve the hand fatigue problem. Yes,
+emacs pinky is actually a problem and hand fatigue in general. I have to be
+honest and say that I feel strongly you should use another system other than the
+default keybindings. If you do want to learn the vanilla keybindings they are
+very logical once you get used to them and they pair well with either god mode
+or devil mode.
 
 Xah Fly Keys is the most efficient system for programmers, but only readily
-available for emacs.
-I like the flexibility of moving between neovim, visual studio code and emacs so
-I prefer vim keybindings even though they are less efficient.
-I would only consider learning Xah Fly Keys if you program more than 80% of your
-time and you are ok being locked into emacs.
-The author asks for donations for folks who use his tools.
-Of course it is requested that people donate to all open source projects that
-help them if they can afford to do so.
+available for emacs. I like the flexibility of moving between neovim, visual
+studio code and emacs so I prefer vim keybindings even though they are less
+efficient. I would only consider learning Xah Fly Keys if you program more than
+80% of your time and you are ok being locked into emacs. The author asks for
+donations for folks who use his tools. Of course it is requested that people
+donate to all open source projects that help them if they can afford to do so.
 
-Boon is a well thought out system, again only for emacs.
-I like some of the thoughts and layouts that are in the system.
-It is clearly a smart design, but I do feel that the benefits it gives you are
-not really worth the effort learning it.
+Boon is a well thought out system, again only for emacs. I like some of the
+thoughts and layouts that are in the system. It is clearly a smart design, but I
+do feel that the benefits it gives you are not really worth the effort learning
+it.
 
-Meow is a variation on the vim keybindings.
-The only problem I have with that is if I switch between Meow and standard vim
-it is too confusing to my brain because they are so similar.
-It is almost easier to keep two different systems distinguished in your brain if
-they are totally different.
-A lot of people really like Meow and it is really easy to make adjustments to
-the setup of it.
-I would say if you are leaving vim and not going to go back you might really
-enjoy the improvements that Meow makes.
+Meow is a variation on the vim keybindings. The only problem I have with that is
+if I switch between Meow and standard vim it is too confusing to my brain
+because they are so similar. It is almost easier to keep two different systems
+distinguished in your brain if they are totally different. A lot of people
+really like Meow and it is really easy to make adjustments to the setup of it. I
+would say if you are leaving vim and not going to go back you might really enjoy
+the improvements that Meow makes.
 **** Links
 - [[https://github.com/darkstego/wakib-keys]]
 - [[https://github.com/darkstego/wakib-emacs]]
@@ -481,62 +465,54 @@ enjoy the improvements that Meow makes.
 - [[https://www.youtube.com/watch?v=MPSkyfOp5H8][Emacs Packages for Modal Editing - System Crafters Live!]]
 - [[https://systemcrafters.net/live-streams/april-21-2023/]]
 I think it is important to try out multiple setups and it is ok to use multiple
-approaches.
-I recommend learning emacs, neovim and trying out Visual Studio Code as well.
-I rotate between all three and I have learned the most this way.
-Some problems I know how to solve in all three, some problems I only know how to
-solve in one of the three.
-Whenever I am trying to learn how to do something efficiently I search for the
-solution in emacs plus neovim to learn whatever I can.
-If I have time I will look later at Visual Studio code as well to see how folks
-solve the problem in that ecosystem.
-Emacs and neovim are first only because they are the most flexible and
-extendable.
+approaches. I recommend learning emacs, neovim and trying out Visual Studio Code
+as well. I rotate between all three and I have learned the most this way. Some
+problems I know how to solve in all three, some problems I only know how to
+solve in one of the three. Whenever I am trying to learn how to do something
+efficiently I search for the solution in emacs plus neovim to learn whatever I
+can. If I have time I will look later at Visual Studio code as well to see how
+folks solve the problem in that ecosystem. Emacs and neovim are first only
+because they are the most flexible and extendable.
 
-Emacs can read written text out loud in audio format text-to-speech.
-It has a robotic voice, but I actually prefer that when I am trying to study or
-review certain kinds of information.
+Emacs can read written text out loud in audio format text-to-speech. It has a
+robotic voice, but I actually prefer that when I am trying to study or review
+certain kinds of information.
 
 You can take a video and extract the audio and then transcribe it with a paid
-service like this one [[https://turboscribe][https://turboscribe.ai]].
-Then you can read it or have Emacs perform text-to-speech.
-This allows you to review the information at different speeds.
-It allows a more consistent pace to be possible.
-It allows for searching through information.
+service like this one [[https://turboscribe][https://turboscribe.ai]]. Then you can read it or have Emacs
+perform text-to-speech. This allows you to review the information at different
+speeds. It allows a more consistent pace to be possible. It allows for searching
+through information.
 
 Emacs has a built in web browser, it is handy if you have a text heavy document
-that you want open side by side with a place to take notes in emacs.
-It does not replace full featured web browsers but is still helpful for
-reference document review.
+that you want open side by side with a place to take notes in emacs. It does not
+replace full featured web browsers but is still helpful for reference document
+review.
 
-Neovim and Emacs both have distributions.
-A lot of people tell you to build your own configuration.
-It can take a long time to really understand how to setup your own configuration
-to best optimize your workflows.
-I like how the distributions usually offer keybindings decided on with a logical
-layout.
-It is helpful to build your own config because you learn so much.
-I think the best answer is to do both a custom config and try using the
-distributions to learn as much as possible.
+Neovim and Emacs both have distributions. A lot of people tell you to build your
+own configuration. It can take a long time to really understand how to setup
+your own configuration to best optimize your workflows. I like how the
+distributions usually offer keybindings decided on with a logical layout. It is
+helpful to build your own config because you learn so much. I think the best
+answer is to do both a custom config and try using the distributions to learn as
+much as possible.
 - [[https://gitlab.com/public-repositories/emacs-groundup/-/blob/main/src/docs/emacs-groundup.org]]
 *** Learning The Vim Keybindings - Video Game For Vim Keybindings
 - [[https://vim-adventures.com/]]
-I highly recommend playing this game.
-I have to confess that I find the game frustrating, but it helps you learn, so I
-feel it is worth the trouble of playing the game and paying for it.
-As long as you know you want to build vim skills, then it is worth the trouble
-to play the game in my opinion.
-You can play the game a little while for free, after that you have to pay.
-At first I was not willing to pay for it, but I decided to just do it anyway and
-I am really glad I did.
-It forces you to learn the vim motions in a different context and makes you more
-effective in text editing contexts.
+I highly recommend playing this game. I have to confess that I find the game
+frustrating, but it helps you learn, so I feel it is worth the trouble of
+playing the game and paying for it. As long as you know you want to build vim
+skills, then it is worth the trouble to play the game in my opinion. You can
+play the game a little while for free, after that you have to pay. At first I
+was not willing to pay for it, but I decided to just do it anyway and I am
+really glad I did. It forces you to learn the vim motions in a different context
+and makes you more effective in text editing contexts.
 
 The reason why I find the game frustrating is the author does not give you
-enough information for you to know what you are supposed to do.
-He does this on purpose to challenge you, but I wish he added more of a hint
-system in the game to give you a bit more information to work with, but please
-do not let this detour you from working through the challenges.
+enough information for you to know what you are supposed to do. He does this on
+purpose to challenge you, but I wish he added more of a hint system in the game
+to give you a bit more information to work with, but please do not let this
+detour you from working through the challenges.
 
 I recommend you play the game and struggle as much as possible before trying to
 find any answers online.
@@ -545,17 +521,16 @@ I have some mental/brain challenges with working through a game like this, so I
 know others may also experience challenges where it may be very difficult for
 you to figure out what to do in the game.
 
-First take a break and try the problem again.
-Look at the motions available to you and think about creative ways to use them.
+First take a break and try the problem again. Look at the motions available to
+you and think about creative ways to use them.
 
-Instead of looking up an answer you can also email the author for a hint.
-He tries not to give you the answer but prefers just to give you a hint so you
-can try to figure it out.
+Instead of looking up an answer you can also email the author for a hint. He
+tries not to give you the answer but prefers just to give you a hint so you can
+try to figure it out.
 - [[https://github.com/pepers/vim-adventures]]
 This has answers in text form from Level 8 to the Last Level of the main story
-line.
-This does not cover the Macro puzzles.
-There are some small mistakes in the document, but it is mostly correct.
+line. This does not cover the Macro puzzles. There are some small mistakes in
+the document, but it is mostly correct.
 **** Videos From Vomikod
 Playlist
 - [[https://youtube.com/playlist?list=PLl3Gy8rm8g9THKPnmbegeeiu0NvmbLg-V&si=Kc9uqQXNbWAoJTA7]]
@@ -569,14 +544,13 @@ Videos of note:
 - Level 1 -- How to cross the ocean information
 - Explains Level 5 where is the hidden key
 **** File Formats For Note Taking
-Org and markdown are two popular formats for taking notes.
-You can use plain text documents (txt) if you just want to copy and paste a
-bunch of information into a file that you can search or grep later to find.
-If you are organizing information that you are going share with others or need
-the document to be more structured for your own reference then org and markdown
-formats are worth learning and using.
-If you need highly structured control over formatting above what markdown and
-org can provide then look into LaTeX.
+Org and markdown are two popular formats for taking notes. You can use plain
+text documents (txt) if you just want to copy and paste a bunch of information
+into a file that you can search or grep later to find. If you are organizing
+information that you are going share with others or need the document to be more
+structured for your own reference then org and markdown formats are worth
+learning and using. If you need highly structured control over formatting above
+what markdown and org can provide then look into LaTeX.
 ***** Short Videos Note Taking
 ****** Is Neovim The Ultimate Note Taking Tool?
 - [[https://www.youtube.com/watch?v=vdBkQ4jT2OE]]
@@ -590,9 +564,9 @@ offer more):
 - FULL NEOVIM Configuration Walkthrough As A DevOps Engineer On MacOS
 - Ultimate Notetaking: My Neovim Zettelkasten Based on Obsidian - Complete Walkthrough
 - My Entire Neovim + Tmux Workflow As A DevOps Engineer On MacOS
-I like the style and approach of how he uses markdown and his workflows.
-When you install neovim it is bare bones, so you can add distribution layer on
-top of the base that makes it easy to use and awesome right away, you can still
+I like the style and approach of how he uses markdown and his workflows. When
+you install neovim it is bare bones, so you can add distribution layer on top of
+the base that makes it easy to use and awesome right away, you can still
 customize it further to meet your needs but it gives you a good out of the box
 experience.
 *** Neovim Distributions
@@ -664,38 +638,35 @@ First you have to install espeak on your system.
 Then install greader.
 **** My Greader Workflow In Spacemacs In Detail
 Opening keybinding notes: when you have evil mode on you can do your LEADER KEY
-which can be set to anything but the default is =SPACE= (space bar key).
-If you have evil mode off you can do =ALT-m= (called Meta-m or M-m the M- part
+which can be set to anything but the default is =SPACE= (space bar key). If you
+have evil mode off you can do =ALT-m= (called Meta-m or M-m the M- part
 represents the Meta keybinding which is actually the alt key on modern
 keyboards - there were old keyboards that had this extra key that are not widely
 used anymore).
 
 Open Spacemacs then open the text file I want to have read to me with the
-robotic voice.
-Note the reading speed of the robot is set in your dot spacemacs (.spacemacs)
-config file.
-You press =SPC f e d= to open your configuration file.
+robotic voice. Note the reading speed of the robot is set in your dot spacemacs
+(.spacemacs) config file. You press =SPC f e d= to open your configuration file.
 You then go to the ~defun dotspacemacs/user-config ()~ and add ~(setq
-greader-espeak-rate 500)~.
-You vary the number to whatever suites your preferred speaking pace.
-I would keep in mind that since it is reading text it is not perfectly
-comparable to the rate that people talk or what speed you would normally read.
-So just try different speeds until you find what works best for you.
-Press =SPC SPC= and type =turn-off-evil-mode= and =ENTER=.
-You have to turn off evil mode for using greader - well you could use it by
-customizing a bunch of stuff, but I just disable and re-enable it when I am
-done.
-=M-x= type =greader-mode ENTER=.
-To have it start reading you do =C-r SPACE= and to have it stop you do =SPACE=.
+greader-espeak-rate 500)~. You vary the number to whatever suites your preferred
+speaking pace. I would keep in mind that since it is reading text it is not
+perfectly comparable to the rate that people talk or what speed you would
+normally read. So just try different speeds until you find what works best for
+you.
 
-Another customization I like to use it to do =SPC w c C= which is toggling
-distraction free settings to be active.
-This centers the text and gets rid of distractions and makes the reading and
-listening experience better.
-=SPC SPC visual-line-mode ENTER= also fixes the word wrapping for me so words
-are not cut off in the middle of letters and it wraps on whole words.
- I actually like the default wrapping for programming but for reading and
-writing prose I find visual-line-mode more effective most of the time.
+A customization I like to use it to do =SPC w c C= which is toggling distraction
+free settings to be active. This centers the text and gets rid of distractions
+and makes the reading and listening experience better. =SPC SPC visual-line-mode
+ENTER= also fixes the word wrapping for me so words are not cut off in the
+middle of letters and it wraps on whole words. I actually like the default
+wrapping for programming but for reading and writing prose I find
+visual-line-mode more effective most of the time.
+
+Press =SPC SPC= and type =turn-off-evil-mode= and =ENTER=. You have to turn off
+evil mode for using greader - well you could use it by customizing a bunch of
+stuff, but I just disable and re-enable it when I am done. =M-x= type
+=greader-mode ENTER=. To have it start reading you do =C-r SPACE= and to have it
+stop you do =SPACE=.
 
 I press =C-l= two or three times in a row to move the screen of text back up to
 the top (you can press it twice to get it into the middle and three times to get
@@ -794,10 +765,9 @@ for me to continue reading and following it.
 #+end_example
 ** FAQs
 *** Which text editor do you recommend the most?
-Emacs.
-It offers the most customization, flexibility, add-ons/plugins... basically an
-incredible ecosystem.
-The wide variety of tools can help in many areas, for example:
+Emacs. It offers the most customization, flexibility, add-ons/plugins...
+basically an incredible ecosystem. The wide variety of tools can help in many
+areas, for example:
 - You can set a text to speech to read to you.
 - You can use a variety of terminals.
 - You can edit text using any methodology you want including vim keybindings.
@@ -805,20 +775,18 @@ The wide variety of tools can help in many areas, for example:
 - You can optimize your workflows by having more tasks inside of Emacs.
 - You have full org mode support for text tasks which then can be exported to a myriad of formats.
 *** Which text format do you recommend the most?
-The org format from Emacs org mode.
-It is a more consistent implementation compared to markdown.
-Although markdown is not really that bad, Emacs has a robust markdown mode if
-you do need that format.
-You can also convert from org documents to markdown.
-Org mode can seem a little overwhelming at first because it can do so much.
-However, learning the basics can allow you to do the same things that markdown
-allows but have the flexibility to expand what you use it for if needed.
-Look at Orgdown if you want a simpler starting point then full org mode.
-Another interesting feature is you can use code blocks and then tangle them
-to export the code blocks to a separate file.
-This is called literate programming allows you to create one file and then have
-different exports for documentation and for code.
-You only have to maintain one file, but you create whatever exports you need.
+The org format from Emacs org mode. It is a more consistent implementation
+compared to markdown. Although markdown is not really that bad, Emacs has a
+robust markdown mode if you do need that format. You can also convert from org
+documents to markdown. Org mode can seem a little overwhelming at first because
+it can do so much. However, learning the basics can allow you to do the same
+things that markdown allows but have the flexibility to expand what you use it
+for if needed. Look at Orgdown if you want a simpler starting point then full
+org mode. Another interesting feature is you can use code blocks and then tangle
+them to export the code blocks to a separate file. This is called literate
+programming allows you to create one file and then have different exports for
+documentation and for code. You only have to maintain one file, but you create
+whatever exports you need.
 ** Additional Links
 - Vim/Neovim: [[https://github.com/YanivZalach/Vim_Config_NO_PLUGINS]]
 - Vim/Neovim: [[https://github.com/YanivZalach/Vim_Config]]
@@ -918,5 +886,4 @@ You only have to maintain one file, but you create whatever exports you need.
 - [[https://www.youtube.com/watch?v=mmqDYw9C30I][Josean Martinez - 7 Amazing CLI Tools You Need To Try]]
 - [[https://www.youtube.com/watch?v=uOnL4fEnldA][Josean Martinez - How To Make Your Boring macOS Terminal Amazing With Alacritty (some of the tips apply to linux Alacritty use as well)]]
 ** Contact Me
-If you have any interesting information to share please let me know.
-[[mailto:david.rrrrrr@yandex.com][Email Dave]]
+If you have any interesting information to share please let me know. [[mailto:david.rrrrrr@yandex.com][Email Dave]]
