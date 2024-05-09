@@ -66,6 +66,8 @@
   - sudo pacman -S yay
   - lsb_release -drc
   - yay -S vmware-horizon-client
+  - sudo pacman -S espeak-ng
+  - sudo pacman -S espeak-ng-compat
 *** openSUSE Linux Leap 15.5 x86_64 Plasma KDE
 - [[https://www.opensuse.org/#Leap][openSUSE Leap]]
 - [[https://snapcraft.io/install/snap-store/opensuse][Install Snap on openSUSE]]
@@ -91,7 +93,7 @@ detox
 Here are a bunch of commands I have run recently just for future reference. I
 may or may not have continued using some of these, but you have to sometimes
 play around and try different options to find out what is helpful. Some of this
-is general command line and some is openSUSE specific.
+is general command line and some is openSUSE or Manjaro specific.
 #+begin_src sh
   cat /etc/os-release
   sudo zypper refresh
@@ -146,7 +148,8 @@ is general command line and some is openSUSE specific.
   sudo zypper install pandoc
   sudo zypper install notmuch
   sudo zypper install isync # mbsync
-  sudo zypper install espeak
+  sudo zypper install espeak-ng
+  sudo zypper install espeak-ng-compat
   sudo zypper install ranger
   sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:/Wine/15.4/Emulators:Wine.repo
   sudo zypper refresh
@@ -169,7 +172,7 @@ is general command line and some is openSUSE specific.
   # add line:
   # openSUSE
   UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  user                          0  0
-  # manjaro
+  # Manjaro
   UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  users                         0  0
   #+end_src
 **** Trash-cli commands
@@ -194,7 +197,7 @@ there are many more.
 - [[https://system76.com/]]
   - company sells computers with pop OS pre-installed
 - [[https://ubuntu.com/]]
-- [[https://manjaro.org/][https://manjaro.org/]]
+- [[https://manjaro.org/][https://Manjaro.org/]]
 *** Apps
 - Adobe DNG Converter (windows app run through emulation on wine)
   - [[https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html]]
