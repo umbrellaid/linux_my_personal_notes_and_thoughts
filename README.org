@@ -363,10 +363,7 @@ After that section is this section where I adjust a couple of settings:
     )
 #+end_src
 ***** Section 4
-After that section is this section where I set a variable for greader and I add
-a custom function that wraps http links so that the link has both the [] and ()
-for markdown files. Otherwise when I am in format checkers it throws an error
-for urls that are not in the right format.
+After that section is this section where I set a variable for greader
 #+begin_src emacs-lisp
   (defun dotspacemacs/user-config ()
     "Configuration for user code:
@@ -552,13 +549,17 @@ Videos of note:
 - Level 1 -- How to cross the ocean information
 - Explains Level 5 where is the hidden key
 **** File Formats For Note Taking
-Org and markdown are two popular formats for taking notes. You can use plain
-text documents (txt) if you just want to copy and paste a bunch of information
-into a file that you can search or grep later to find. If you are organizing
+Org, AsciiDoc and Markdown are a few examples of popular formats for taking
+notes. There are more options out there then these three. You can use plain text
+documents (txt) if you just want to copy and paste a bunch of information into a
+file that you can search or grep later to find. If you are organizing
 information that you are going share with others or need the document to be more
-structured for your own reference then org and markdown formats are worth
+structured for your own reference then org and Markdown formats are worth
 learning and using. If you need highly structured control over formatting above
-what markdown and org can provide then look into LaTeX.
+what AsciiDoc, Markdown and Org can provide then look into LaTeX. Note you can
+use a tool called Pandoc to convert these formats to other formats. So you do
+not need to go to the LaTeX level which is very involved unless you need very
+specific formatting for PDFs or print.
 ***** Short Videos Note Taking
 ****** Is Neovim The Ultimate Note Taking Tool?
 - [[https://www.youtube.com/watch?v=vdBkQ4jT2OE]]
@@ -572,7 +573,7 @@ offer more):
 - FULL NEOVIM Configuration Walkthrough As A DevOps Engineer On MacOS
 - Ultimate Notetaking: My Neovim Zettelkasten Based on Obsidian - Complete Walkthrough
 - My Entire Neovim + Tmux Workflow As A DevOps Engineer On MacOS
-I like the style and approach of how he uses markdown and his workflows. When
+I like the style and approach of how he uses Markdown and his workflows. When
 you install neovim it is bare bones, so you can add distribution layer on top of
 the base that makes it easy to use and awesome right away, you can still
 customize it further to meet your needs but it gives you a good out of the box
@@ -784,18 +785,25 @@ areas, for example:
 - You have full org mode support for text tasks which then can be exported to a myriad of formats.
 *** Which text format do you recommend the most?
 The org format from Emacs org mode. It is a more consistent implementation
-compared to markdown. Although markdown is not really that bad, Emacs has a
-robust markdown mode if you do need that format. You can also convert from org
-documents to markdown. Org mode can seem a little overwhelming at first because
-it can do so much. However, learning the basics can allow you to do the same
-things that markdown allows but have the flexibility to expand what you use it
-for if needed. Look at Orgdown if you want a simpler starting point then full
-org mode. Another interesting feature is you can use code blocks and then tangle
-them to export the code blocks to a separate file. This is called literate
-programming allows you to create one file and then have different exports for
-documentation and for code. You only have to maintain one file, but you create
-whatever exports you need.
+compared to Markdown. Although Markdown is not really that bad, Emacs has a
+robust Markdown mode if you do need that format. You can also convert from org
+documents to Markdown using Pandoc. Org mode can seem a little overwhelming at
+first because it can do so much. However, learning the basics can allow you to
+do the same things that Markdown allows but have the flexibility to expand what
+you use it for if needed. Look at Orgdown if you want a simpler starting point
+then full org mode. Another interesting feature is you can use code blocks and
+then tangle them to export the code blocks to a separate file. This is called
+literate programming allows you to create one file and then have different
+exports for documentation and for code. You only have to maintain one file, but
+you create whatever exports you need. Another option of note is AsciiDoc which
+has better formatting than Markdown and can be converted using Pandoc to lots of
+formats as well. It seems to be popular for technical publishing, including but
+not limited to producing actual technical books, README files, man pages,
+articles and taking notes.
 ** Additional Links
+- https://asciidoc.org/
+- https://powerman.name/doc/asciidoc
+- https://pandoc.org/
 - Vim/Neovim: [[https://github.com/YanivZalach/Vim_Config_NO_PLUGINS]]
 - Vim/Neovim: [[https://github.com/YanivZalach/Vim_Config]]
 - Neovim: [[https://github.com/YanivZalach/Nvim_Config]]
@@ -893,5 +901,6 @@ whatever exports you need.
     syntax, supported software programs, mobile apps, services, and parsers.
 - [[https://www.youtube.com/watch?v=mmqDYw9C30I][Josean Martinez - 7 Amazing CLI Tools You Need To Try]]
 - [[https://www.youtube.com/watch?v=uOnL4fEnldA][Josean Martinez - How To Make Your Boring macOS Terminal Amazing With Alacritty (some of the tips apply to linux Alacritty use as well)]]
+- https://github.com/james-stoup/org-mode-better-defaults
 ** Contact Me
 If you have any interesting information to share please let me know. [[mailto:david.rrrrrr@yandex.com][Email Dave]]
