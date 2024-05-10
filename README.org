@@ -902,5 +902,7 @@ articles and taking notes.
 - [[https://www.youtube.com/watch?v=mmqDYw9C30I][Josean Martinez - 7 Amazing CLI Tools You Need To Try]]
 - [[https://www.youtube.com/watch?v=uOnL4fEnldA][Josean Martinez - How To Make Your Boring macOS Terminal Amazing With Alacritty (some of the tips apply to linux Alacritty use as well)]]
 - https://github.com/james-stoup/org-mode-better-defaults
+- https://github.com/james-stoup/emacs-org-mode-tutorial/
+- https://orgmode.org/quickstart.html
 ** Contact Me
 If you have any interesting information to share please let me know. [[mailto:david.rrrrrr@yandex.com][Email Dave]]
