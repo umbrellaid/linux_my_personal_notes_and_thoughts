@@ -68,6 +68,11 @@
   - yay -S vmware-horizon-client
   - sudo pacman -S espeak-ng
   - sudo pacman -S espeak-ng-compat
+  - sudo pacman -S texlive-core texlive-bin texlive-latexextra
+    - this is for exporting to pdf from org mode emacs command pdflatex
+    - alternative for larger install: sudo pacman -S texlive-most texlive-lang
+      - note this is a large install
+    - to find additional packages: pacman -Ss texlive
 *** openSUSE Linux Leap 15.5 x86_64 Plasma KDE
 - [[https://www.opensuse.org/#Leap][openSUSE Leap]]
 - [[https://snapcraft.io/install/snap-store/opensuse][Install Snap on openSUSE]]
@@ -159,6 +164,13 @@ is general command line and some is openSUSE or Manjaro specific.
   winecfg
   wine AdobeDNGConverter_x64_16_2_1.exe
   sudo zypper install aspell
+  # adding tex support to a system is a substantial large install
+  # you could export the latex source and upload to a website like
+  # overleaf and have their system render the pdf from the latex source
+  # if you are doing a lot of updates it might be annoying to keep
+  # refreshing, but if you just do something occassionally it might be
+  # sufficent
+  sudo zypper install texlive texlive-pdflatex
   pandoc -f markdown -t org -o note.org /tmp/md_note.md
   python3.11 -m pip install exifread
   python3.11 -m pip install hyfetch
@@ -904,5 +916,6 @@ articles and taking notes.
 - https://github.com/james-stoup/org-mode-better-defaults
 - https://github.com/james-stoup/emacs-org-mode-tutorial/
 - https://orgmode.org/quickstart.html
+- https://karl-voit.at/2021/07/23/emacs-lock-in/
 ** Contact Me
 If you have any interesting information to share please let me know. [[mailto:david.rrrrrr@yandex.com][Email Dave]]
