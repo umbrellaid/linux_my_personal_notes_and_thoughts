@@ -1,5 +1,6 @@
 * Linux My Personal Notes and Thoughts                                  :TOC:
   - [[#linux-notes--thoughts][Linux Notes / Thoughts]]
+    - [[#cheat-sheet-links][Cheat Sheet Links]]
     - [[#manjaro-linux-plasma-kde][Manjaro Linux Plasma KDE]]
     - [[#opensuse-linux-leap-155-x86_64-plasma-kde][openSUSE Linux Leap 15.5 x86_64 Plasma KDE]]
     - [[#random-linux-commands-flag-notes][Random Linux Commands Flag Notes]]
@@ -50,6 +51,14 @@
   - [[#contact-me][Contact Me]]
 
 ** Linux Notes / Thoughts
+*** Cheat Sheet Links
+- https://wiki.manjaro.org/index.php/CheatSheet
+- https://wiki.manjaro.org/index.php/Main_Page
+- https://docs.manjaro.org/
+- https://forum.manjaro.org/
+- https://en.opensuse.org/SDB:Zypper_usage
+- https://doc.opensuse.org/documentation/leap/reference/single-html/book-reference/index.html#sec-zypper
+- https://doc.opensuse.org/
 *** Manjaro Linux Plasma KDE
 - open graphical pamac
   - official repositories
@@ -94,6 +103,12 @@ detox
 - n --dry-run does not change anything
 - r recursive into subfolders (any folders starting with . such as .git and .cache are skipped by default)
 - v be verbose about files being renamed
+rsync
+a - archive mode - quick way to tell it you want recursion and preserve almost everything about the file properties permissions
+v - verbose
+h - output numbers in a human-readable format
+--delete (automatically calls --delete-during) - tells rsync to delete extraneous files - read the manual (man) page for this option as their are some complex nuances to it for difference scenarios, but for my backup to external hard drive use this is a good option
+--exclude - exclude something from being synced
 *** Random Linux Commands
 Here are a bunch of commands I have run recently just for future reference. I
 may or may not have continued using some of these, but you have to sometimes
@@ -349,6 +364,7 @@ dotspacemacs-configuration-layers
                            ("https://protesilaos.com/master.xml" emacs)
                            ("https://sachachua.com/blog/feed" emacs)
                            ("https://www.reddit.com/r/orgmode.rss" emacs)
+                           ("https://karthinks.com/index.xml" emacs)
                            )
             )
     treemacs)
@@ -383,7 +399,7 @@ After that section is this section where I set a variable for greader
   configuration.
   Put your configuration code here, except for variables that should be set
   before packages are loaded."
-    (setq greader-espeak-rate 400)
+    (setq greader-espeak-rate 425)
     (setq python-shell-interpreter "/usr/bin/python3.11")
     )
 #+end_src
