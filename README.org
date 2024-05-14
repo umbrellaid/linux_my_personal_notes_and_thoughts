@@ -47,43 +47,43 @@
 
 ** Linux Notes / Thoughts
 *** doom emacs
-before you start install these items
-git
-ripgrep
-Manjaro
-sudo pacman -S ripgrep
-should already be included in openSUSE or
-sudo zypper install ripgrep
-fd
-Manjaro
-pacman -S fd
-openSUSE
-because fd is out of date in the openSUSE Leap I am installing with cargo which is part of rust instead
-https://www.rust-lang.org/tools/install
-https://doc.rust-lang.org/book/ch01-01-installation.html
-https://learning-rust.github.io/docs/installation/
-https://en.opensuse.org/Rust - better to not use this and instead use the above, but it is another option
-cargo install fd-find
-snap install emacs --classic
-Manjaro
-# required dependencies
-pacman -S git emacs ripgrep
-# optional dependencies
-pacman -S fd
-openSUSE
-zypper addrepo https://download.opensuse.org/repositories/editors/openSUSE_Leap_15.1/editors.repo
-zypper refresh
-zypper install emacs
-git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
-~/.emacs.d/bin/doom install
-cd ~/.local/share/fonts/
-https://www.nerdfonts.com/font-downloads
-save UbuntuMono Nerd Font files to the above folder
-https://design.ubuntu.com/font
-save Ubuntu font files to the above folder
-sudo fc-cache -fv
-fc-list | grep -i 'ubuntu'
-M-x all-the-icons-install-fonts
+- before you start install these items
+- git
+- ripgrep
+- Manjaro
+- sudo pacman -S ripgrep
+- should already be included in openSUSE or
+- sudo zypper install ripgrep
+- fd
+- Manjaro
+- pacman -S fd
+- openSUSE
+- because fd is out of date in the openSUSE Leap I am installing with cargo which is part of rust instead
+- https://www.rust-lang.org/tools/install
+- https://doc.rust-lang.org/book/ch01-01-installation.html
+- https://learning-rust.github.io/docs/installation/
+- https://en.opensuse.org/Rust - better to not use this and instead use the above, but it is another option
+- cargo install fd-find
+- snap install emacs --classic
+- Manjaro
+- # required dependencies
+- pacman -S git emacs ripgrep
+- # optional dependencies
+- pacman -S fd
+- openSUSE
+- zypper addrepo https://download.opensuse.org/repositories/editors/openSUSE_Leap_15.1/editors.repo
+- zypper refresh
+- zypper install emacs
+- git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+- ~/.emacs.d/bin/doom install
+- cd ~/.local/share/fonts/
+- https://www.nerdfonts.com/font-downloads
+- save UbuntuMono Nerd Font files to the above folder
+- https://design.ubuntu.com/font
+- save Ubuntu font files to the above folder
+- sudo fc-cache -fv
+- fc-list | grep -i 'ubuntu'
+- M-x all-the-icons-install-fonts
 *** Cheat Sheet Links
 - https://wiki.manjaro.org/index.php/CheatSheet
 - https://wiki.manjaro.org/index.php/Main_Page
@@ -883,7 +883,7 @@ If you have any interesting information to share please let me know. [[mailto:da
 ;;
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font" :size 15 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Ubuntu" :size 16)
-      doom-big-font (font-spec :family "UbuntuMono Nerd Font" :size 20))
+      doom-big-font (font-spec :family "UbuntuMono Nerd Font" :size 17))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
