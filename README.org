@@ -289,8 +289,6 @@ there are many more.
 - FD find entries on your file system
   - [[https://github.com/sharkdp/fd]]
   - installed from system package manager
-- Geeqie - fast image viewer including raw files
-  - [[https://flathub.org/apps/org.geeqie.Geeqie]]
 - Handbrake
   - [[https://handbrake.fr/downloads.php]]
   - Flatpak - [[https://flathub.org/apps/fr.handbrake.ghb]]
