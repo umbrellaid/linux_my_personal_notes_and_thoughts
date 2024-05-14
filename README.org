@@ -1,5 +1,6 @@
-* Linux My Personal Notes and Thoughts                                  :TOC:
+* Linux My Personal Notes and Thoughts                                  :TOC_9:
   - [[#linux-notes--thoughts][Linux Notes / Thoughts]]
+    - [[#doom-emacs][doom emacs]]
     - [[#cheat-sheet-links][Cheat Sheet Links]]
     - [[#manjaro-linux-plasma-kde][Manjaro Linux Plasma KDE]]
     - [[#opensuse-linux-leap-155-x86_64-plasma-kde][openSUSE Linux Leap 15.5 x86_64 Plasma KDE]]
@@ -9,20 +10,10 @@
       - [[#other-random-opensuse-links][Other Random openSUSE Links]]
     - [[#linux-distributions][Linux Distributions]]
     - [[#apps][Apps]]
-    - [[#apps-within-apps][Apps Within Apps]]
-      - [[#neovim][Neovim]]
-      - [[#emacs][Emacs]]
-    - [[#fonts][Fonts]]
     - [[#configurations-and-tweaks][Configurations and Tweaks]]
       - [[#alacritty][Alacritty]]
         - [[#main-configuration-from-here][Main Configuration From Here]]
         - [[#other-interesting-configurations][Other Interesting Configurations]]
-      - [[#spacemacs][Spacemacs]]
-        - [[#section-1][Section 1]]
-        - [[#section-2][Section 2]]
-        - [[#section-3][Section 3]]
-        - [[#section-4][Section 4]]
-        - [[#section-5][Section 5]]
   - [[#text-editing-resources][Text Editing Resources]]
     - [[#introduction-text][Introduction Text]]
       - [[#links][Links]]
@@ -38,7 +29,7 @@
     - [[#the-primeagen-related-links---michael-paulson][The Primeagen Related Links - Michael Paulson]]
     - [[#emacs-m-x-commands-i-randomly-use][Emacs M-x Commands I randomly use]]
     - [[#greader-notes][Greader Notes]]
-      - [[#my-greader-workflow-in-spacemacs-in-detail][My Greader Workflow In Spacemacs In Detail]]
+      - [[#my-greader-workflow-in-detail][My Greader Workflow In Detail]]
   - [[#newsboat-configuration-and-my-youtube-playlist-watch-list][Newsboat Configuration and My Youtube Playlist Watch list]]
     - [[#config-file][config file]]
     - [[#main-color-theme-dark-file][main color theme dark file]]
@@ -51,6 +42,44 @@
   - [[#contact-me][Contact Me]]
 
 ** Linux Notes / Thoughts
+*** doom emacs
+before you start install these items
+git
+ripgrep
+Manjaro
+sudo pacman -S ripgrep
+should already be included in openSUSE or
+sudo zypper install ripgrep
+fd
+Manjaro
+pacman -S fd
+openSUSE
+because fd is out of date in the openSUSE Leap I am installing with cargo which is part of rust instead
+https://www.rust-lang.org/tools/install
+https://doc.rust-lang.org/book/ch01-01-installation.html
+https://learning-rust.github.io/docs/installation/
+https://en.opensuse.org/Rust - better to not use this and instead use the above, but it is another option
+cargo install fd-find
+snap install emacs --classic
+Manjaro
+# required dependencies
+pacman -S git emacs ripgrep
+# optional dependencies
+pacman -S fd
+openSUSE
+zypper addrepo https://download.opensuse.org/repositories/editors/openSUSE_Leap_15.1/editors.repo
+zypper refresh
+zypper install emacs
+git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+cd ~/.local/share/fonts/
+https://www.nerdfonts.com/font-downloads
+save UbuntuMono Nerd Font files to the above folder
+https://design.ubuntu.com/font
+save Ubuntu font files to the above folder
+sudo fc-cache -fv
+fc-list | grep -i 'ubuntu'
+M-x all-the-icons-install-fonts
 *** Cheat Sheet Links
 - https://wiki.manjaro.org/index.php/CheatSheet
 - https://wiki.manjaro.org/index.php/Main_Page
@@ -82,6 +111,7 @@
     - alternative for larger install: sudo pacman -S texlive-most texlive-lang
       - note this is a large install
     - to find additional packages: pacman -Ss texlive
+  - sudo pacman -S isync notmuch #mbsync
 *** openSUSE Linux Leap 15.5 x86_64 Plasma KDE
 - [[https://www.opensuse.org/#Leap][openSUSE Leap]]
 - [[https://snapcraft.io/install/snap-store/opensuse][Install Snap on openSUSE]]
@@ -163,7 +193,7 @@ is general command line and some is openSUSE or Manjaro specific.
   sudo zypper install the_silver_searcher
   sudo zypper install ripgrep
   # to make sure there are no emacs files that need to be deleted before I
-  # install spacemacs
+  # install doom emacs
   find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \) -print
   sudo zypper install pandoc
   sudo zypper install notmuch
@@ -201,6 +231,9 @@ is general command line and some is openSUSE or Manjaro specific.
   UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  user                          0  0
   # Manjaro
   UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  users                         0  0
+  sudo snap install mpv
+  find /path/to/search -type d \( -iname "*elfeed*" -o -iname ".*elfeed*" \)
+  sudo rsync -avh /run/media/david/AmazonThumbDrive/reorganized_emails/ /home/david/Maildir/reorganized_emails/
   #+end_src
 **** Trash-cli commands
 - trash-put           trash files and directories.
@@ -286,15 +319,6 @@ there are many more.
   - [[https://help.vivaldi.com/desktop/install-update/manual-setup-vivaldi-linux-repositories/]]
 - Wine (windows emulation)
   - [[https://wiki.winehq.org/Download]]
-*** Apps Within Apps
-**** Neovim
-- lazyvim distribution - https://www.lazyvim.org/
-**** Emacs
-- spacemacs distribution - https://www.spacemacs.org/
-*** Fonts
-- Fira Code [[https://github.com/tonsky/FiraCode]]
-  - Nerd Font version of Fira Code is Listed as FiraCode Nerd Font
-    [[https://www.nerdfonts.com/font-downloads]]
 *** Configurations and Tweaks
 **** Alacritty
 ***** Main Configuration From Here
@@ -306,106 +330,18 @@ Neovim does not work fully without a Nerd Font set as your terminal font
 [[https://www.nerdfonts.com/]]
 #+begin_src toml
   [font.bold]
-  family = "FiraCode Nerd Font"
+  family = "UbuntuMono Nerd Font"
   style = "Bold"
   [font.bold_italic]
-  family = "FiraCode Nerd Font"
+  family = "UbuntuMono Nerd Font"
   style = "Bold Italic"
   [font.italic]
-  family = "FiraCode Nerd Font"
+  family = "UbuntuMono Nerd Font"
   style = "Italic"
   [font.normal]
-  family = "FiraCode Nerd Font"
+  family = "UbuntuMono Nerd Font"
   style = "Regular"
 #+end_src
-**** Spacemacs
-***** Section 1
-dotspacemacs-configuration-layers
-#+begin_src emacs-lisp
-  ;; List of configuration layers to load.
-  dotspacemacs-configuration-layers
-  '(
-    ;; ----------------------------------------------------------------
-    ;; Example of useful layers you may want to use right away.
-    ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
-    ;; `M-m f e R' (Emacs style) to install them.
-    ;; ----------------------------------------------------------------
-    auto-completion
-    better-defaults
-    emacs-lisp
-    git
-    helm
-    lsp
-    markdown
-    multiple-cursors
-    org
-    (shell :variables
-           shell-default-height 30
-           shell-default-position 'bottom)
-    spell-checking
-    syntax-checking
-    version-control
-    ranger
-    emoji
-    python
-    (evil-snipe
-     :variables
-     evil-snipe-enable-alternate-f-and-t-behaviors t)
-    notmuch
-    (elfeed :variables
-            elfeed-feeds '(
-                           ("http://nullprogram.com/feed/" emacs)
-                           ("https://planet.emacslife.com/atom.xml" emacs)
-                           ("https://www.reddit.com/r/emacs.rss" emacs)
-                           ("https://www.reddit.com/r/neovim.rss" neovim)
-                           ("https://www.reddit.com/r/vim.rss" vim)
-                           ("https://neovim.io/news.xml" neovim)
-                           ("https://dotfyle.com/this-week-in-neovim/rss.xml" neovim)
-                           ("https://protesilaos.com/master.xml" emacs)
-                           ("https://sachachua.com/blog/feed" emacs)
-                           ("https://www.reddit.com/r/orgmode.rss" emacs)
-                           ("https://karthinks.com/index.xml" emacs)
-                           )
-            )
-    treemacs)
-#+end_src
-***** Section 2
-After that section this section I add apps from MELPA
-#+begin_src emacs-lisp
-  dotspacemacs-additional-packages '(
-                                     greader
-                                     sqlite3
-                                     )
-#+end_src
-***** Section 3
-After that section is this section where I adjust a couple of settings:
-#+begin_src emacs-lisp
-  (defun dotspacemacs/user-init ()
-    "Initialization for user code:
-  This function is called immediately after `dotspacemacs/init', before layer
-  configuration.
-  It is mostly for variables that should be set before packages are loaded.
-  If you are unsure, try setting them in `dotspacemacs/user-config' first."
-    ;; For python
-    (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
-    )
-#+end_src
-***** Section 4
-After that section is this section where I set a variable for greader
-#+begin_src emacs-lisp
-  (defun dotspacemacs/user-config ()
-    "Configuration for user code:
-  This function is called at the very end of Spacemacs startup, after layer
-  configuration.
-  Put your configuration code here, except for variables that should be set
-  before packages are loaded."
-    (setq greader-espeak-rate 425)
-    (setq python-shell-interpreter "/usr/bin/python3.11")
-    )
-#+end_src
-Everything else is the standard configuration file without any changes.
-***** Section 5
-After install run this command once SPC SPC all-the-icons-install-fonts
 ** Text Editing Resources
 *** Introduction Text
 Text editing is incredibly valuable for programming, note taking, organizing and
@@ -673,7 +609,7 @@ inspirational:
 *** Greader Notes
 First you have to install espeak on your system.
 Then install greader.
-**** My Greader Workflow In Spacemacs In Detail
+**** My Greader Workflow In Detail
 Opening keybinding notes: when you have evil mode on you can do your LEADER KEY
 which can be set to anything but the default is =SPACE= (space bar key). If you
 have evil mode off you can do =ALT-m= (called Meta-m or M-m the M- part
@@ -681,15 +617,13 @@ represents the Meta keybinding which is actually the alt key on modern
 keyboards - there were old keyboards that had this extra key that are not widely
 used anymore).
 
-Open Spacemacs then open the text file I want to have read to me with the
-robotic voice. Note the reading speed of the robot is set in your dot spacemacs
-(.spacemacs) config file. You press =SPC f e d= to open your configuration file.
-You then go to the ~defun dotspacemacs/user-config ()~ and add ~(setq
-greader-espeak-rate 500)~. You vary the number to whatever suites your preferred
-speaking pace. I would keep in mind that since it is reading text it is not
-perfectly comparable to the rate that people talk or what speed you would
-normally read. So just try different speeds until you find what works best for
-you.
+Open Emacs then open the text file I want to have read to me with the robotic
+voice. Note the reading speed of the robot is set in your dot Emacs
+configuration file. Open your configuration file. ~(setq greader-espeak-rate
+500)~ You vary the number to whatever suites your preferred speaking pace. I
+would keep in mind that since it is reading text it is not perfectly comparable
+to the rate that people talk or what speed you would normally read. So just try
+different speeds until you find what works best for you.
 
 A customization I like to use it to do =SPC w c C= which is toggling distraction
 free settings to be active. This centers the text and gets rid of distractions
@@ -835,7 +769,6 @@ articles and taking notes.
 - Vim/Neovim: [[https://github.com/YanivZalach/Vim_Config_NO_PLUGINS]]
 - Vim/Neovim: [[https://github.com/YanivZalach/Vim_Config]]
 - Neovim: [[https://github.com/YanivZalach/Nvim_Config]]
-- Emacs: [[https://www.spacemacs.org/]]
 - Emacs: [[https://github.com/doomemacs/doomemacs]]
 - Emacs: [[https://github.com/corgi-emacs/corgi]]
 - Markdown: [[https://www.markdownguide.org/]]
@@ -890,11 +823,8 @@ articles and taking notes.
 - Neovim: [[https://github.com/itsvinayak/TurboNvimConfig.nvim]]
 - Vim/Neovim: [[https://www.youtube.com/watch?v=5BU2gBOe9RU][YouTube Video: Vim Tips I Wish I Knew Earlier by Sebastian Daschner]]
 - Neovim: [[https://www.youtube.com/watch?v=6pAG3BHurdM][YouTube Video: How I Setup Neovim On My Mac To Make It AMAZING In 2024 by Josean Martinez]]
-- [[https://github.com/trishume/trishume.github.com/blob/master/_posts%2F2015-03-07-configuring-spacemacs-a-tutorial.md]]
 - [[https://github.com/trishume/dotfiles]]
 - [[https://github.com/trishume]]
-- [[https://www.spacemacs.org/doc/DOCUMENTATION.html#orgheadline21]]
-- [[https://www.spacemacs.org/doc/LAYERS.html]]
 - [[https://elpa.gnu.org/packages/greader.html]]
 - [[https://github.com/emacs-straight/greader]]
 - [[https://github.com/emacs-straight]]
