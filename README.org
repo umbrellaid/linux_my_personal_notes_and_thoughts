@@ -149,98 +149,105 @@ may or may not have continued using some of these, but you have to sometimes
 play around and try different options to find out what is helpful. Some of this
 is general command line and some is openSUSE or Manjaro specific.
 #+begin_src sh
-  cat /etc/os-release
-  sudo zypper refresh
-  # if you are running tumbleweed sudo zypper dup
-  # --allow-vendor-change dup stands for distribution upgrades whereas
-  # zypper up is for package updates
-  sudo zypper update
-  # command not found - it will tell you what to install to make a
-  # certain command available to you
-  cnf <command>
-  # compiling and linking applications needed for make, make install commands
-  sudo zypper install patterns-devel-base-devel_basis # minimal set of tools for
-  # install command detox for fixing filenames https://github.com/dharple/detox
-  mkdir ~/build
-  cd ~/build
-  wget https://github.com/dharple/detox/releases/download/v2.0.0/detox-2.0.0.tar.gz
-  tar xzvf detox-2.0.0.tar.gz
-  cd detox-2.0.0
-  ./configure
-  make
-  sudo make install
-  # tool for hp printer
-  sudo zypper install hplip
-  sudo zypper install git-core
-  git --version
-  git config --global user.name "David R Rrrrr"
-  git config --global user.email "david.rrrrrr@yandex.com"
-  git config --global core.editor "vim"
-  git config --global user.name
-  git config --global user.email
-  git config --global core.editor
-  sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
-  sudo zypper refresh
-  sudo zypper install gh
-  gh auth login
-  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-  sudo zypper addrepo https://packages.microsoft.com/yumrepos/edge microsoft-edge
-  sudo zypper refresh
-  sudo zypper install microsoft-edge-stable
-  # alternative method for obtaining edge below
-  sudo zypper install opi
-  opi msedge
-  # other interesting options for opi - brave, megasync, vivaldi, vscode, yandex-browser
-  opi codecs
-  sudo zypper install fetchmsttfonts
-  sudo zypper install fira-code-fonts
-  sudo zypper install the_silver_searcher
-  sudo zypper install ripgrep
-  # to make sure there are no emacs files that need to be deleted before I
-  # install doom emacs
-  find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \) -print
-  sudo zypper install pandoc
-  sudo zypper install notmuch
-  sudo zypper install isync # mbsync
-  sudo zypper install espeak-ng
-  sudo zypper install espeak-ng-compat
-  sudo zypper install ranger
-  sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:/Wine/15.4/Emulators:Wine.repo
-  sudo zypper refresh
-  sudo zypper install wine-staging
-  wine --version
-  # adjust windows version to latest
-  winecfg
-  wine AdobeDNGConverter_x64_16_2_1.exe
-  sudo zypper install aspell
-  # adding tex support to a system is a substantial large install
-  # you could export the latex source and upload to a website like
-  # overleaf and have their system render the pdf from the latex source
-  # if you are doing a lot of updates it might be annoying to keep
-  # refreshing, but if you just do something occassionally it might be
-  # sufficent
-  sudo zypper install texlive texlive-pdflatex
-  pandoc -f markdown -t org -o note.org /tmp/md_note.md
-  python3.11 -m pip install exifread
-  python3.11 -m pip install hyfetch
-  python3.11 -m pip install trash-cli
-  sudo rsync -avh --delete <copy from path> <copy to path>
-  sudo rsync -avh --delete /run/media/david/140a6cd2-c07c-4339-bb9a-c87b592bafe5/ /run/media/david/01d0e521-1a65-41ad-a1b2-e77f68c41894/
-  sudo rsync -avh --delete --exclude='.cache/' --exclude='*~' /home/david/ .
-  sudo mkdir /mnt/internal_data/
-  sudo blkid # find drive uuid
-  # edit /etc/fstab - man fstab for details if needed
-  # add line:
-  # openSUSE
-  UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  user                          0  0
-  # Manjaro
-  UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  users                         0  0
-  sudo snap install mpv
-  find /path/to/search -type d \( -iname "*elfeed*" -o -iname ".*elfeed*" \)
-  sudo rsync -avh /run/media/david/AmazonThumbDrive/reorganized_emails/ /home/david/Maildir/reorganized_emails/
-  ln -s /home/david/reorganized_emails /home/david/Maildir/reorganized_emails
-  awk '{for(i=1;i<=NF;i++){printf "%s%s",$i,(i%10==0? ".\n":" ")}}' input.txt > output.txt
-  #+end_src
+cat /etc/os-release
+sudo zypper refresh
+# if you are running tumbleweed sudo zypper dup
+# --allow-vendor-change dup stands for distribution upgrades whereas
+# zypper up is for package updates
+sudo zypper update
+# command not found - it will tell you what to install to make a
+# certain command available to you
+cnf <command>
+# compiling and linking applications needed for make, make install commands
+sudo zypper install patterns-devel-base-devel_basis # minimal set of tools for
+# install command detox for fixing filenames https://github.com/dharple/detox
+mkdir ~/build
+cd ~/build
+wget https://github.com/dharple/detox/releases/download/v2.0.0/detox-2.0.0.tar.gz
+tar xzvf detox-2.0.0.tar.gz
+cd detox-2.0.0
+./configure
+make
+sudo make install
+# tool for hp printer
+sudo zypper install hplip
+sudo zypper install git-core
+git --version
+git config --global user.name "David R Rrrrr"
+git config --global user.email "david.rrrrrr@yandex.com"
+git config --global core.editor "vim"
+git config --global user.name
+git config --global user.email
+git config --global core.editor
+sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo zypper refresh
+sudo zypper install gh
+gh auth login
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo zypper addrepo https://packages.microsoft.com/yumrepos/edge microsoft-edge
+sudo zypper refresh
+sudo zypper install microsoft-edge-stable
+# alternative method for obtaining edge below
+sudo zypper install opi
+opi msedge
+# other interesting options for opi - brave, megasync, vivaldi, vscode, yandex-browser
+opi codecs
+sudo zypper install fetchmsttfonts
+sudo zypper install fira-code-fonts
+sudo zypper install the_silver_searcher
+sudo zypper install ripgrep
+# to make sure there are no emacs files that need to be deleted before I
+# install doom emacs
+find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \) -print
+sudo zypper install pandoc
+sudo zypper install notmuch
+sudo zypper install isync # mbsync
+sudo zypper install espeak-ng
+sudo zypper install espeak-ng-compat
+sudo zypper install ranger
+sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:/Wine/15.4/Emulators:Wine.repo
+sudo zypper refresh
+sudo zypper install wine-staging
+wine --version
+# adjust windows version to latest
+winecfg
+wine AdobeDNGConverter_x64_16_2_1.exe
+sudo zypper install aspell
+# adding tex support to a system is a substantial large install
+# you could export the latex source and upload to a website like
+# overleaf and have their system render the pdf from the latex source
+# if you are doing a lot of updates it might be annoying to keep
+# refreshing, but if you just do something occassionally it might be
+# sufficent
+sudo zypper install texlive texlive-pdflatex
+pandoc -f markdown -t org -o note.org /tmp/md_note.md
+python3.11 -m pip install exifread
+python3.11 -m pip install hyfetch
+python3.11 -m pip install trash-cli
+sudo rsync -avh --delete <copy from path> <copy to path>
+sudo rsync -avh --delete /run/media/david/140a6cd2-c07c-4339-bb9a-c87b592bafe5/ /run/media/david/01d0e521-1a65-41ad-a1b2-e77f68c41894/
+sudo rsync -avh --delete --exclude='.cache/' --exclude='*~' /home/david/ .
+sudo mkdir /mnt/internal_data/
+sudo blkid # find drive uuid
+# edit /etc/fstab - man fstab for details if needed
+# add line:
+# openSUSE
+UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  user                          0  0
+# Manjaro
+UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  users                         0  0
+sudo snap install mpv
+find /path/to/search -type d \( -iname "*elfeed*" -o -iname ".*elfeed*" \)
+sudo rsync -avh /run/media/david/AmazonThumbDrive/reorganized_emails/ /home/david/Maildir/reorganized_emails/
+ln -s /home/david/reorganized_emails /home/david/Maildir/reorganized_emails
+awk '{for(i=1;i<=NF;i++){printf "%s%s",$i,(i%10==0? ".\n":" ")}}' input.txt > output.txt
+# https://photoqt.org/downpopupflatpak
+# https://flathub.org/apps/org.photoqt.PhotoQt
+flatpak install flathub org.photoqt.PhotoQt
+# https://www.xnview.com/en/xnviewmp/
+# https://flathub.org/apps/com.xnview.XnViewMP
+flatpak update
+sudo snap refresh
+#+end_src
 **** Trash-cli commands
 - trash-put           trash files and directories.
 - trash-empty         empty the trashcan(s).
@@ -248,8 +255,8 @@ is general command line and some is openSUSE or Manjaro specific.
 - trash-restore       restore a trashed file.
 - trash-rm            remove individual files from the trashcan.
 #+begin_src bash
-  # add to .bashrc
-  alias rm='echo "use trash-put or backslash rm to use rm normally"; false'
+# add to .bashrc
+alias rm='echo "use trash-put or backslash rm to use rm normally"; false'
 #+end_src
 **** Other Random openSUSE Links
 - [[https://en.opensuse.org/Additional_package_repositories]]
@@ -335,18 +342,18 @@ there are many more.
 Neovim does not work fully without a Nerd Font set as your terminal font
 [[https://www.nerdfonts.com/]]
 #+begin_src toml
-  [font.bold]
-  family = "UbuntuMono Nerd Font"
-  style = "Bold"
-  [font.bold_italic]
-  family = "UbuntuMono Nerd Font"
-  style = "Bold Italic"
-  [font.italic]
-  family = "UbuntuMono Nerd Font"
-  style = "Italic"
-  [font.normal]
-  family = "UbuntuMono Nerd Font"
-  style = "Regular"
+[font.bold]
+family = "UbuntuMono Nerd Font"
+style = "Bold"
+[font.bold_italic]
+family = "UbuntuMono Nerd Font"
+style = "Bold Italic"
+[font.italic]
+family = "UbuntuMono Nerd Font"
+style = "Italic"
+[font.normal]
+family = "UbuntuMono Nerd Font"
+style = "Regular"
 #+end_src
 ** Text Editing Resources
 *** Introduction Text
@@ -1197,7 +1204,7 @@ If you have any interesting information to share please let me know. [[mailto:da
        :config
        ;;literate
        (default +bindings +smartparens))
-    #+end_src
+#+end_src
 *** packages.el
 #+begin_src emacs-lisp
 ;; -*- no-byte-compile: t; -*-
