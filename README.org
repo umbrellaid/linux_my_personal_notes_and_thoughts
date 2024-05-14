@@ -138,11 +138,11 @@ detox
 - r recursive into subfolders (any folders starting with . such as .git and .cache are skipped by default)
 - v be verbose about files being renamed
 rsync
-a - archive mode - quick way to tell it you want recursion and preserve almost everything about the file properties permissions
-v - verbose
-h - output numbers in a human-readable format
---delete (automatically calls --delete-during) - tells rsync to delete extraneous files - read the manual (man) page for this option as their are some complex nuances to it for difference scenarios, but for my backup to external hard drive use this is a good option
---exclude - exclude something from being synced
+- a - archive mode - quick way to tell it you want recursion and preserve almost everything about the file properties permissions
+- v - verbose
+- h - output numbers in a human-readable format
+- --delete (automatically calls --delete-during) - tells rsync to delete extraneous files - read the manual (man) page for this option as their are some complex nuances to it for difference scenarios, but for my backup to external hard drive use this is a good option
+- --exclude - exclude something from being synced
 *** Random Linux Commands
 Here are a bunch of commands I have run recently just for future reference. I
 may or may not have continued using some of these, but you have to sometimes
