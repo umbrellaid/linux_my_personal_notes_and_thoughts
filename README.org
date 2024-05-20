@@ -38,6 +38,7 @@
   - [[#faqs][FAQs]]
     - [[#which-text-editor-do-you-recommend-the-most][Which text editor do you recommend the most?]]
     - [[#which-text-format-do-you-recommend-the-most][Which text format do you recommend the most?]]
+    - [[#which-system-do-you-recommend-learning-for-emacs-keybindings-between-evil-vanilla-emacs-xah-fly-keys-boon-meow-wakib][Which system do you recommend learning for emacs keybindings between evil, vanilla emacs, xah fly keys, boon, meow, wakib?]]
   - [[#additional-links][Additional Links]]
   - [[#contact-me][Contact Me]]
 
@@ -386,21 +387,16 @@ conflicts. If you do not like the vim keybindings Emacs has the most other
 options available including variations of the vim keybindings and keybindings
 that are completely different or can be customized to suite your needs. The only
 slight downside if you go these routes is that they are only readily available
-for emacs, but luckily emacs can be infinitely customized and extended. I will
-admit that I have learned some of the other systems and went back to vim style
-keybindings so that I can move between the three programs using similar
-keybindings.
+for emacs, but luckily emacs can be infinitely customized and extended.
 
 Examples of other keybinding options: First a quick note on the vanilla Emacs
 keybindings. I have spent time learning them and they are really hard on your
 hands. The only way you can sort of mitigate that issue is by having a custom
 keyboard where you can reprogram the buttons so you do not put strain on your
 pinky. God mode and devil mode can also solve the hand fatigue problem. Yes,
-emacs pinky is actually a problem and hand fatigue in general. I have to be
-honest and say that I feel strongly you should use another system other than the
-default keybindings. If you do want to learn the vanilla keybindings they are
-very logical once you get used to them and they pair well with either god mode
-or devil mode.
+emacs pinky is actually a problem and hand fatigue in general. If you do want to
+learn the vanilla keybindings they are very logical once you get used to them
+and they pair well with either god mode or devil mode.
 
 Xah Fly Keys is the most efficient system for programmers, but only readily
 available for emacs. I like the flexibility of moving between neovim, visual
@@ -422,10 +418,17 @@ distinguished in your brain if they are totally different. A lot of people
 really like Meow and it is really easy to make adjustments to the setup of it. I
 would say if you are leaving vim and not going to go back you might really enjoy
 the improvements that Meow makes.
+
+Wakib: Emacs for the rest of us. This is both a minor mode and a starter kit.
+This is incredibly well thought out. I like the keyboard layout it is very
+logical and similar to some of the other systems mentioned above. This feels
+very well polished with the starter kit giving you a lot of functionality right
+away.
+
 **** Links
-- [[https://github.com/darkstego/wakib-keys]]
-- [[https://github.com/darkstego/wakib-emacs]]
 - [[https://www.youtube.com/watch?v=rK51Lp_lreI][Intro to Wakib, an Emacs Starter Kit]]
+- [[https://github.com/darkstego/wakib-emacs]]
+- [[https://github.com/darkstego/wakib-keys]]
 - [[https://ergoemacs.github.io/]]
 - [[https://github.com/xahlee/xah-fly-keys]]
 - [[https://www.youtube.com/watch?v=-iDJV2GPjEY][The Most Efficient Emacs Workflow, more efficient than vim]]
@@ -753,6 +756,23 @@ has better formatting than Markdown and can be converted using Pandoc to lots of
 formats as well. It seems to be popular for technical publishing, including but
 not limited to producing actual technical books, README files, man pages,
 articles and taking notes.
+*** Which system do you recommend learning for emacs keybindings between evil, vanilla emacs, xah fly keys, boon, meow, wakib?
+My answer on this question has changed multiple times. Many people were shocked
+when the great YouTuber David Wilson of System Crafters channel switched from
+evil back to vanilla Emacs keybindings. His reasoning was then he does not
+have to context switch as much and there is more consistency as he moves around
+to different parts of Emacs. It also allows him to use plain Emacs with
+efficiency without having to worry about getting evil mode installed to complete
+basic tasks. I do agree with this logic. You can always add god or devil mode to
+translate the normal Emacs keybindings without as much hand strain. Then you can
+also learn from books more easily since you are using the default keybindings
+and not a custom setup. If you are not going to learn the Emacs keybindings in
+depth you might want to try wakib as it is very logical and well thought out. If
+you want to be able to use the same keybindings in multiple programs then you
+would be either learning some of the vim ways as that is the only one that spans
+emacs, neovim and vscode as an option. Of course if you use vscode normally
+without the vim plugin and emacs in wakib mode then it can be close enough for
+many people.
 ** Additional Links
 - https://asciidoc.org/
 - https://powerman.name/doc/asciidoc
