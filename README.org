@@ -201,7 +201,6 @@ sudo zypper install notmuch
 sudo zypper install isync # mbsync
 sudo zypper install espeak-ng
 sudo zypper install espeak-ng-compat
-sudo zypper install ranger
 sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:/Wine/15.4/Emulators:Wine.repo
 sudo zypper refresh
 sudo zypper install wine-staging
@@ -311,8 +310,6 @@ there are many more.
   - [[https://snapcraft.io/opera]]
 - Pandoc
   - [[https://pandoc.org/installing.html]]
-  - installed from system package manager
-- Ranger
   - installed from system package manager
 - Ripgrep (rg)
   - Has some similarities to grep, but also includes its own defaults and
@@ -606,7 +603,6 @@ inspirational:
 - greader-mode
 - org-lint
 - query-replace-regexp
-- ranger
 - set-variable
 - sort-fields
 - sort-lines
@@ -736,7 +732,7 @@ areas, for example:
 - You can set a text to speech to read to you.
 - You can use a variety of terminals.
 - You can edit text using any methodology you want including vim keybindings.
-- You can navigate your file system using dired or ranger or both.
+- You can navigate your file system using dired
 - You can optimize your workflows by having more tasks inside of Emacs.
 - You have full org mode support for text tasks which then can be exported to a myriad of formats.
 *** Which text format do you recommend the most?
@@ -772,7 +768,8 @@ you want to be able to use the same keybindings in multiple programs then you
 would be either learning some of the vim ways as that is the only one that spans
 emacs, neovim and vscode as an option. Of course if you use vscode normally
 without the vim plugin and emacs in wakib mode then it can be close enough for
-many people.
+many people. There is a basic wakib plugin for vscode but it does not have many
+of the features that the emacs version has, but it does provide some basics.
 ** Additional Links
 - https://asciidoc.org/
 - https://powerman.name/doc/asciidoc
