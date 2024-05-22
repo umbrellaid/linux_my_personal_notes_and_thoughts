@@ -709,7 +709,6 @@ for me to continue reading and following it.
 "https://www.youtube.com/feeds/videos.xml?channel_id=UCoJP9pYqZjiJOlR4UWdPhow" ;PetaPixel
 "https://www.youtube.com/feeds/videos.xml?channel_id=UC0uTPqBCFIpZxlz_Lv1tk_g" ;Protesilaos Stavrou
 "https://www.youtube.com/feeds/videos.xml?channel_id=UCcVyr6JVlLsqTqoif6mZkSQ" ;Richard Wong
-"https://www.youtube.com/feeds/videos.xml?channel_id=UC4k4g9LVWmGOidD7tzRnYFg" ;Rob Trek
 "https://www.youtube.com/feeds/videos.xml?channel_id=UCeLeR_BosxhrE1Mm0KPRgSg" ;Ron Durant Photographer Nikon
 "https://www.youtube.com/feeds/videos.xml?channel_id=UCKq3tXnvXnA0feJYmOx9MPw" ;Stefano Ianiro Nature
 "https://www.youtube.com/feeds/videos.xml?channel_id=UCAiiOTio8Yu69c3XnR7nQBQ" ;System Crafters
