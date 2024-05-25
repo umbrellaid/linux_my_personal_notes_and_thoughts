@@ -243,6 +243,11 @@ flatpak install flathub org.photoqt.PhotoQt
 # https://flathub.org/apps/com.xnview.XnViewMP
 flatpak update
 sudo snap refresh
+# iname is case insensitive (versus name)
+find ~/ -iname "*vim*"
+rsync -av --remove-source-files ~/Maildir/gmail/INBOX/ ~/Maildir/reorganized_emails/
+mv ~/Maildir/gmail/INBOX/* ~/Maildir/gmail/Trash/
+mbsync -a
 #+end_src
 **** Trash-cli commands
 - trash-put           trash files and directories.
