@@ -23,7 +23,7 @@
 ;;
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font" :size 20)
       doom-variable-pitch-font (font-spec :family "Ubuntu" :size 20)
-      doom-big-font (font-spec :family "UbuntuMono Nerd Font" :size 28)
+      doom-big-font (font-spec :family "UbuntuMono Nerd Font" :size 24)
       doom-symbol-font (font-spec :family "UbuntuMono Nerd Font" :size 20)
       doom-serif-font (font-spec :family "UbuntuMono Nerd Font" :size 20)
       )

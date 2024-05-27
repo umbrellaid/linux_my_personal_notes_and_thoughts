@@ -601,12 +601,19 @@ inspirational:
 *** Emacs M-x Commands I randomly use
 - auto-fill-mode - automatically inserts line lines at specified line width
 - avy-copy-line
+- avy-move-line
+- capitalize-word
 - check-parens
 - dired
 - display-fill-column-indicator-mode
 - eshell
 - greader-mode
+- ibuffer
+- olivetti-mode
+- org-insert-link
 - org-lint
+- org-sort
+- org-sort-list
 - query-replace-regexp
 - set-variable
 - sort-fields
@@ -615,8 +622,10 @@ inspirational:
 - turn-off-evil-mode
 - turn-on-evil-mode
 - visual-line-mode
+- wakib-keys
 - whitespace-cleanup
 - whitespace-mode
+- yank-from-kill-ring
 *** Greader Notes
 First you have to install espeak on your system. Then install greader.
 **** My Greader Workflow In Detail
@@ -726,7 +735,6 @@ for me to continue reading and following it.
 "https://www.youtube.com/feeds/videos.xml?channel_id=UCo71RUe6DX4w-Vd47rFLXPg" ;Typecraft
 "https://www.youtube.com/feeds/videos.xml?channel_id=UC-Jmw9-Jcq7lCuK-8t7_kiA" ;Ulanzi
 "https://www.youtube.com/feeds/videos.xml?channel_id=UCBKNuaxVlSNvIN139KplUKw" ;Vhyrro Vhyrro neovim
-"https://www.youtube.com/feeds/videos.xml?channel_id=UCm7osXyGvpU57deE8CHBmuw" ;WILD ALASKA
 #+end_example
 ** FAQs
 *** Which text editor do you recommend the most?
