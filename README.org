@@ -607,6 +607,7 @@ inspirational:
 - dired
 - display-fill-column-indicator-mode
 - eshell
+- flush-lines (with parameter ^$) - deletes blank lines in highlighted region
 - greader-mode
 - ibuffer
 - olivetti-mode
@@ -619,6 +620,7 @@ inspirational:
 - sort-fields
 - sort-lines
 - sort-numeric-fields
+- treemacs-edit-workspaces
 - turn-off-evil-mode
 - turn-on-evil-mode
 - visual-line-mode
