@@ -1,5 +1,6 @@
 * Linux My Personal Notes and Thoughts                                  :TOC_9:
   - [[#linux-notes--thoughts][Linux Notes / Thoughts]]
+    - [[#fedora-silverblue-and-bluefin-customized-version-of-fedora-silverblue][Fedora Silverblue and bluefin customized version of Fedora Silverblue]]
     - [[#doom-emacs][doom emacs]]
     - [[#cheat-sheet-links][Cheat Sheet Links]]
     - [[#manjaro-linux-plasma-kde][Manjaro Linux Plasma KDE]]
@@ -43,6 +44,70 @@
   - [[#contact-me][Contact Me]]
 
 ** Linux Notes / Thoughts
+*** Fedora Silverblue and bluefin customized version of Fedora Silverblue
+[[https://universal-blue.discourse.group/docs?topic=41][Introduction to Bluefin]]
+[[https://universal-blue.discourse.group/docs][Welcome to Universal Blue General Documentation]]
+[[https://projectbluefin.io/][Project Bluefin home]]
+[[https://universal-blue.discourse.group/t/gui-install-which-order/2018/9][GUI install, which order?]]
+Notes from above link:
+GUI Apps: Flatpak, AppImage, BoxBuddy/Distrobox, Native layering (try not to use layering)
+homebrew is for CLI apps. Some of the things I use are neovim, dysk, gh, glances, grype, helix, micro, ollama, spf, ranger, ripgrep, and yt-dlp.
+boxbuddy and distrobox are for when you need a traditional distro to do something. Like say there’s an app that only comes as a .deb or something and you’re stuck with or you’re helping a friend with something and need a disposable pet container.
+ubuntu-family-fonts - these are preinstalled do not need to install them rpm-ostree
+flatpak install
+flatpak remotes
+99% fedora
+rpm-ostree install htop (do not install software this way)
+systemctl reboot
+rpm-ostree status
+rpm-ostree upgrade
+software center can install flatpaks
+flatpak update
+for cli tools - toolbox create techhut (for silverblue not bluefin, use homebrew on blue)
+toolbox enter techhut
+toolbox list
+toolbox run app name - for a quick launch option
+sudo dnf update
+dnf command to install cli tools like normal
+sudo rpm-ostree status
+flatpak list
+sudo rpm-ostree update
+sudo ostree admin status
+dnf install python-pip
+rpm -qa | grep -i 'pip'
+dnf search fonts
+sudo dnf install libreoffice-opensymbol-fonts
+[[https://docs.fedoraproject.org/en-US/quick-docs/fonts/][Adding New Fonts in Fedora]]
+[[https://docs.fedoraproject.org/en-US/quick-docs/][Fedora Quick Docs]]
+[[https://docs.fedoraproject.org/en-US/docs/][User Documentation - Fedora Linux]]
+[[https://docs.fedoraproject.org/en-US/fedora/latest/][Fedora Linux User Documentation]]
+[[https://docs.fedoraproject.org/en-US/fedora-silverblue/][Fedora Silverblue User Guide]]
+sudo mkdir /usr/share/fonts/googlefonts && cd /usr/share/fonts/googlefonts
+sudo unzip -d . ~/Downloads/FontArchive.zip
+sudo fc-cache -fv
+fc-match Font Name
+[[https://lurkerlabs.com/fedora-silverblue-ultimate-post-install-guide/][Fedora Silverblue 40: Ultimate Post Installation Guide]]
+distrobox create --init --image quay.io/fedora/fedora:39 --name fedora_box_39 --pre-init-hooks "dnf install -y systemd"
+distrobox enter fedora_box_39
+sudo systemctl status
+dnf group list -v --available | grep desktop
+sudo dnf install @xfce-desktop-environment
+sudo dnf install @kde-desktop-environment
+sudo dnf install -y htop
+sudo dnf install -y tldr
+sudo dnf install -y tmux
+sudo dnf install -y tree
+sudo dnf install -y bat
+sudo dnf install -y eza
+sudo dnf install -y dua-cli
+sudo dnf install -y which
+sudo dnf install -y feh
+https://distrobox.it/useful_tips/
+From above link:
+Resolve “Error cannot open display: :0”
+If your container is not able to connect to your host xserver, make sure to install xhost on the host machine and run xhost +si:localuser:$USER. If you wish to enable this functionality on future reboots add the above command to your ~/.distroboxrc
+-$ cat ~/.distroboxrc
+xhost +si:localuser:$USER >/dev/null
 *** doom emacs
 - before you start install these items
 - git
