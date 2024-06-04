@@ -108,6 +108,63 @@ Resolve “Error cannot open display: :0”
 If your container is not able to connect to your host xserver, make sure to install xhost on the host machine and run xhost +si:localuser:$USER. If you wish to enable this functionality on future reboots add the above command to your ~/.distroboxrc
 -$ cat ~/.distroboxrc
 xhost +si:localuser:$USER >/dev/null
+brew install newsboat
+brew install git
+brew install gh
+brew install notmuch
+brew install isync
+To start isync now and restart at login:
+  brew services start isync
+Or, if you don't want/need a background service you can just run:
+  /home/linuxbrew/.linuxbrew/opt/isync/bin/mbsync -a
+brew install detox
+brew install espeak-ng
+brew install aspell
+brew install hyfetch
+hyfetch
+sudo dnf install emacs
+sudo dnf update
+sudo dnf install python3
+brew install aspell
+sudo dnf install aspell
+sudo dnf install aspell-en
+aspell dicts - lists dictionaries installed - en_US worked in emacs
+sudo dnf install ./google-chrome-stable_current_x86_64.rpm
+sudo dnf install ./microsoft-edge-stable-125.0.2535.79-1.x86_64.rpm
+sudo dnf install xorg-x11-server-Xwayland - I am not sure if I needed this or not, it was more a troubleshooting step that was probably not needed
+sudo dnf install ./VMware-Horizon-Client-2312.1-8.12.1-23543969.x64.rpm
+sudo dnf install python3-qt5
+============================================================
+python3.12 -m pip install exifread
+error: externally-managed-environment
+× This environment is externally managed
+╰─> To install Python packages system-wide, try brew install
+    xyz, where xyz is the package you are trying to
+    install.
+
+    If you wish to install a Python library that isn't in Homebrew,
+    use a virtual environment:
+
+    python3 -m venv path/to/venv
+    source path/to/venv/bin/activate
+    python3 -m pip install xyz
+
+    If you wish to install a Python application that isn't in Homebrew,
+    it may be easiest to use 'pipx install xyz', which will manage a
+    virtual environment for you. You can install pipx with
+
+    brew install pipx
+
+    You may restore the old behavior of pip by passing
+    the '--break-system-packages' flag to pip, or by adding
+    'break-system-packages = true' to your pip.conf file. The latter
+    will permanently disable this error.
+
+    If you disable this error, we STRONGLY recommend that you additionally
+    pass the '--user' flag to pip, or set 'user = true' in your pip.conf
+    file. Failure to do this can result in a broken Homebrew installation.
+
+    Read more about this behavior here: <https://peps.python.org/pep-0668/>
 *** doom emacs
 - before you start install these items
 - git
