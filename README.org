@@ -134,6 +134,18 @@ sudo dnf install ./microsoft-edge-stable-125.0.2535.79-1.x86_64.rpm
 sudo dnf install xorg-x11-server-Xwayland - I am not sure if I needed this or not, it was more a troubleshooting step that was probably not needed
 sudo dnf install ./VMware-Horizon-Client-2312.1-8.12.1-23543969.x64.rpm
 sudo dnf install python3-qt5
+sudo dnf install lazygit
+sudo dnf install 'dnf-command(config-manager)'
+sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf install gh --repo gh-cli
+gh auth login
+git config --global user.name "David R Rrrrr"
+git config --global user.email "david.rrrrrr@yandex.com"
+gh auth status
+gh auth setup-git
+gh auth
+unset SSH_ASKPASS
+nano ~/.gitconfig
 ============================================================
 python3.12 -m pip install exifread
 error: externally-managed-environment
