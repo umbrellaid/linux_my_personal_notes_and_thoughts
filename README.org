@@ -45,15 +45,15 @@
 
 ** Linux Notes / Thoughts
 *** Fedora Silverblue and bluefin customized version of Fedora Silverblue
-[[https://universal-blue.discourse.group/docs?topic=41][Introduction to Bluefin]]
-[[https://universal-blue.discourse.group/docs][Welcome to Universal Blue General Documentation]]
-[[https://projectbluefin.io/][Project Bluefin home]]
-[[https://universal-blue.discourse.group/t/gui-install-which-order/2018/9][GUI install, which order?]]
-[[https://docs.fedoraproject.org/en-US/quick-docs/fonts/][Adding New Fonts in Fedora]]
-[[https://docs.fedoraproject.org/en-US/quick-docs/][Fedora Quick Docs]]
-[[https://docs.fedoraproject.org/en-US/docs/][User Documentation - Fedora Linux]]
-[[https://docs.fedoraproject.org/en-US/fedora/latest/][Fedora Linux User Documentation]]
-[[https://docs.fedoraproject.org/en-US/fedora-silverblue/][Fedora Silverblue User Guide]]
+- [[https://docs.fedoraproject.org/en-US/quick-docs/fonts/][Adding New Fonts in Fedora]]
+- [[https://docs.fedoraproject.org/en-US/fedora/latest/][Fedora Linux User Documentation]]
+- [[https://docs.fedoraproject.org/en-US/quick-docs/][Fedora Quick Docs]]
+- [[https://docs.fedoraproject.org/en-US/fedora-silverblue/][Fedora Silverblue User Guide]]
+- [[https://universal-blue.discourse.group/t/gui-install-which-order/2018/9][GUI install, which order?]]
+- [[https://universal-blue.discourse.group/docs?topic=41][Introduction to Bluefin]]
+- [[https://projectbluefin.io/][Project Bluefin home]]
+- [[https://docs.fedoraproject.org/en-US/docs/][User Documentation - Fedora Linux]]
+- [[https://universal-blue.discourse.group/docs][Welcome to Universal Blue General Documentation]]
 #+begin_src bash
   distrobox create --init --image quay.io/fedora/fedora:39 --name fedora_box_39 --pre-init-hooks "dnf install -y systemd"
   Notes from above link:
