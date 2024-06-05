@@ -54,132 +54,108 @@
 - [[https://projectbluefin.io/][Project Bluefin home]]
 - [[https://docs.fedoraproject.org/en-US/docs/][User Documentation - Fedora Linux]]
 - [[https://universal-blue.discourse.group/docs][Welcome to Universal Blue General Documentation]]
-#+begin_src bash
-  distrobox create --init --image quay.io/fedora/fedora:39 --name fedora_box_39 --pre-init-hooks "dnf install -y systemd"
-  Notes from above link:
-  GUI Apps: Flatpak, AppImage, BoxBuddy/Distrobox, Native layering (try not to use layering)
-  homebrew is for CLI apps. Some of the things I use are neovim, dysk, gh, glances, grype, helix, micro, ollama, spf, ranger, ripgrep, and yt-dlp.
-  boxbuddy and distrobox are for when you need a traditional distro to do something. Like say there’s an app that only comes as a .deb or something and you’re stuck with or you’re helping a friend with something and need a disposable pet container.
-  ubuntu-family-fonts - these are preinstalled do not need to install them rpm-ostree
-  flatpak install
-  flatpak remotes
-  99% fedora
-  rpm-ostree install htop (do not install software this way)
-  systemctl reboot
-  rpm-ostree status
-  rpm-ostree upgrade
-  software center can install flatpaks
-  flatpak update
-  for cli tools - toolbox create techhut (for silverblue not bluefin, use homebrew on blue)
-      toolbox enter techhut
-      toolbox list
-      toolbox run app name - for a quick launch option
-      sudo dnf update
-      dnf command to install cli tools like normal
-      sudo rpm-ostree status
-      flatpak list
-      sudo rpm-ostree update
-      sudo ostree admin status
-      dnf install python-pip
-      rpm -qa | grep -i 'pip'
-      dnf search fonts
-      sudo dnf install libreoffice-opensymbol-fonts
-      sudo mkdir /usr/share/fonts/googlefonts && cd /usr/share/fonts/googlefonts
-      sudo unzip -d . ~/Downloads/FontArchive.zip
-      sudo fc-cache -fv
-      fc-match Font Name
-      distrobox enter fedora_box_39
-      sudo systemctl status
-      dnf group list -v --available | grep desktop
-      sudo dnf install @xfce-desktop-environment
-      sudo dnf install @kde-desktop-environment
-      sudo dnf install -y htop
-      sudo dnf install -y tldr
-      sudo dnf install -y tmux
-      sudo dnf install -y tree
-      sudo dnf install -y bat
-      sudo dnf install -y eza
-      sudo dnf install -y dua-cli
-      sudo dnf install -y which
-      sudo dnf install -y feh
-      https://distrobox.it/useful_tips/
-      From above link:
-      Resolve “Error cannot open display: :0”
-      If your container is not able to connect to your host xserver, make sure to install xhost on the host machine and run xhost +si:localuser:$USER. If you wish to enable this functionality on future reboots add the above command to your ~/.distroboxrc
-      -$ cat ~/.distroboxrc
-      xhost +si:localuser:$USER >/dev/null
-      brew install newsboat
-      brew install git
-      brew install gh
-      brew install notmuch
-      brew install isync
-      To start isync now and restart at login:
-      brew services start isync
-      Or, if you don't want/need a background service you can just run:
-      /home/linuxbrew/.linuxbrew/opt/isync/bin/mbsync -a
-    brew install detox
-    brew install espeak-ng
-    brew install aspell
-    brew install hyfetch
-    hyfetch
-    sudo dnf install emacs
-    sudo dnf update
-    sudo dnf install python3
-    brew install aspell
-    sudo dnf install aspell
-    sudo dnf install aspell-en
-    aspell dicts - lists dictionaries installed - en_US worked in emacs
-    sudo dnf install ./google-chrome-stable_current_x86_64.rpm
-    sudo dnf install ./microsoft-edge-stable-125.0.2535.79-1.x86_64.rpm
-    sudo dnf install xorg-x11-server-Xwayland - I am not sure if I needed this or not, it was more a troubleshooting step that was probably not needed
-    sudo dnf install ./VMware-Horizon-Client-2312.1-8.12.1-23543969.x64.rpm
-    sudo dnf install python3-qt5
-    sudo dnf install lazygit
-    sudo dnf install 'dnf-command(config-manager)'
-    sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-    sudo dnf install gh --repo gh-cli
-    gh auth login
-    git config --global user.name "David R Rrrrr"
-    git config --global user.email "david.rrrrrr@yandex.com"
-    gh auth status
-    gh auth setup-git
-    gh auth
-    unset SSH_ASKPASS
-    nano ~/.gitconfig
-    sudo dnf install espeak-ng
-    cd /usr/bin/
-    sudo ln -s /usr/bin/espeak-ng espeak
-    ============================================================
-    python3.12 -m pip install exifread
-    error: externally-managed-environment
-    × This environment is externally managed
-    ╰─> To install Python packages system-wide, try brew install
-	xyz, where xyz is the package you are trying to
-	install.
+#+begin_src none
+-$ cat ~/.distroboxrc
+/home/linuxbrew/.linuxbrew/opt/isync/bin/mbsync -a
+aspell dicts - lists dictionaries installed - en_US worked in emacs
+brew install aspell
+brew install aspell
+brew install detox
+brew install espeak-ng
+brew install gh
+brew install git
+brew install hyfetch
+brew install isync
+brew install newsboat
+brew install notmuch
+brew services start isync
+cd /usr/bin/
+distrobox create --init --image docker.io/library/ubuntu:22.04 --name ubuntu_box_22_04 --additional-packages "systemd"
+distrobox create --init --image quay.io/fedora/fedora:39 --name fedora_box_39 --pre-init-hooks "dnf install -y systemd"
+distrobox enter fedora_box_39
+distrobox enter ubuntu_box_22_04
+dnf group list -v --available | grep desktop
+dnf install python-pip
+dnf search fonts
+fc-match Font Name
+flatpak install
+flatpak list
+flatpak update
+gh auth
+gh auth login
+gh auth setup-git
+gh auth status
+git config --global user.email "david.rrrrrr@yandex.com"
+git config --global user.name "David R Rrrrr"
+homebrew is for CLI apps. examples: neovim, dysk, gh, glances, grype, helix, micro, ollama, spf, ranger, ripgrep, and yt-dlp.
+hyfetch - prints system information in nice format for screenshots
+nano ~/.gitconfig
+rpm-ostree install htop (do not install software this way)
+rpm-ostree status
+rpm-ostree upgrade
+sudo apt install xfce4 xfce4-goodies
+sudo dnf install -y bat
+sudo dnf install -y dua-cli
+sudo dnf install -y eza
+sudo dnf install -y feh
+sudo dnf install -y htop
+sudo dnf install -y tldr
+sudo dnf install -y tmux
+sudo dnf install -y tree
+sudo dnf install -y which
+sudo dnf install ./VMware-Horizon-Client-2312.1-8.12.1-23543969.x64.rpm
+sudo dnf install ./google-chrome-stable_current_x86_64.rpm
+sudo dnf install ./microsoft-edge-stable-125.0.2535.79-1.x86_64.rpm
+sudo dnf install @xfce-desktop-environment
+sudo dnf install aspell
+sudo dnf install aspell-en
+sudo dnf install emacs
+sudo dnf install espeak-ng
+sudo dnf install libreoffice-opensymbol-fonts
+sudo dnf install python3 - this was already installed
+sudo dnf update
+sudo fc-cache -fv
+sudo ln -s /usr/bin/espeak-ng espeak
+sudo mkdir /usr/share/fonts/googlefonts && cd /usr/share/fonts/googlefonts
+sudo ostree admin status
+sudo rpm-ostree status
+sudo rpm-ostree update
+sudo systemctl status
+sudo unzip -d . ~/Downloads/FontArchive.zip
+systemctl reboot
+ubuntu-family-fonts - these are preinstalled do not need to install them
+xhost +si:localuser:$USER >/dev/null
+============================================================
+python3.12 -m pip install exifread
+error: externally-managed-environment
+× This environment is externally managed
+╰─> To install Python packages system-wide, try brew install
+xyz, where xyz is the package you are trying to
+install.
 
-	If you wish to install a Python library that isn't in Homebrew,
-      use a virtual environment:
+If you wish to install a Python library that isn't in Homebrew,
+use a virtual environment:
 
-      python3 -m venv path/to/venv
-      source path/to/venv/bin/activate
-      python3 -m pip install xyz
+python3 -m venv path/to/venv
+source path/to/venv/bin/activate
+python3 -m pip install xyz
 
-      If you wish to install a Python application that isn't in Homebrew,
-	it may be easiest to use 'pipx install xyz', which will manage a
-	virtual environment for you. You can install pipx with
+If you wish to install a Python application that isn't in Homebrew,
+it may be easiest to use 'pipx install xyz', which will manage a
+virtual environment for you. You can install pipx with
 
-	brew install pipx
+brew install pipx
 
-	You may restore the old behavior of pip by passing
-	the '--break-system-packages' flag to pip, or by adding
-	'break-system-packages = true' to your pip.conf file. The latter
-	will permanently disable this error.
+You may restore the old behavior of pip by passing
+the '--break-system-packages' flag to pip, or by adding
+'break-system-packages = true' to your pip.conf file. The latter
+will permanently disable this error.
 
-	If you disable this error, we STRONGLY recommend that you additionally
-	pass the '--user' flag to pip, or set 'user = true' in your pip.conf
-	file. Failure to do this can result in a broken Homebrew installation.
+If you disable this error, we STRONGLY recommend that you additionally
+pass the '--user' flag to pip, or set 'user = true' in your pip.conf
+file. Failure to do this can result in a broken Homebrew installation.
 
-	Read more about this behavior here: <https://peps.python.org/pep-0668/>
+Read more about this behavior here: <https://peps.python.org/pep-0668/>
 #+end_src
 *** doom emacs
 - before you start install these items
