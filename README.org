@@ -49,134 +49,138 @@
 [[https://universal-blue.discourse.group/docs][Welcome to Universal Blue General Documentation]]
 [[https://projectbluefin.io/][Project Bluefin home]]
 [[https://universal-blue.discourse.group/t/gui-install-which-order/2018/9][GUI install, which order?]]
-Notes from above link:
-GUI Apps: Flatpak, AppImage, BoxBuddy/Distrobox, Native layering (try not to use layering)
-homebrew is for CLI apps. Some of the things I use are neovim, dysk, gh, glances, grype, helix, micro, ollama, spf, ranger, ripgrep, and yt-dlp.
-boxbuddy and distrobox are for when you need a traditional distro to do something. Like say there’s an app that only comes as a .deb or something and you’re stuck with or you’re helping a friend with something and need a disposable pet container.
-ubuntu-family-fonts - these are preinstalled do not need to install them rpm-ostree
-flatpak install
-flatpak remotes
-99% fedora
-rpm-ostree install htop (do not install software this way)
-systemctl reboot
-rpm-ostree status
-rpm-ostree upgrade
-software center can install flatpaks
-flatpak update
-for cli tools - toolbox create techhut (for silverblue not bluefin, use homebrew on blue)
-toolbox enter techhut
-toolbox list
-toolbox run app name - for a quick launch option
-sudo dnf update
-dnf command to install cli tools like normal
-sudo rpm-ostree status
-flatpak list
-sudo rpm-ostree update
-sudo ostree admin status
-dnf install python-pip
-rpm -qa | grep -i 'pip'
-dnf search fonts
-sudo dnf install libreoffice-opensymbol-fonts
 [[https://docs.fedoraproject.org/en-US/quick-docs/fonts/][Adding New Fonts in Fedora]]
 [[https://docs.fedoraproject.org/en-US/quick-docs/][Fedora Quick Docs]]
 [[https://docs.fedoraproject.org/en-US/docs/][User Documentation - Fedora Linux]]
 [[https://docs.fedoraproject.org/en-US/fedora/latest/][Fedora Linux User Documentation]]
 [[https://docs.fedoraproject.org/en-US/fedora-silverblue/][Fedora Silverblue User Guide]]
-sudo mkdir /usr/share/fonts/googlefonts && cd /usr/share/fonts/googlefonts
-sudo unzip -d . ~/Downloads/FontArchive.zip
-sudo fc-cache -fv
-fc-match Font Name
-[[https://lurkerlabs.com/fedora-silverblue-ultimate-post-install-guide/][Fedora Silverblue 40: Ultimate Post Installation Guide]]
-distrobox create --init --image quay.io/fedora/fedora:39 --name fedora_box_39 --pre-init-hooks "dnf install -y systemd"
-distrobox enter fedora_box_39
-sudo systemctl status
-dnf group list -v --available | grep desktop
-sudo dnf install @xfce-desktop-environment
-sudo dnf install @kde-desktop-environment
-sudo dnf install -y htop
-sudo dnf install -y tldr
-sudo dnf install -y tmux
-sudo dnf install -y tree
-sudo dnf install -y bat
-sudo dnf install -y eza
-sudo dnf install -y dua-cli
-sudo dnf install -y which
-sudo dnf install -y feh
-https://distrobox.it/useful_tips/
-From above link:
-Resolve “Error cannot open display: :0”
-If your container is not able to connect to your host xserver, make sure to install xhost on the host machine and run xhost +si:localuser:$USER. If you wish to enable this functionality on future reboots add the above command to your ~/.distroboxrc
--$ cat ~/.distroboxrc
-xhost +si:localuser:$USER >/dev/null
-brew install newsboat
-brew install git
-brew install gh
-brew install notmuch
-brew install isync
-To start isync now and restart at login:
-  brew services start isync
-Or, if you don't want/need a background service you can just run:
-  /home/linuxbrew/.linuxbrew/opt/isync/bin/mbsync -a
-brew install detox
-brew install espeak-ng
-brew install aspell
-brew install hyfetch
-hyfetch
-sudo dnf install emacs
-sudo dnf update
-sudo dnf install python3
-brew install aspell
-sudo dnf install aspell
-sudo dnf install aspell-en
-aspell dicts - lists dictionaries installed - en_US worked in emacs
-sudo dnf install ./google-chrome-stable_current_x86_64.rpm
-sudo dnf install ./microsoft-edge-stable-125.0.2535.79-1.x86_64.rpm
-sudo dnf install xorg-x11-server-Xwayland - I am not sure if I needed this or not, it was more a troubleshooting step that was probably not needed
-sudo dnf install ./VMware-Horizon-Client-2312.1-8.12.1-23543969.x64.rpm
-sudo dnf install python3-qt5
-sudo dnf install lazygit
-sudo dnf install 'dnf-command(config-manager)'
-sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-sudo dnf install gh --repo gh-cli
-gh auth login
-git config --global user.name "David R Rrrrr"
-git config --global user.email "david.rrrrrr@yandex.com"
-gh auth status
-gh auth setup-git
-gh auth
-unset SSH_ASKPASS
-nano ~/.gitconfig
-============================================================
-python3.12 -m pip install exifread
-error: externally-managed-environment
-× This environment is externally managed
-╰─> To install Python packages system-wide, try brew install
-    xyz, where xyz is the package you are trying to
-    install.
+#+begin_src bash
+  distrobox create --init --image quay.io/fedora/fedora:39 --name fedora_box_39 --pre-init-hooks "dnf install -y systemd"
+  Notes from above link:
+  GUI Apps: Flatpak, AppImage, BoxBuddy/Distrobox, Native layering (try not to use layering)
+  homebrew is for CLI apps. Some of the things I use are neovim, dysk, gh, glances, grype, helix, micro, ollama, spf, ranger, ripgrep, and yt-dlp.
+  boxbuddy and distrobox are for when you need a traditional distro to do something. Like say there’s an app that only comes as a .deb or something and you’re stuck with or you’re helping a friend with something and need a disposable pet container.
+  ubuntu-family-fonts - these are preinstalled do not need to install them rpm-ostree
+  flatpak install
+  flatpak remotes
+  99% fedora
+  rpm-ostree install htop (do not install software this way)
+  systemctl reboot
+  rpm-ostree status
+  rpm-ostree upgrade
+  software center can install flatpaks
+  flatpak update
+  for cli tools - toolbox create techhut (for silverblue not bluefin, use homebrew on blue)
+      toolbox enter techhut
+      toolbox list
+      toolbox run app name - for a quick launch option
+      sudo dnf update
+      dnf command to install cli tools like normal
+      sudo rpm-ostree status
+      flatpak list
+      sudo rpm-ostree update
+      sudo ostree admin status
+      dnf install python-pip
+      rpm -qa | grep -i 'pip'
+      dnf search fonts
+      sudo dnf install libreoffice-opensymbol-fonts
+      sudo mkdir /usr/share/fonts/googlefonts && cd /usr/share/fonts/googlefonts
+      sudo unzip -d . ~/Downloads/FontArchive.zip
+      sudo fc-cache -fv
+      fc-match Font Name
+      distrobox enter fedora_box_39
+      sudo systemctl status
+      dnf group list -v --available | grep desktop
+      sudo dnf install @xfce-desktop-environment
+      sudo dnf install @kde-desktop-environment
+      sudo dnf install -y htop
+      sudo dnf install -y tldr
+      sudo dnf install -y tmux
+      sudo dnf install -y tree
+      sudo dnf install -y bat
+      sudo dnf install -y eza
+      sudo dnf install -y dua-cli
+      sudo dnf install -y which
+      sudo dnf install -y feh
+      https://distrobox.it/useful_tips/
+      From above link:
+      Resolve “Error cannot open display: :0”
+      If your container is not able to connect to your host xserver, make sure to install xhost on the host machine and run xhost +si:localuser:$USER. If you wish to enable this functionality on future reboots add the above command to your ~/.distroboxrc
+      -$ cat ~/.distroboxrc
+      xhost +si:localuser:$USER >/dev/null
+      brew install newsboat
+      brew install git
+      brew install gh
+      brew install notmuch
+      brew install isync
+      To start isync now and restart at login:
+      brew services start isync
+      Or, if you don't want/need a background service you can just run:
+      /home/linuxbrew/.linuxbrew/opt/isync/bin/mbsync -a
+    brew install detox
+    brew install espeak-ng
+    brew install aspell
+    brew install hyfetch
+    hyfetch
+    sudo dnf install emacs
+    sudo dnf update
+    sudo dnf install python3
+    brew install aspell
+    sudo dnf install aspell
+    sudo dnf install aspell-en
+    aspell dicts - lists dictionaries installed - en_US worked in emacs
+    sudo dnf install ./google-chrome-stable_current_x86_64.rpm
+    sudo dnf install ./microsoft-edge-stable-125.0.2535.79-1.x86_64.rpm
+    sudo dnf install xorg-x11-server-Xwayland - I am not sure if I needed this or not, it was more a troubleshooting step that was probably not needed
+    sudo dnf install ./VMware-Horizon-Client-2312.1-8.12.1-23543969.x64.rpm
+    sudo dnf install python3-qt5
+    sudo dnf install lazygit
+    sudo dnf install 'dnf-command(config-manager)'
+    sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+    sudo dnf install gh --repo gh-cli
+    gh auth login
+    git config --global user.name "David R Rrrrr"
+    git config --global user.email "david.rrrrrr@yandex.com"
+    gh auth status
+    gh auth setup-git
+    gh auth
+    unset SSH_ASKPASS
+    nano ~/.gitconfig
+    sudo dnf install espeak-ng
+    cd /usr/bin/
+    sudo ln -s /usr/bin/espeak-ng espeak
+    ============================================================
+    python3.12 -m pip install exifread
+    error: externally-managed-environment
+    × This environment is externally managed
+    ╰─> To install Python packages system-wide, try brew install
+	xyz, where xyz is the package you are trying to
+	install.
 
-    If you wish to install a Python library that isn't in Homebrew,
-    use a virtual environment:
+	If you wish to install a Python library that isn't in Homebrew,
+      use a virtual environment:
 
-    python3 -m venv path/to/venv
-    source path/to/venv/bin/activate
-    python3 -m pip install xyz
+      python3 -m venv path/to/venv
+      source path/to/venv/bin/activate
+      python3 -m pip install xyz
 
-    If you wish to install a Python application that isn't in Homebrew,
-    it may be easiest to use 'pipx install xyz', which will manage a
-    virtual environment for you. You can install pipx with
+      If you wish to install a Python application that isn't in Homebrew,
+	it may be easiest to use 'pipx install xyz', which will manage a
+	virtual environment for you. You can install pipx with
 
-    brew install pipx
+	brew install pipx
 
-    You may restore the old behavior of pip by passing
-    the '--break-system-packages' flag to pip, or by adding
-    'break-system-packages = true' to your pip.conf file. The latter
-    will permanently disable this error.
+	You may restore the old behavior of pip by passing
+	the '--break-system-packages' flag to pip, or by adding
+	'break-system-packages = true' to your pip.conf file. The latter
+	will permanently disable this error.
 
-    If you disable this error, we STRONGLY recommend that you additionally
-    pass the '--user' flag to pip, or set 'user = true' in your pip.conf
-    file. Failure to do this can result in a broken Homebrew installation.
+	If you disable this error, we STRONGLY recommend that you additionally
+	pass the '--user' flag to pip, or set 'user = true' in your pip.conf
+	file. Failure to do this can result in a broken Homebrew installation.
 
-    Read more about this behavior here: <https://peps.python.org/pep-0668/>
+	Read more about this behavior here: <https://peps.python.org/pep-0668/>
+#+end_src
 *** doom emacs
 - before you start install these items
 - git
@@ -280,108 +284,108 @@ may or may not have continued using some of these, but you have to sometimes
 play around and try different options to find out what is helpful. Some of this
 is general command line and some is openSUSE or Manjaro specific.
 #+begin_src sh
-cat /etc/os-release
-sudo zypper refresh
-# if you are running tumbleweed sudo zypper dup
-# --allow-vendor-change dup stands for distribution upgrades whereas
-# zypper up is for package updates
-sudo zypper update
-# command not found - it will tell you what to install to make a
-# certain command available to you
-cnf <command>
-# compiling and linking applications needed for make, make install commands
-sudo zypper install patterns-devel-base-devel_basis # minimal set of tools for
-# install command detox for fixing filenames https://github.com/dharple/detox
-mkdir ~/build
-cd ~/build
-wget https://github.com/dharple/detox/releases/download/v2.0.0/detox-2.0.0.tar.gz
-tar xzvf detox-2.0.0.tar.gz
-cd detox-2.0.0
-./configure
-make
-sudo make install
-# tool for hp printer
-sudo zypper install hplip
-sudo zypper install git-core
-git --version
-git config --global user.name "David R Rrrrr"
-git config --global user.email "david.rrrrrr@yandex.com"
-git config --global core.editor "vim"
-git config --global user.name
-git config --global user.email
-git config --global core.editor
-sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
-sudo zypper refresh
-sudo zypper install gh
-gh auth login
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo zypper addrepo https://packages.microsoft.com/yumrepos/edge microsoft-edge
-sudo zypper refresh
-sudo zypper install microsoft-edge-stable
-# alternative method for obtaining edge below
-sudo zypper install opi
-opi msedge
-# other interesting options for opi - brave, megasync, vivaldi, vscode, yandex-browser
-opi codecs
-sudo zypper install fetchmsttfonts
-sudo zypper install fira-code-fonts
-sudo zypper install the_silver_searcher
-sudo zypper install ripgrep
-# to make sure there are no emacs files that need to be deleted before I
-# install doom emacs
-find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \) -print
-sudo zypper install pandoc
-sudo zypper install notmuch
-sudo zypper install isync # mbsync
-sudo zypper install espeak-ng
-sudo zypper install espeak-ng-compat
-sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:/Wine/15.4/Emulators:Wine.repo
-sudo zypper refresh
-sudo zypper install wine-staging
-wine --version
-# adjust windows version to latest
-winecfg
-wine AdobeDNGConverter_x64_16_2_1.exe
-sudo zypper install aspell
-# adding tex support to a system is a substantial large install
-# you could export the latex source and upload to a website like
-# overleaf and have their system render the pdf from the latex source
-# if you are doing a lot of updates it might be annoying to keep
-# refreshing, but if you just do something occassionally it might be
-# sufficent
-sudo zypper install texlive texlive-pdflatex
-pandoc -f markdown -t org -o note.org /tmp/md_note.md
-python3.11 -m pip install exifread
-python3.11 -m pip install hyfetch
-python3.11 -m pip install trash-cli
-sudo rsync -avh --delete <copy from path> <copy to path>
-sudo rsync -avh --delete /run/media/david/140a6cd2-c07c-4339-bb9a-c87b592bafe5/ /run/media/david/01d0e521-1a65-41ad-a1b2-e77f68c41894/
-sudo rsync -avh --delete --exclude='.cache/' --exclude='*~' /home/david/ .
-sudo mkdir /mnt/internal_data/
-sudo blkid # find drive uuid
-# edit /etc/fstab - man fstab for details if needed
-# add line:
-# openSUSE
-UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  user                          0  0
-# Manjaro
-UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  users                         0  0
-sudo snap install mpv
-find /path/to/search -type d \( -iname "*elfeed*" -o -iname ".*elfeed*" \)
-sudo rsync -avh /run/media/david/AmazonThumbDrive/reorganized_emails/ /home/david/Maildir/reorganized_emails/
-ln -s /home/david/reorganized_emails /home/david/Maildir/reorganized_emails
-awk '{for(i=1;i<=NF;i++){printf "%s%s",$i,(i%10==0? ".\n":" ")}}' input.txt > output.txt
-# https://photoqt.org/downpopupflatpak
-# https://flathub.org/apps/org.photoqt.PhotoQt
-flatpak install flathub org.photoqt.PhotoQt
-# https://www.xnview.com/en/xnviewmp/
-# https://flathub.org/apps/com.xnview.XnViewMP
-flatpak update
-sudo snap refresh
-# iname is case insensitive (versus name)
-find ~/ -iname "*vim*"
-rsync -av --remove-source-files ~/Maildir/gmail/INBOX/ ~/Maildir/reorganized_emails/
-mv ~/Maildir/gmail/INBOX/* ~/Maildir/gmail/Trash/
-mbsync -a
+  cat /etc/os-release
+  sudo zypper refresh
+  # if you are running tumbleweed sudo zypper dup
+  # --allow-vendor-change dup stands for distribution upgrades whereas
+  # zypper up is for package updates
+  sudo zypper update
+  # command not found - it will tell you what to install to make a
+  # certain command available to you
+  cnf <command>
+  # compiling and linking applications needed for make, make install commands
+  sudo zypper install patterns-devel-base-devel_basis # minimal set of tools for
+  # install command detox for fixing filenames https://github.com/dharple/detox
+  mkdir ~/build
+  cd ~/build
+  wget https://github.com/dharple/detox/releases/download/v2.0.0/detox-2.0.0.tar.gz
+  tar xzvf detox-2.0.0.tar.gz
+  cd detox-2.0.0
+  ./configure
+  make
+  sudo make install
+  # tool for hp printer
+  sudo zypper install hplip
+  sudo zypper install git-core
+  git --version
+  git config --global user.name "David R Rrrrr"
+  git config --global user.email "david.rrrrrr@yandex.com"
+  git config --global core.editor "vim"
+  git config --global user.name
+  git config --global user.email
+  git config --global core.editor
+  sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
+  sudo zypper refresh
+  sudo zypper install gh
+  gh auth login
+  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+  sudo zypper addrepo https://packages.microsoft.com/yumrepos/edge microsoft-edge
+  sudo zypper refresh
+  sudo zypper install microsoft-edge-stable
+  # alternative method for obtaining edge below
+  sudo zypper install opi
+  opi msedge
+  # other interesting options for opi - brave, megasync, vivaldi, vscode, yandex-browser
+  opi codecs
+  sudo zypper install fetchmsttfonts
+  sudo zypper install fira-code-fonts
+  sudo zypper install the_silver_searcher
+  sudo zypper install ripgrep
+  # to make sure there are no emacs files that need to be deleted before I
+  # install doom emacs
+  find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \) -print
+  sudo zypper install pandoc
+  sudo zypper install notmuch
+  sudo zypper install isync # mbsync
+  sudo zypper install espeak-ng
+  sudo zypper install espeak-ng-compat
+  sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:/Wine/15.4/Emulators:Wine.repo
+  sudo zypper refresh
+  sudo zypper install wine-staging
+  wine --version
+  # adjust windows version to latest
+  winecfg
+  wine AdobeDNGConverter_x64_16_2_1.exe
+  sudo zypper install aspell
+  # adding tex support to a system is a substantial large install
+  # you could export the latex source and upload to a website like
+  # overleaf and have their system render the pdf from the latex source
+  # if you are doing a lot of updates it might be annoying to keep
+  # refreshing, but if you just do something occassionally it might be
+  # sufficent
+  sudo zypper install texlive texlive-pdflatex
+  pandoc -f markdown -t org -o note.org /tmp/md_note.md
+  python3.11 -m pip install exifread
+  python3.11 -m pip install hyfetch
+  python3.11 -m pip install trash-cli
+  sudo rsync -avh --delete <copy from path> <copy to path>
+  sudo rsync -avh --delete /run/media/david/140a6cd2-c07c-4339-bb9a-c87b592bafe5/ /run/media/david/01d0e521-1a65-41ad-a1b2-e77f68c41894/
+  sudo rsync -avh --delete --exclude='.cache/' --exclude='*~' /home/david/ .
+  sudo mkdir /mnt/internal_data/
+  sudo blkid # find drive uuid
+  # edit /etc/fstab - man fstab for details if needed
+  # add line:
+  # openSUSE
+  UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  user                          0  0
+  # Manjaro
+  UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  users                         0  0
+  sudo snap install mpv
+  find /path/to/search -type d \( -iname "*elfeed*" -o -iname ".*elfeed*" \)
+  sudo rsync -avh /run/media/david/AmazonThumbDrive/reorganized_emails/ /home/david/Maildir/reorganized_emails/
+  ln -s /home/david/reorganized_emails /home/david/Maildir/reorganized_emails
+  awk '{for(i=1;i<=NF;i++){printf "%s%s",$i,(i%10==0? ".\n":" ")}}' input.txt > output.txt
+  # https://photoqt.org/downpopupflatpak
+  # https://flathub.org/apps/org.photoqt.PhotoQt
+  flatpak install flathub org.photoqt.PhotoQt
+  # https://www.xnview.com/en/xnviewmp/
+  # https://flathub.org/apps/com.xnview.XnViewMP
+  flatpak update
+  sudo snap refresh
+  # iname is case insensitive (versus name)
+  find ~/ -iname "*vim*"
+  rsync -av --remove-source-files ~/Maildir/gmail/INBOX/ ~/Maildir/reorganized_emails/
+  mv ~/Maildir/gmail/INBOX/* ~/Maildir/gmail/Trash/
+  mbsync -a
 #+end_src
 **** Trash-cli commands
 - trash-put           trash files and directories.
@@ -390,8 +394,8 @@ mbsync -a
 - trash-restore       restore a trashed file.
 - trash-rm            remove individual files from the trashcan.
 #+begin_src bash
-# add to .bashrc
-alias rm='echo "use trash-put or backslash rm to use rm normally"; false'
+  # add to .bashrc
+  alias rm='echo "use trash-put or backslash rm to use rm normally"; false'
 #+end_src
 **** Other Random openSUSE Links
 - [[https://en.opensuse.org/Additional_package_repositories]]
@@ -473,18 +477,18 @@ there are many more.
 Neovim does not work fully without a Nerd Font set as your terminal font
 [[https://www.nerdfonts.com/]]
 #+begin_src toml
-[font.bold]
-family = "UbuntuMono Nerd Font"
-style = "Bold"
-[font.bold_italic]
-family = "UbuntuMono Nerd Font"
-style = "Bold Italic"
-[font.italic]
-family = "UbuntuMono Nerd Font"
-style = "Italic"
-[font.normal]
-family = "UbuntuMono Nerd Font"
-style = "Regular"
+  [font.bold]
+  family = "UbuntuMono Nerd Font"
+  style = "Bold"
+  [font.bold_italic]
+  family = "UbuntuMono Nerd Font"
+  style = "Bold Italic"
+  [font.italic]
+  family = "UbuntuMono Nerd Font"
+  style = "Italic"
+  [font.normal]
+  family = "UbuntuMono Nerd Font"
+  style = "Regular"
 #+end_src
 ** Text Editing Resources
 *** Introduction Text
