@@ -337,6 +337,7 @@ is general command line and some is openSUSE or Manjaro specific.
   sudo rsync -avh --delete <copy from path> <copy to path>
   sudo rsync -avh --delete /run/media/david/140a6cd2-c07c-4339-bb9a-c87b592bafe5/ /run/media/david/01d0e521-1a65-41ad-a1b2-e77f68c41894/
   sudo rsync -avh --delete --exclude='.cache/' --exclude='*~' /home/david/ .
+  sudo rsync -avh --delete /var/mnt/140a6cd2-c07c-4339-bb9a-c87b592bafe5/{i,m}/ .
   sudo mkdir /mnt/internal_data/
   sudo blkid # find drive uuid
   # edit /etc/fstab - man fstab for details if needed
