@@ -748,17 +748,15 @@ First you have to install espeak on your system. Then install greader.
 **** My Greader Workflow In Detail
 Open Emacs then open the text file I want to have read to me with the robotic
 voice. Note the reading speed of the robot is set in your Emacs configuration
-file with variable: ~(setq greader-espeak-rate 400)~. You vary the number to
+file with variable: ~(setq greader-espeak-rate 300)~. You vary the number to
 whatever suites your preferred speaking pace. I would keep in mind that since it
 is reading text it is not perfectly comparable to the rate that people talk or
 what speed you would normally read. So just try different speeds until you find
 what works best for you.
 
-A customization I like to use it to toggle zen mode before reading. You have to
-turn off evil mode for using greader - well you could use it by customizing a
-bunch of stuff, but I just disable and re-enable it when I am done. =M-x= type
-=greader-mode ENTER=. To have it start reading you do =C-r SPACE= and to have it
-stop you do =SPACE=.
+A customization I like to use it to toggle olivetti-mode (or some other zen type
+mode) before reading. =M-x= type =greader-mode ENTER=. To have it start reading
+you do =C-r SPACE= and to have it stop you do =SPACE=.
 
 I press =C-l= two or three times in a row to move the screen of text back up to
 the top (you can press it twice to get it into the middle and three times to get
@@ -884,11 +882,11 @@ articles and taking notes.
 *** Which system do you recommend learning for emacs keybindings between evil, vanilla emacs, xah fly keys, boon, meow, wakib?
 My answer on this question has changed multiple times. Many people were shocked
 when the great YouTuber David Wilson of System Crafters channel switched from
-evil back to vanilla Emacs keybindings. His reasoning was then he does not
-have to context switch as much and there is more consistency as he moves around
-to different parts of Emacs. It also allows him to use plain Emacs with
-efficiency without having to worry about getting evil mode installed to complete
-basic tasks. I do agree with this logic. You can always add god or devil mode to
+evil back to vanilla Emacs keybindings. His reasoning was then he does not have
+to context switch as much and there is more consistency as he moves around to
+different parts of Emacs. It also allows him to use plain Emacs with efficiency
+without having to worry about getting evil mode installed to complete basic
+tasks. I do agree with this logic. You can always add god or devil mode to
 translate the normal Emacs keybindings without as much hand strain. Then you can
 also learn from books more easily since you are using the default keybindings
 and not a custom setup. If you are not going to learn the Emacs keybindings in
