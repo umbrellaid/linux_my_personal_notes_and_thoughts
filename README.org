@@ -33,8 +33,6 @@
       - [[#my-greader-workflow-in-detail][My Greader Workflow In Detail]]
   - [[#newsboat-configuration-and-my-youtube-playlist-watch-list][Newsboat Configuration and My Youtube Playlist Watch list]]
     - [[#config-file][config file]]
-    - [[#main-color-theme-dark-file][main color theme dark file]]
-    - [[#alternative-color-theme-latte-catppuccin-for-newsboat][alternative color theme latte (Catppuccin for Newsboat)]]
     - [[#urls][urls]]
   - [[#faqs][FAQs]]
     - [[#which-text-editor-do-you-recommend-the-most][Which text editor do you recommend the most?]]
@@ -393,8 +391,6 @@ there are many more.
   - [[https://helpx.adobe.com/camera-raw/digital-negative.html]]
   - [[https://www.adobe.com/creativecloud/file-types/image/raw/dng-file.html]]
 - Alacritty terminal emulator
-  - installed from snap - neovim seems to works better in terminal emulators
-    like Alacritty.
   - [[https://alacritty.org/]]
 - Brave Browser
   - [[https://brave.com/linux/]]
@@ -474,16 +470,19 @@ reviewing written information. Here is a collection of thoughts and links I have
 found to be valuable.
 
 A lot of people on reddit and on forums ask if it is worth learning the vim
-normal mode keybindings. I believe if you work in a text a certain amount of
+normal mode keybindings. This is a difficult question to answer since it depends
+on your needs and workflows. I believe if you work in a text a certain amount of
 time it is worth learning, but if you only do small amounts of time in a text
 editor it may not be worth it. Here is a way to think about this, if you do
-programming in a text editor more than a couple hours a week I would say it is
-worth learning. If you write notes or read a lot of text more than a couple of
-hours a week then it may also be worth learning. However, please note that folks
-who do not program are a little more mixed on whether it is worth the time to
-learn and use, whereas programmers tend to find it worth the time to learn. It
-is not just a productivity boost, it is also more engaging and fun as you work
-through code.
+programming in a text editor more than a couple hours a week I would say it
+could be worth learning. If you write notes or read a lot of text more than a
+couple of hours a week then it may also be worth learning. However, please note
+that folks who do not program are a little more mixed on whether it is worth the
+time to learn and use, whereas programmers tend to find it worth the time to
+learn. It is not just a productivity boost, it is also more engaging and fun as
+you work through code or text. I would explore the other options for editing
+besides the vim keybindings to see if you like one of the other approaches
+better.
 
 If you are a programmer I recommend trying and learning the basics of all three
 major text editors which are Visual Studio Code, neovim (or original vim) and
@@ -516,17 +515,18 @@ learn the vanilla keybindings they are very logical once you get used to them
 and they pair well with either god mode or devil mode.
 
 Xah Fly Keys is the most efficient system for programmers, but only readily
-available for emacs. I like the flexibility of moving between neovim, visual
-studio code and emacs so I prefer vim keybindings even though they are less
-efficient. I would only consider learning Xah Fly Keys if you program more than
-80% of your time and you are ok being locked into emacs. The author asks for
-donations for folks who use his tools. Of course it is requested that people
-donate to all open source projects that help them if they can afford to do so.
+available for Emacs. I would only consider learning Xah Fly Keys if you program
+more than 70% of your time and you are ok being locked into emacs. The author
+asks for donations for folks who use his tools. Of course it is requested that
+people donate to all open source projects that help them if they can afford to
+do so.
 
 Boon is a well thought out system, again only for emacs. I like some of the
-thoughts and layouts that are in the system. It is clearly a smart design, but I
-do feel that the benefits it gives you are not really worth the effort learning
-it.
+thoughts and layouts that are in the system. It is clearly a smart design. The
+only problem with it is even though it is easy to learn I do not feel like
+learning it gives you the boost that most people are looking for in their
+workflow. It is nice and straightforward and well designed. Still worth looking
+at.
 
 Meow is a variation on the vim keybindings. The only problem I have with that is
 if I switch between Meow and standard vim it is too confusing to my brain
@@ -560,16 +560,6 @@ away.
 - [[https://github.com/susam/devil]]
 - [[https://www.youtube.com/watch?v=MPSkyfOp5H8][Emacs Packages for Modal Editing - System Crafters Live!]]
 - [[https://systemcrafters.net/live-streams/april-21-2023/]]
-I think it is important to try out multiple setups and it is ok to use multiple
-approaches. I recommend learning emacs, neovim and trying out Visual Studio Code
-as well. I rotate between all three and I have learned the most this way. Some
-problems I know how to solve in all three, some problems I only know how to
-solve in one of the three. Whenever I am trying to learn how to do something
-efficiently I search for the solution in emacs plus neovim to learn whatever I
-can. If I have time I will look later at Visual Studio code as well to see how
-folks solve the problem in that ecosystem. Emacs and neovim are first only
-because they are the most flexible and extendable.
-
 Emacs can read written text out loud in audio format text-to-speech. It has a
 robotic voice, but I actually prefer that when I am trying to study or review
 certain kinds of information.
@@ -589,9 +579,7 @@ Neovim and Emacs both have distributions. A lot of people tell you to build your
 own configuration. It can take a long time to really understand how to setup
 your own configuration to best optimize your workflows. I like how the
 distributions usually offer keybindings decided on with a logical layout. It is
-helpful to build your own config because you learn so much. I think the best
-answer is to do both a custom config and try using the distributions to learn as
-much as possible.
+helpful to build your own config because you learn so much.
 - [[https://gitlab.com/public-repositories/emacs-groundup/-/blob/main/src/docs/emacs-groundup.org]]
 *** Learning The Vim Keybindings - Video Game For Vim Keybindings
 - [[https://vim-adventures.com/]]
@@ -670,10 +658,8 @@ the base that makes it easy to use and awesome right away, you can still
 customize it further to meet your needs but it gives you a good out of the box
 experience.
 *** Neovim Distributions
-- [[https://nvchad.com/]]
-- [[https://www.lunarvim.org/]]
-- [[https://astronvim.com/]]
 - [[https://www.lazyvim.org/]]
+- [[https://nvchad.com/]]
 funny video about note taking if you jump to 14:43 his explanation of emacs and
 21:20 for neovim or watch the whole thing for entertainment and additional
 context:
@@ -725,6 +711,8 @@ inspirational:
 - flush-lines (with parameter ^$) - deletes blank lines in highlighted region
 - greader-mode
 - ibuffer
+- list-command-history (shows minibuffer history)
+- manual-entry (shows manual page inside of emacs)
 - olivetti-mode
 - org-insert-link
 - org-lint
@@ -732,9 +720,11 @@ inspirational:
 - org-sort-list
 - query-replace-regexp
 - set-variable
+- sort-columns
 - sort-fields
 - sort-lines
 - sort-numeric-fields
+- sort-paragraphs
 - treemacs-edit-workspaces
 - turn-off-evil-mode
 - turn-on-evil-mode
@@ -757,56 +747,10 @@ what works best for you.
 A customization I like to use it to toggle olivetti-mode (or some other zen type
 mode) before reading. =M-x= type =greader-mode ENTER=. To have it start reading
 you do =C-r SPACE= and to have it stop you do =SPACE=.
-
-I press =C-l= two or three times in a row to move the screen of text back up to
-the top (you can press it twice to get it into the middle and three times to get
-the text to the top) once the reading part gets to the bottom so it is easier
-for me to continue reading and following it.
 ** Newsboat Configuration and My Youtube Playlist Watch list
 *** config file
 #+begin_example
   browser "xdg-open '%u'
-  include /home/<username>/snap/newsboat/7551/.newsboat/dark
-#+end_example
-*** main color theme dark file
-- [[https://github.com/catppuccin/newsboat/blob/be3d0ee1ba0fc26baf7a47c2aa7032b7541deb0f/themes/dark]]
-#+begin_example
-  color listnormal         color15 default
-  color listnormal_unread  color2  default
-  color listfocus_unread   color2  color0
-  color listfocus          default color0
-  color background         default default
-  color article            default default
-  color end-of-text-marker color8  default
-  color info               color4  color8
-  color hint-separator     default color8
-  color hint-description   default color8
-  color title              color14 color8
-  highlight article "^(Feed|Title|Author|Link|Date): .+" color4 default bold
-  highlight article "^(Feed|Title|Author|Link|Date):" color14 default bold
-  highlight article "\\((link|image|video)\\)" color8 default
-  highlight article "https?://[^ ]+" color4 default
-  highlight article "\[[0-9]+\]" color6 default bold
-#+end_example
-*** alternative color theme latte (Catppuccin for Newsboat)
-- [[https://github.com/catppuccin/newsboat/blob/be3d0ee1ba0fc26baf7a47c2aa7032b7541deb0f/themes/latte]]
-#+begin_example
-  color listnormal         color15 default
-  color listnormal_unread  color2  default
-  color listfocus_unread   color2  color15
-  color listfocus          default color15
-  color background         default default
-  color article            default default
-  color end-of-text-marker color8  default
-  color info               color4  color7
-  color hint-separator     default color7
-  color hint-description   default color7
-  color title              color14 color7
-  highlight article "^(Feed|Title|Author|Link|Date): .+" color4 default bold
-  highlight article "^(Feed|Title|Author|Link|Date):" color14 default bold
-  highlight article "\\((link|image|video)\\)" color8 default
-  highlight article "https?://[^ ]+" color4 default
-  highlight article "\[[0-9]+\]" color6 default bold
 #+end_example
 *** urls
 #+begin_example
@@ -889,14 +833,15 @@ without having to worry about getting evil mode installed to complete basic
 tasks. I do agree with this logic. You can always add god or devil mode to
 translate the normal Emacs keybindings without as much hand strain. Then you can
 also learn from books more easily since you are using the default keybindings
-and not a custom setup. If you are not going to learn the Emacs keybindings in
-depth you might want to try wakib as it is very logical and well thought out. If
-you want to be able to use the same keybindings in multiple programs then you
-would be either learning some of the vim ways as that is the only one that spans
-emacs, neovim and vscode as an option. Of course if you use vscode normally
-without the vim plugin and emacs in wakib mode then it can be close enough for
-many people. There is a basic wakib plugin for vscode but it does not have many
-of the features that the emacs version has, but it does provide some basics.
+and not a custom setup. You might want to try wakib as it is very logical and
+well thought out. If you want to be able to use the same keybindings in multiple
+programs then you would be either learning some of the vim ways as that is the
+only one that spans emacs, neovim and vscode as an option. Of course if you use
+vscode normally without the vim plugin and emacs in wakib mode then it can be
+close enough for many people. There is a basic wakib plugin for vscode but it
+does not have many of the features that the emacs version has, but it does
+provide some basics. You can also map wakib mode to your keyboard on some custom
+keyboards to have your keystrokes the same everywhere.
 ** Additional Links
 - https://asciidoc.org/
 - https://powerman.name/doc/asciidoc
