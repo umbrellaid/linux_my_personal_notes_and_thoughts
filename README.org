@@ -703,6 +703,7 @@ inspirational:
 - auto-fill-mode - automatically inserts line lines at specified line width
 - avy-copy-line
 - avy-move-line
+- buffer-menu
 - capitalize-word
 - check-parens
 - dired
@@ -713,6 +714,7 @@ inspirational:
 - ibuffer
 - list-command-history (shows minibuffer history)
 - manual-entry (shows manual page inside of emacs)
+- narrow-to-region (widen to re-expand - this allows you to just work on a small part of your file without accidentally messing up something off screen)
 - olivetti-mode
 - org-insert-link
 - org-lint
