@@ -451,16 +451,16 @@ Neovim does not work fully without a Nerd Font set as your terminal font
 [[https://www.nerdfonts.com/]]
 #+begin_src toml
   [font.bold]
-  family = "UbuntuMono Nerd Font"
+  family = "Liberation Mono"
   style = "Bold"
   [font.bold_italic]
-  family = "UbuntuMono Nerd Font"
+  family = "Liberation Mono"
   style = "Bold Italic"
   [font.italic]
-  family = "UbuntuMono Nerd Font"
+  family = "Liberation Mono"
   style = "Italic"
   [font.normal]
-  family = "UbuntuMono Nerd Font"
+  family = "Liberation Mono"
   style = "Regular"
 #+end_src
 ** Text Editing Resources
