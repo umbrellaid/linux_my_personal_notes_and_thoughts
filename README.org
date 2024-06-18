@@ -1,4 +1,4 @@
-* Linux My Personal Notes and Thoughts                                  :TOC_9:
+* Linux My Personal Notes and Thoughts :TOC_9:
   - [[#linux-notes--thoughts][Linux Notes / Thoughts]]
     - [[#fedora-silverblue-and-bluefin-customized-version-of-fedora-silverblue][Fedora Silverblue and bluefin customized version of Fedora Silverblue]]
     - [[#doom-emacs][doom emacs]]
@@ -36,7 +36,7 @@
   - [[#faqs][FAQs]]
     - [[#which-text-editor-do-you-recommend-the-most][Which text editor do you recommend the most?]]
     - [[#which-text-format-do-you-recommend-the-most][Which text format do you recommend the most?]]
-    - [[#which-system-do-you-recommend-learning-for-emacs-keybindings-between-evil-vanilla-emacs-xah-fly-keys-boon-meow-wakib][Which system do you recommend learning for emacs keybindings between evil, vanilla emacs, xah fly keys, boon, meow, wakib?]]
+    - [[#which-system-do-you-recommend-learning-for-emacs-keybindings-between-evil][Which system do you recommend learning for emacs keybindings between evil,]]
   - [[#additional-links][Additional Links]]
   - [[#contact-me][Contact Me]]
 
@@ -67,9 +67,11 @@ brew install newsboat
 brew install notmuch
 brew services start isync
 cd /usr/bin/
-distrobox create --init --image docker.io/library/ubuntu:22.04 --name ubuntu_box_22_04 --pre-init-hooks "apt-get install -y systemd"
+distrobox create --init --image docker.io/library/ubuntu:22.04 --name
+ubuntu_box_22_04 --pre-init-hooks "apt-get install -y systemd"
 distrobox enter ubuntu_box_22_04
-distrobox create --init --image quay.io/fedora/fedora:39 --name fedora_box_39 --pre-init-hooks "dnf install -y systemd"
+distrobox create --init --image quay.io/fedora/fedora:39 --name fedora_box_39
+--pre-init-hooks "dnf install -y systemd"
 distrobox enter fedora_box_39
 dnf group list -v --available | grep desktop
 dnf install python-pip
@@ -84,7 +86,8 @@ gh auth setup-git
 gh auth status
 git config --global user.email "david.rrrrrr@yandex.com"
 git config --global user.name "David R Rrrrr"
-homebrew is for CLI apps. examples: neovim, dysk, gh, glances, grype, helix, micro, ollama, spf, ranger, ripgrep, and yt-dlp.
+homebrew is for CLI apps. examples: neovim, dysk, gh, glances, grype, helix,
+micro, ollama, spf, ranger, ripgrep, and yt-dlp.
 hyfetch - prints system information in nice format for screenshots
 nano ~/.gitconfig
 rpm-ostree install htop (do not install software this way)
@@ -165,11 +168,13 @@ Read more about this behavior here: <https://peps.python.org/pep-0668/>
 - Manjaro
 - pacman -S fd
 - openSUSE
-- because fd is out of date in the openSUSE Leap I am installing with cargo which is part of rust instead
+- because fd is out of date in the openSUSE Leap I am installing with cargo
+  which is part of rust instead
 - https://www.rust-lang.org/tools/install
 - https://doc.rust-lang.org/book/ch01-01-installation.html
 - https://learning-rust.github.io/docs/installation/
-- https://en.opensuse.org/Rust - better to not use this and instead use the above, but it is another option
+- https://en.opensuse.org/Rust - better to not use this and instead use the
+  above, but it is another option
 - cargo install fd-find
 - snap install emacs --classic
 - Manjaro
@@ -178,7 +183,8 @@ Read more about this behavior here: <https://peps.python.org/pep-0668/>
 - # optional dependencies
 - pacman -S fd
 - openSUSE
-- zypper addrepo https://download.opensuse.org/repositories/editors/openSUSE_Leap_15.1/editors.repo
+- zypper addrepo
+  https://download.opensuse.org/repositories/editors/openSUSE_Leap_15.1/editors.repo
 - zypper refresh
 - zypper install emacs
 - git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
@@ -197,7 +203,8 @@ Read more about this behavior here: <https://peps.python.org/pep-0668/>
 - https://docs.manjaro.org/
 - https://forum.manjaro.org/
 - https://en.opensuse.org/SDB:Zypper_usage
-- https://doc.opensuse.org/documentation/leap/reference/single-html/book-reference/index.html#sec-zypper
+-
+  https://doc.opensuse.org/documentation/leap/reference/single-html/book-reference/index.html#sec-zypper
 - https://doc.opensuse.org/
 *** Manjaro Linux Plasma KDE
 - open graphical pamac
@@ -237,18 +244,24 @@ grep [options] [pattern] [file or folder or .]
 - i ignore-case
 - l files-with-matches - just list filenames that contain matches
 - r recursive
-- v instead of returning matches return everything that does NOT match (invert-match)
+- v instead of returning matches return everything that does NOT match
+  (invert-match)
 detox
 - detox -n or --dry-run to see what is going to do before running a command
 - detox -rvn path/ then once you are sure changes are ok detox -rv path/
 - n --dry-run does not change anything
-- r recursive into subfolders (any folders starting with . such as .git and .cache are skipped by default)
+- r recursive into subfolders (any folders starting with . such as .git and
+  .cache are skipped by default)
 - v be verbose about files being renamed
 rsync
-- a - archive mode - quick way to tell it you want recursion and preserve almost everything about the file properties permissions
+- a - archive mode - quick way to tell it you want recursion and preserve almost
+  everything about the file properties permissions
 - v - verbose
 - h - output numbers in a human-readable format
-- --delete (automatically calls --delete-during) - tells rsync to delete extraneous files - read the manual (man) page for this option as their are some complex nuances to it for difference scenarios, but for my backup to external hard drive use this is a good option
+- --delete (automatically calls --delete-during) - tells rsync to delete
+  extraneous files - read the manual (man) page for this option as their are
+  some complex nuances to it for difference scenarios, but for my backup to
+  external hard drive use this is a good option
 - --exclude - exclude something from being synced
 *** Random Linux Commands
 Here are a bunch of commands I have run recently just for future reference. I
@@ -270,7 +283,8 @@ is general command line and some is openSUSE or Manjaro specific.
   # install command detox for fixing filenames https://github.com/dharple/detox
   mkdir ~/build
   cd ~/build
-  wget https://github.com/dharple/detox/releases/download/v2.0.0/detox-2.0.0.tar.gz
+  wget
+  https://github.com/dharple/detox/releases/download/v2.0.0/detox-2.0.0.tar.gz
   tar xzvf detox-2.0.0.tar.gz
   cd detox-2.0.0
   ./configure
@@ -291,13 +305,15 @@ is general command line and some is openSUSE or Manjaro specific.
   sudo zypper install gh
   gh auth login
   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-  sudo zypper addrepo https://packages.microsoft.com/yumrepos/edge microsoft-edge
+  sudo zypper addrepo https://packages.microsoft.com/yumrepos/edge
+  microsoft-edge
   sudo zypper refresh
   sudo zypper install microsoft-edge-stable
   # alternative method for obtaining edge below
   sudo zypper install opi
   opi msedge
-  # other interesting options for opi - brave, megasync, vivaldi, vscode, yandex-browser
+  # other interesting options for opi - brave, megasync, vivaldi, vscode,
+yandex-browser
   opi codecs
   sudo zypper install fetchmsttfonts
   sudo zypper install fira-code-fonts
@@ -305,13 +321,15 @@ is general command line and some is openSUSE or Manjaro specific.
   sudo zypper install ripgrep
   # to make sure there are no emacs files that need to be deleted before I
   # install doom emacs
-  find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \) -print
+  find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \)
+  -print
   sudo zypper install pandoc
   sudo zypper install notmuch
   sudo zypper install isync # mbsync
   sudo zypper install espeak-ng
   sudo zypper install espeak-ng-compat
-  sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:/Wine/15.4/Emulators:Wine.repo
+  sudo zypper addrepo
+  https://download.opensuse.org/repositories/Emulators:/Wine/15.4/Emulators:Wine.repo
   sudo zypper refresh
   sudo zypper install wine-staging
   wine --version
@@ -331,22 +349,27 @@ is general command line and some is openSUSE or Manjaro specific.
   python3.11 -m pip install hyfetch
   python3.11 -m pip install trash-cli
   sudo rsync -avh --delete <copy from path> <copy to path>
-  sudo rsync -avh --delete /run/media/david/140a6cd2-c07c-4339-bb9a-c87b592bafe5/ /run/media/david/01d0e521-1a65-41ad-a1b2-e77f68c41894/
+  sudo rsync -avh --delete
+  /run/media/david/140a6cd2-c07c-4339-bb9a-c87b592bafe5/
+  /run/media/david/01d0e521-1a65-41ad-a1b2-e77f68c41894/
   sudo rsync -avh --delete --exclude='.cache/' --exclude='*~' /home/david/ .
-  sudo rsync -avh --delete /var/mnt/140a6cd2-c07c-4339-bb9a-c87b592bafe5/{i,m}/ .
+  sudo rsync -avh --delete /var/mnt/140a6cd2-c07c-4339-bb9a-c87b592bafe5/{i,m}/
+  .
   sudo mkdir /mnt/internal_data/
   sudo blkid # find drive uuid
   # edit /etc/fstab - man fstab for details if needed
   # add line:
   # openSUSE
-  UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  user                          0  0
+  UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5 /mnt/internal_data btrfs user 0 0
   # Manjaro
-  UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5  /mnt/internal_data      btrfs  users                         0  0
+  UUID=140a6cd2-c07c-4339-bb9a-c87b592bafe5 /mnt/internal_data btrfs users 0 0
   sudo snap install mpv
   find /path/to/search -type d \( -iname "*elfeed*" -o -iname ".*elfeed*" \)
-  sudo rsync -avh /run/media/david/AmazonThumbDrive/reorganized_emails/ /home/david/Maildir/reorganized_emails/
+  sudo rsync -avh /run/media/david/AmazonThumbDrive/reorganized_emails/
+  /home/david/Maildir/reorganized_emails/
   ln -s /home/david/reorganized_emails /home/david/Maildir/reorganized_emails
-  awk '{for(i=1;i<=NF;i++){printf "%s%s",$i,(i%10==0? ".\n":" ")}}' input.txt > output.txt
+  awk '{for(i=1;i<=NF;i++){printf "%s%s",$i,(i%10==0? ".\n":" ")}}' input.txt >
+  output.txt
   # https://photoqt.org/downpopupflatpak
   # https://flathub.org/apps/org.photoqt.PhotoQt
   flatpak install flathub org.photoqt.PhotoQt
@@ -356,7 +379,8 @@ is general command line and some is openSUSE or Manjaro specific.
   sudo snap refresh
   # iname is case insensitive (versus name)
   find ~/ -iname "*vim*"
-  rsync -av --remove-source-files ~/Maildir/gmail/INBOX/ ~/Maildir/reorganized_emails/
+  rsync -av --remove-source-files ~/Maildir/gmail/INBOX/
+  ~/Maildir/reorganized_emails/
   mv ~/Maildir/gmail/INBOX/* ~/Maildir/gmail/Trash/
   mbsync -a
 #+end_src
@@ -435,7 +459,8 @@ there are many more.
   - [[https://github.com/ggreer/the_silver_searcher]]
 - Vivaldi Browser
   - [[https://vivaldi.com/download/]]
-  - [[https://help.vivaldi.com/desktop/install-update/manual-setup-vivaldi-linux-repositories/]]
+  -
+    [[https://help.vivaldi.com/desktop/install-update/manual-setup-vivaldi-linux-repositories/]]
 - Wine (windows emulation)
   - [[https://wiki.winehq.org/Download]]
 *** Configurations and Tweaks
@@ -557,7 +582,8 @@ vim keybindings.
 - [[https://www.youtube.com/watch?v=deg74diF_2Q&t=1445s][Xah Talk Show 2023-10-25 Xah Fly Keys, Bill Gosper Equations, Game of Life]]
 - [[https://www.youtube.com/watch?v=TXKlr67qSlc&t=14s][Xah Talk Show Ep532 What Happens When You Blog for 25 Years]]
 - [[https://www.youtube.com/watch?v=giwqQY1inn0][intro to svalboard datahand, best input device]]
-- [[https://www.youtube.com/watch?v=KZA6tojsGfU][Xah Talk Show Ep541, emacs org-mode key, WolframLang tiling, plane curves, math]]
+- [[https://www.youtube.com/watch?v=KZA6tojsGfU][Xah Talk Show Ep541, emacs org-mode key, WolframLang tiling, plane curves,
+  math]]
 - [[https://www.youtube.com/watch?v=ypjsgrpG1r4][xah emacs talk show 2019-01-07 xah-html-mode vs org mode]]
 - [[https://www.youtube.com/watch?v=-vQ56wu30Lg][emacs xah fly keys intro]]
 - [[https://github.com/emacsorphanage/god-mode]]
@@ -585,7 +611,8 @@ own configuration. It can take a long time to really understand how to setup
 your own configuration to best optimize your workflows. I like how the
 distributions usually offer keybindings decided on with a logical layout. It is
 helpful to build your own config because you learn so much.
-- [[https://gitlab.com/public-repositories/emacs-groundup/-/blob/main/src/docs/emacs-groundup.org]]
+-
+  [[https://gitlab.com/public-repositories/emacs-groundup/-/blob/main/src/docs/emacs-groundup.org]]
 *** Learning The Vim Keybindings - Video Game For Vim Keybindings
 - [[https://vim-adventures.com/]]
 I highly recommend playing this game. I have to confess that I find the game
@@ -622,11 +649,12 @@ line. This does not cover the Macro puzzles. There are some small mistakes in
 the document, but it is mostly correct.
 **** Videos From Vomikod
 Playlist
-- [[https://youtube.com/playlist?list=PLl3Gy8rm8g9THKPnmbegeeiu0NvmbLg-V&si=Kc9uqQXNbWAoJTA7]]
+-
+  [[https://youtube.com/playlist?list=PLl3Gy8rm8g9THKPnmbegeeiu0NvmbLg-V&si=Kc9uqQXNbWAoJTA7]]
 Plays through levels 1 -- Last Level, videos are not in English -- there is at
 least one puzzle that had a small change implemented since he recorded these
-videos, but it is mostly accurate to the current game.
-The game authors YouTube Channel:
+videos, but it is mostly accurate to the current game. The game authors YouTube
+Channel:
 - [[https://www.youtube.com/@DoronLinder/videos][https://www.youtube.com/@DoronLinder/videos]]
 Videos of note:
 - Video Explaining the Game
@@ -655,7 +683,8 @@ offer more):
 - [[https://www.youtube.com/@mischavandenburg/videos][https://www.youtube.com/@mischavandenburg/videos]]
 ****** Videos Of Interest
 - FULL NEOVIM Configuration Walkthrough As A DevOps Engineer On MacOS
-- Ultimate Notetaking: My Neovim Zettelkasten Based on Obsidian - Complete Walkthrough
+- Ultimate Notetaking: My Neovim Zettelkasten Based on Obsidian - Complete
+  Walkthrough
 - My Entire Neovim + Tmux Workflow As A DevOps Engineer On MacOS
 I like the style and approach of how he uses Markdown and his workflows. When
 you install neovim it is bare bones, so you can add distribution layer on top of
@@ -679,7 +708,8 @@ inspirational:
 - [[https://www.youtube.com/@ThePrimeTimeagen/videos][https://www.youtube.com/@ThePrimeTimeagen/videos]]
 - [[https://www.youtube.com/@TheVimeagen/videos][https://www.youtube.com/@TheVimeagen/videos]]
 - [[https://www.twitch.tv/theprimeagen]]
-- [[https://kinesis-ergo.com/prime360/][Discount Codes on Kinesis Official Website - they have many types of keyboards so make sure you look through all of the options.]]
+- [[https://kinesis-ergo.com/prime360/][Discount Codes on Kinesis Official Website - they have many types of keyboards
+  so make sure you look through all of the options.]]
 - [[https://twitter.com/ThePrimeagen]]
 - [[https://www.instagram.com/ThePrimeagen/]]
 - [[https://www.tiktok.com/@theprimeagen][https://www.tiktok.com/@theprimeagen]]
@@ -691,7 +721,8 @@ inspirational:
 - [[https://github.com/ThePrimeagen/yt]]
 - [[https://frontendmasters.com/courses/vim-fundamentals/]]
 - [[https://frontendmasters.com/teachers/the-primeagen/]]
-- [[https://github.com/hakluke/how-to-exit-vim][How to exit vim - just a silly lol article - if you do need to quit ESC :q! (quit do not save changes) or ESC :wq (write/save your changes and quit)]]
+- [[https://github.com/hakluke/how-to-exit-vim][How to exit vim - just a silly lol article - if you do need to quit ESC :q!
+  (quit do not save changes) or ESC :wq (write/save your changes and quit)]]
 - [[https://www.youtube.com/watch?v=ZRnWmNdf5IE][From Vim To Zed]]
 - [[https://www.boot.dev/?promo=PRIME][Boot.dev - Learn Backend Development the Smart Way - Primeagen Discount Link]]
 *** Emacs M-x Commands I randomly use
@@ -702,22 +733,26 @@ inspirational:
 - capitalize-word
 - check-parens
 - dired
-- display-fill-column-indicator-mode - shows vertical bar on the number of characters you have set for fill-column value
+- display-fill-column-indicator-mode - shows vertical bar on the number of
+  characters you have set for fill-column value
 - eshell
 - flush-lines (with parameter ^$) - deletes blank lines in highlighted region
 - greader-mode
 - ibuffer
 - list-command-history (shows minibuffer history)
 - manual-entry (shows manual page inside of emacs)
-- narrow-to-region (widen to re-expand - this allows you to just work on a small part of your file without accidentally messing up something off screen)
+- narrow-to-region (widen to re-expand - this allows you to just work on a small
+  part of your file without accidentally messing up something off screen)
 - olivetti-mode
 - org-insert-link
 - org-lint
-- org-open-at-point - opens a link under the point (cursor) when on a link in org mode
+- org-open-at-point - opens a link under the point (cursor) when on a link in
+  org mode
 - org-sort
 - org-sort-list
 - query-replace-regexp
-- set-variable (fill-column for location of text width to adjust to 80 characters or whatever)
+- set-variable (fill-column for location of text width to adjust to 80
+  characters or whatever)
 - sort-columns
 - sort-fields
 - sort-lines
@@ -803,7 +838,8 @@ areas, for example:
 - You can edit text using any methodology you want including vim keybindings.
 - You can navigate your file system using dired
 - You can optimize your workflows by having more tasks inside of Emacs.
-- You have full org mode support for text tasks which then can be exported to a myriad of formats.
+- You have full org mode support for text tasks which then can be exported to a
+  myriad of formats.
 *** Which text format do you recommend the most?
 The org format from Emacs org mode. It is a more consistent implementation
 compared to Markdown. Although Markdown is not really that bad, Emacs has a
@@ -821,7 +857,8 @@ has better formatting than Markdown and can be converted using Pandoc to lots of
 formats as well. It seems to be popular for technical publishing, including but
 not limited to producing actual technical books, README files, man pages,
 articles and taking notes.
-*** Which system do you recommend learning for emacs keybindings between evil, vanilla emacs, xah fly keys, boon, meow, wakib?
+*** Which system do you recommend learning for emacs keybindings between evil,
+    vanilla emacs, xah fly keys, boon, meow, wakib?
 My answer on this question has changed multiple times. Many people were shocked
 when the great YouTuber David Wilson of System Crafters channel switched from
 evil back to vanilla Emacs keybindings. His reasoning was then he does not have
@@ -852,7 +889,8 @@ easier to use that tool in place of Emacs.
 - Org Mode: [[https://orgmode.org/]]
 - LaTeX (if you need precise formatting control): [[https://www.latex-project.org/]]
 - Github Markdown: [[https://docs.github.com/en/get-started/writing-on-github]]
-- Markdown Cheat Sheet: [[https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet]]
+- Markdown Cheat Sheet:
+  [[https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet]]
 - Markdown Here: [[https://github.com/adam-p/markdown-here]]
 - Emacs: [[https://distro.tube/]]
 - Emacs: [[https://emacsconf.org/2023/talks/]]
@@ -873,8 +911,7 @@ easier to use that tool in place of Emacs.
 - Emacs: [[https://systemcrafters.net/emacs-from-scratch/]]
 - Emacs: [[https://www.masteringemacs.org/]]
 - Emacs: [[https://www.masteringemacs.org/book]]
-- Font GNU Unifont on Wikipedia:
-  [[https://en.wikipedia.org/wiki/GNU_Unifont]]
+- Font GNU Unifont on Wikipedia: [[https://en.wikipedia.org/wiki/GNU_Unifont]]
 - Font Unifont Download: [[https://ftp.gnu.org/gnu/unifont/]]
 - Font Unifont: [[http://unifoundry.com/unifont/index.html]]
 - Font YouTube Video about Unifont: [[https://www.youtube.com/watch?v=ckrkW8VHRIs]]
@@ -890,16 +927,18 @@ easier to use that tool in place of Emacs.
 - Neovim: [[https://github.com/rvbug/neovim]]
 - Neovim: [[https://github.com/NormalNvim/NormalNvim]]
 - Neovim: [[https://github.com/rockerBOO/awesome-neovim]]
-- Neovim:
-  [[https://dotfyle.com/neovim/plugins/top?categories=preconfigured]]
+- Neovim: [[https://dotfyle.com/neovim/plugins/top?categories=preconfigured]]
 - Vim: [[https://github.com/ibhagwan/vim-cheatsheet]]
 - Vim: [[https://github.com/vbd/Fieldnotes/blob/main/vim.md]]
-- Emacs: [[http://yummymelon.com/devnull/announcing-casual-an-opinionated-porcelain-for-emacs-calc.html]]
+- Emacs:
+  [[http://yummymelon.com/devnull/announcing-casual-an-opinionated-porcelain-for-emacs-calc.html]]
 - Emacs: [[https://xenodium.com/my-emacs-eye-candy/]]
 - Emacs: [[https://github.com/xenodium/dotsies]]
 - Neovim: [[https://github.com/itsvinayak/TurboNvimConfig.nvim]]
-- Vim/Neovim: [[https://www.youtube.com/watch?v=5BU2gBOe9RU][YouTube Video: Vim Tips I Wish I Knew Earlier by Sebastian Daschner]]
-- Neovim: [[https://www.youtube.com/watch?v=6pAG3BHurdM][YouTube Video: How I Setup Neovim On My Mac To Make It AMAZING In 2024 by Josean Martinez]]
+- Vim/Neovim: [[https://www.youtube.com/watch?v=5BU2gBOe9RU][YouTube Video: Vim
+  Tips I Wish I Knew Earlier by Sebastian Daschner]]
+- Neovim: [[https://www.youtube.com/watch?v=6pAG3BHurdM][YouTube Video: How I
+  Setup Neovim On My Mac To Make It AMAZING In 2024 by Josean Martinez]]
 - [[https://github.com/trishume/dotfiles]]
 - [[https://github.com/trishume]]
 - [[https://elpa.gnu.org/packages/greader.html]]
@@ -914,13 +953,19 @@ easier to use that tool in place of Emacs.
 - [[https://www.gnu.org/software/emacs/manual/index.html][GNU Emacs Manuals Online]]
 - [[https://www.gnu.org/software/emacs/refcards/index.html][GNU Emacs Reference Cards]]
 - [[https://www.gnu.org/doc/other-free-books.html][Free Books from Other Publishers]]
-- [[https://github.com/SilverSnake0/File-Automated-Assistant-Mover][SilverSnake0/File-Automated-Assistant-Mover Excellent Python Toolkit for Organizing and Searching Files - You can run it on a folder and it will sort all of the loose files into file type sub folders and it will not mess with your existing subfolders - it also has tools for searching and finding through sets of files uses python 3]]
+-
+  [[https://github.com/SilverSnake0/File-Automated-Assistant-Mover][SilverSnake0/File-Automated-Assistant-Mover
+  Excellent Python Toolkit for Organizing and Searching Files - You can run it
+  on a folder and it will sort all of the loose files into file type sub folders
+  and it will not mess with your existing subfolders - it also has tools for
+  searching and finding through sets of files uses python 3]]
 - [[https://www.youtube.com/@cantucodes/videos][Cantu Codes - Weekly Neovim Plugin Series]]
 - [[https://github.com/alextricity25/nvim_weekly_plugin_configs][Alex Cantu Github for Code from the Weekly Neovim Plugin Series]]
 - [[https://www.youtube.com/watch?v=jgogUgeuBPo][goparism youtube channel video: Where To Learn Emacs in 2024]]
 - [[https://www.youtube.com/@goparism/videos][goparism youtube channel]]
 - [[https://francopasut.netlify.app/post/markdown-vim-emacs-sublime-vscode/][Markdown with Vim, Emacs, Sublime Text 4 and Visual Studio Code - Franco Pasut]]
-- [[https://karl-voit.at/2017/09/23/orgmode-as-markup-only/][Article Org Mode Syntax Is One of the Most Reasonable Markup Languages to Use for Text]]
+- [[https://karl-voit.at/2017/09/23/orgmode-as-markup-only/][Article Org Mode
+  Syntax Is One of the Most Reasonable Markup Languages to Use for Text]]
 - [[https://missing.csail.mit.edu/2020/editors/]]
 - [[https://www.youtube.com/watch?v=aiBt8CieE7U][Gavin Freeborn - Double Your Productivity With Emacs Org-Mode]]
 - [[https://www.youtube.com/watch?v=DEeStDz_imQ][Gavin Freeborn - 5 Reasons I Love Emacs Orgmode]]
@@ -935,8 +980,9 @@ easier to use that tool in place of Emacs.
   - The purpose of this site is to provide basic information on the Orgdown
     syntax, supported software programs, mobile apps, services, and parsers.
 - [[https://www.youtube.com/watch?v=mmqDYw9C30I][Josean Martinez - 7 Amazing CLI Tools You Need To Try]]
-- [[https://www.youtube.com/watch?v=uOnL4fEnldA][Josean Martinez - How To Make Your Boring macOS Terminal Amazing With
-  Alacritty (some of the tips apply to linux Alacritty use as well)]]
+- [[https://www.youtube.com/watch?v=uOnL4fEnldA][Josean Martinez - How To Make
+  Your Boring macOS Terminal Amazing With Alacritty (some of the tips apply to
+  linux Alacritty use as well)]]
 - https://github.com/james-stoup/org-mode-better-defaults
 - https://github.com/james-stoup/emacs-org-mode-tutorial/
 - https://orgmode.org/quickstart.html
