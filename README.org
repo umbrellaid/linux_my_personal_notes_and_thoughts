@@ -26,7 +26,6 @@
         - [[#long-videos-note-taking][Long Videos Note Taking]]
           - [[#videos-of-interest][Videos Of Interest]]
     - [[#neovim-distributions][Neovim Distributions]]
-    - [[#rss-feeds][RSS Feeds]]
     - [[#the-primeagen-related-links---michael-paulson][The Primeagen Related Links - Michael Paulson]]
     - [[#emacs-m-x-commands-i-randomly-use][Emacs M-x Commands I randomly use]]
     - [[#greader-notes][Greader Notes]]
@@ -68,10 +67,10 @@ brew install newsboat
 brew install notmuch
 brew services start isync
 cd /usr/bin/
-distrobox create --init --image docker.io/library/ubuntu:22.04 --name ubuntu_box_22_04 --additional-packages "systemd"
+distrobox create --init --image docker.io/library/ubuntu:22.04 --name ubuntu_box_22_04 --pre-init-hooks "apt-get install -y systemd"
+distrobox enter ubuntu_box_22_04
 distrobox create --init --image quay.io/fedora/fedora:39 --name fedora_box_39 --pre-init-hooks "dnf install -y systemd"
 distrobox enter fedora_box_39
-distrobox enter ubuntu_box_22_04
 dnf group list -v --available | grep desktop
 dnf install python-pip
 dnf search fonts
@@ -114,7 +113,6 @@ sudo dnf install python3 - this was already installed
 sudo dnf update
 sudo fc-cache -fv
 sudo ln -s /usr/bin/espeak-ng espeak
-sudo mkdir /usr/share/fonts/googlefonts && cd /usr/share/fonts/googlefonts
 sudo ostree admin status
 sudo rpm-ostree status
 sudo rpm-ostree update
@@ -449,6 +447,8 @@ there are many more.
 - [[https://github.com/scalarwaves/dotfiles/blob/main/alacritty/alacritty.toml]]
 Neovim does not work fully without a Nerd Font set as your terminal font
 [[https://www.nerdfonts.com/]]
+Liberation Mono in the Nerd Font world is referenced as Literation Mono Nerd
+Font since the Liberation Mono is a reserved name
 #+begin_src toml
   [font.bold]
   family = "Liberation Mono"
@@ -494,7 +494,7 @@ a setup that you can have up and running super fast that allow you to learn the
 ways of vim but have all of the modern conveniences of a high end text editor
 working right away. Make sure you go through all of the extensions settings and
 turn on some of the plugins if you want to get familiar with them. They are not
-all enabled by default. Emacs with vi emulation. Emacs has a robust platform
+all enabled by default. Emacs with vim emulation. Emacs has a robust platform
 with tremendous built in functionality. Plus you can extend it with add-ons and
 you can have custom functions you can easily add. OpenAI ChatGPT, Google Gemini
 can generate custom functions you can add to your emacs configuration. Make sure
@@ -519,14 +519,16 @@ available for Emacs. I would only consider learning Xah Fly Keys if you program
 more than 70% of your time and you are ok being locked into emacs. The author
 asks for donations for folks who use his tools. Of course it is requested that
 people donate to all open source projects that help them if they can afford to
-do so.
+do so. Below are links to YouTube videos, you have to watch multiple videos to
+see the real benefit of this system.
 
 Boon is a well thought out system, again only for emacs. I like some of the
 thoughts and layouts that are in the system. It is clearly a smart design. The
 only problem with it is even though it is easy to learn I do not feel like
 learning it gives you the boost that most people are looking for in their
-workflow. It is nice and straightforward and well designed. Still worth looking
-at.
+workflow. It is still nice and straightforward and well designed. Still worth
+looking at, but I think most people would be happier with vim or if you are all
+in on emacs Xah Fly Keys.
 
 Meow is a variation on the vim keybindings. The only problem I have with that is
 if I switch between Meow and standard vim it is too confusing to my brain
@@ -540,7 +542,10 @@ Wakib: Emacs for the rest of us. This is both a minor mode and a starter kit.
 This is incredibly well thought out. I like the keyboard layout it is very
 logical and similar to some of the other systems mentioned above. This feels
 very well polished with the starter kit giving you a lot of functionality right
-away.
+away. This gives you the benefit of cut, copy, paste in the same way as other
+apps it also has a robust starter kit. You can use the starter kit or the
+keybindings independently. I used this for a little while, but I went back to
+vim keybindings.
 
 **** Links
 - [[https://www.youtube.com/watch?v=rK51Lp_lreI][Intro to Wakib, an Emacs Starter Kit]]
@@ -572,7 +577,7 @@ through information.
 
 Emacs has a built in web browser, it is handy if you have a text heavy document
 that you want open side by side with a place to take notes in emacs. It does not
-replace full featured web browsers but is still helpful for reference document
+replace full featured web browsers, but is still helpful for reference document
 review.
 
 Neovim and Emacs both have distributions. A lot of people tell you to build your
@@ -629,9 +634,9 @@ Videos of note:
 - Explains Level 5 where is the hidden key
 **** File Formats For Note Taking
 Org, AsciiDoc and Markdown are a few examples of popular formats for taking
-notes. There are more options out there then these three. You can use plain text
-documents (txt) if you just want to copy and paste a bunch of information into a
-file that you can search or grep later to find. If you are organizing
+notes. There are more choices out there then these options. You can use plain
+text documents (txt) if you just want to copy and paste a bunch of information
+into a file that you can search or grep later to find. If you are organizing
 information that you are going share with others or need the document to be more
 structured for your own reference then org and Markdown formats are worth
 learning and using. If you need highly structured control over formatting above
@@ -669,16 +674,6 @@ Popular series on doom Emacs:
 Japanese app author shares his neovim setups, his app is a note taking app, very
 inspirational:
 - [[https://www.youtube.com/@devaslife/videos][https://www.youtube.com/@devaslife/videos]]
-*** RSS Feeds
-- [[https://nullprogram.com/feed/]]
-- [[https://planet.emacslife.com/atom.xml]]
-- [[https://www.reddit.com/r/emacs.rss]]
-- [[https://www.reddit.com/r/neovim.rss]]
-- [[https://www.reddit.com/r/vim.rss]]
-- [[https://neovim.io/news.xml]]
-- [[https://dotfyle.com/this-week-in-neovim/rss.xml]]
-- [[https://protesilaos.com/master.xml]]
-- [[https://sachachua.com/blog/feed]]
 *** The Primeagen Related Links - Michael Paulson
 - [[https://youtube.com/@ThePrimeagen/videos]]
 - [[https://www.youtube.com/@ThePrimeTimeagen/videos][https://www.youtube.com/@ThePrimeTimeagen/videos]]
@@ -707,7 +702,7 @@ inspirational:
 - capitalize-word
 - check-parens
 - dired
-- display-fill-column-indicator-mode
+- display-fill-column-indicator-mode - shows vertical bar on the number of characters you have set for fill-column value
 - eshell
 - flush-lines (with parameter ^$) - deletes blank lines in highlighted region
 - greader-mode
@@ -718,10 +713,11 @@ inspirational:
 - olivetti-mode
 - org-insert-link
 - org-lint
+- org-open-at-point - opens a link under the point (cursor) when on a link in org mode
 - org-sort
 - org-sort-list
 - query-replace-regexp
-- set-variable
+- set-variable (fill-column for location of text width to adjust to 80 characters or whatever)
 - sort-columns
 - sort-fields
 - sort-lines
@@ -839,7 +835,10 @@ and not a custom setup. If you want to be able to use the same keybindings in
 multiple programs then you would be either learning some of the vim ways as that
 is the only one that spans emacs, neovim and vscode as an option. I do not have
 a perfect answer to this problem, I wish I did. I like switching editors and
-learning different systems.
+learning different systems. My usual workflow is to use vim keybindings but to
+have a quick toggle to turn them off for vanilla Emacs keybindings depending on
+what I am doing. Then if I want to use neovim for something specific it is
+easier to use that tool in place of Emacs.
 ** Additional Links
 - https://asciidoc.org/
 - https://powerman.name/doc/asciidoc
@@ -936,7 +935,8 @@ learning different systems.
   - The purpose of this site is to provide basic information on the Orgdown
     syntax, supported software programs, mobile apps, services, and parsers.
 - [[https://www.youtube.com/watch?v=mmqDYw9C30I][Josean Martinez - 7 Amazing CLI Tools You Need To Try]]
-- [[https://www.youtube.com/watch?v=uOnL4fEnldA][Josean Martinez - How To Make Your Boring macOS Terminal Amazing With Alacritty (some of the tips apply to linux Alacritty use as well)]]
+- [[https://www.youtube.com/watch?v=uOnL4fEnldA][Josean Martinez - How To Make Your Boring macOS Terminal Amazing With
+  Alacritty (some of the tips apply to linux Alacritty use as well)]]
 - https://github.com/james-stoup/org-mode-better-defaults
 - https://github.com/james-stoup/emacs-org-mode-tutorial/
 - https://orgmode.org/quickstart.html
