@@ -835,15 +835,11 @@ without having to worry about getting evil mode installed to complete basic
 tasks. I do agree with this logic. You can always add god or devil mode to
 translate the normal Emacs keybindings without as much hand strain. Then you can
 also learn from books more easily since you are using the default keybindings
-and not a custom setup. You might want to try wakib as it is very logical and
-well thought out. If you want to be able to use the same keybindings in multiple
-programs then you would be either learning some of the vim ways as that is the
-only one that spans emacs, neovim and vscode as an option. Of course if you use
-vscode normally without the vim plugin and emacs in wakib mode then it can be
-close enough for many people. There is a basic wakib plugin for vscode but it
-does not have many of the features that the emacs version has, but it does
-provide some basics. You can also map wakib mode to your keyboard on some custom
-keyboards to have your keystrokes the same everywhere.
+and not a custom setup. If you want to be able to use the same keybindings in
+multiple programs then you would be either learning some of the vim ways as that
+is the only one that spans emacs, neovim and vscode as an option. I do not have
+a perfect answer to this problem, I wish I did. I like switching editors and
+learning different systems.
 ** Additional Links
 - https://asciidoc.org/
 - https://powerman.name/doc/asciidoc
