@@ -74,7 +74,8 @@ distrobox create --init --image quay.io/fedora/fedora:39 --name fedora_box_39
 --pre-init-hooks "dnf install -y systemd"
 distrobox enter fedora_box_39
 dnf group list -v --available | grep desktop
-dnf install python-pip
+sudo dnf check-update
+sudo dnf install python-pip
 dnf search fonts
 fc-match Font Name
 flatpak install
