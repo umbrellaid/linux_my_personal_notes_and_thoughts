@@ -747,10 +747,15 @@ inspirational:
 - olivetti-mode
 - org-insert-link
 - org-lint
+- org-mark-subtree
+- org-narrow-to-block
+- org-narrow-to-element
+- org-narrow-to-subtree
 - org-open-at-point - opens a link under the point (cursor) when on a link in
   org mode
 - org-sort
 - org-sort-list
+- org-toggle-narrow-to-subtree
 - query-replace-regexp
 - set-variable (fill-column for location of text width to adjust to 80
   characters or whatever)
