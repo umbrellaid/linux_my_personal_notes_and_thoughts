@@ -125,6 +125,13 @@ sudo unzip -d . ~/Downloads/FontArchive.zip
 systemctl reboot
 ubuntu-family-fonts - these are preinstalled do not need to install them
 xhost +si:localuser:$USER >/dev/null
+mkdir -p ~/.local/share/fonts
+mv /path/to/your/downloaded/font.ttf ~/.local/share/fonts/
+or you can do .fonts folder instead if preferred
+mkdir -p ~/.fonts
+mv ~/Downloads/<your-font-file.ttf> ~/.fonts/
+fc-cache -fv
+fc-list | grep -i <partial-font-name>
 ============================================================
 python3.12 -m pip install exifread
 error: externally-managed-environment
