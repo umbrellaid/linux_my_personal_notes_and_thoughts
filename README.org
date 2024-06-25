@@ -132,6 +132,9 @@ mkdir -p ~/.fonts
 mv ~/Downloads/<your-font-file.ttf> ~/.fonts/
 fc-cache -fv
 fc-list | grep -i <partial-font-name>
+# Aliases to use nvim instead of vi or vim
+alias vi='nvim'
+alias vim='nvim'
 ============================================================
 python3.12 -m pip install exifread
 error: externally-managed-environment
