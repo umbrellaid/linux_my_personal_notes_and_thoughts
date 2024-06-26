@@ -68,8 +68,43 @@ brew install notmuch
 brew services start isync
 cd /usr/bin/
 distrobox create --init --image docker.io/library/ubuntu:22.04 --name
-ubuntu_box_22_04 --pre-init-hooks "apt-get install -y systemd"
-distrobox enter ubuntu_box_22_04
+ubuntu_box_22_04_new_2 --pre-init-hooks "apt-get update && apt-get install -y
+systemd"
+distrobox enter ubuntu_box_22_04_new_2
+sudo apt-get update
+sudo apt-get install -y xfce4 xfce4-goodies
+cd ~/projects  # or any directory you prefer
+sudo apt-get update
+$ apt-cache show emacs | grep Version
+Version: 1:27.1+1-3ubuntu3
+Version: 1:26.3+1-1ubuntu2
+https://www.masteringemacs.org/article/speed-up-emacs-libjansson-native-elisp-compilation
+git clone https://git.savannah.gnu.org/git/emacs.git
+apt-get update
+apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+edit /etc/apt/sources.list
+add-apt-repository ppa:ubuntu-toolchain-r/ppa
+apt-get update
+apt-get install gcc-10 libgccjit0 libgccjit-10-dev
+apt-get build-dep emacs
+apt-get install libjansson4 libjansson-dev
+export CC="gcc-10"
+./configure --prefix=$HOME/.local --without-compress-install --with-native-compilation
+git clone -b master git://git.sv.gnu.org/emacs.git
+git clone https://github.com/emacs-mirror/emacs.git
+./autogen.sh
+./configure --help
+When installing software from source on Fedora Silverblue, or any other
+immutable system like it, you might prefer to install to a different prefix to
+avoid potential issues with the system's default configuration and to keep the
+system directories clean. The default installation prefix (/usr/local) is
+generally fine for most systems, but on Fedora Silverblue, you might want to use
+a user-specific directory or an alternative location that doesn't interfere with
+the system-managed directories. A common alternative is to use $HOME/.local or
+/opt/emacs. Here’s how you can specify an alternative prefix during the
+./configure step: ./configure --prefix=$HOME/.local
+make
+sudo make install
 distrobox create --init --image quay.io/fedora/fedora:39 --name fedora_box_39
 --pre-init-hooks "dnf install -y systemd"
 distrobox enter fedora_box_39
@@ -324,7 +359,7 @@ is general command line and some is openSUSE or Manjaro specific.
   sudo zypper install opi
   opi msedge
   # other interesting options for opi - brave, megasync, vivaldi, vscode,
-yandex-browser
+  yandex-browser
   opi codecs
   sudo zypper install fetchmsttfonts
   sudo zypper install fira-code-fonts
@@ -394,6 +429,14 @@ yandex-browser
   ~/Maildir/reorganized_emails/
   mv ~/Maildir/gmail/INBOX/* ~/Maildir/gmail/Trash/
   mbsync -a
+  You can also update Ubuntu using the terminal.
+  Press CTRL+ALT+T to bring up a Terminal window (or click the terminal icon in the sidebar).
+  Type in:
+  sudo apt update
+  You will be prompted to enter your login password.
+  This will check for updates and tell you if there are any that need applying. To apply any updates, type:
+  sudo apt upgrade
+  Type Y, then press ENTER to confirm to finish the update process.
 #+end_src
 **** Trash-cli commands
 - trash-put           trash files and directories.
@@ -874,7 +917,7 @@ formats as well. It seems to be popular for technical publishing, including but
 not limited to producing actual technical books, README files, man pages,
 articles and taking notes.
 *** Which system do you recommend learning for emacs keybindings between evil,
-    vanilla emacs, xah fly keys, boon, meow, wakib?
+vanilla emacs, xah fly keys, boon, meow, wakib?
 My answer on this question has changed multiple times. Many people were shocked
 when the great YouTuber David Wilson of System Crafters channel switched from
 evil back to vanilla Emacs keybindings. His reasoning was then he does not have
@@ -970,11 +1013,11 @@ easier to use that tool in place of Emacs.
 - [[https://www.gnu.org/software/emacs/refcards/index.html][GNU Emacs Reference Cards]]
 - [[https://www.gnu.org/doc/other-free-books.html][Free Books from Other Publishers]]
 -
-  [[https://github.com/SilverSnake0/File-Automated-Assistant-Mover][SilverSnake0/File-Automated-Assistant-Mover
-  Excellent Python Toolkit for Organizing and Searching Files - You can run it
-  on a folder and it will sort all of the loose files into file type sub folders
-  and it will not mess with your existing subfolders - it also has tools for
-  searching and finding through sets of files uses python 3]]
+    [[https://github.com/SilverSnake0/File-Automated-Assistant-Mover][SilverSnake0/File-Automated-Assistant-Mover
+    Excellent Python Toolkit for Organizing and Searching Files - You can run it
+    on a folder and it will sort all of the loose files into file type sub folders
+    and it will not mess with your existing subfolders - it also has tools for
+    searching and finding through sets of files uses python 3]]
 - [[https://www.youtube.com/@cantucodes/videos][Cantu Codes - Weekly Neovim Plugin Series]]
 - [[https://github.com/alextricity25/nvim_weekly_plugin_configs][Alex Cantu Github for Code from the Weekly Neovim Plugin Series]]
 - [[https://www.youtube.com/watch?v=jgogUgeuBPo][goparism youtube channel video: Where To Learn Emacs in 2024]]
@@ -1003,5 +1046,17 @@ easier to use that tool in place of Emacs.
 - https://github.com/james-stoup/emacs-org-mode-tutorial/
 - https://orgmode.org/quickstart.html
 - https://karl-voit.at/2021/07/23/emacs-lock-in/
+- https://lazyvim-ambitious-devs.phillips.codes/ - LazyVim for Ambitious Developers (LazyVim Distribution for neovim free e-book)
+- https://omakub.org/ - An Omakase Developer Setup for Ubuntu 24.04 by DHH (eza, fzf, rg, zoxide, and bg)
+  - quote from above site: Use the six default workspaces for apps (hotkeys:
+    Super+1/2/3/…), preferably full-screen ones on laptop displays (hotkey:
+    F11), or tiled neatly using Tactile (hotkey: Super+T). Speed of motion is
+    also why all the transition animations have been nerfed. And start any app
+    in the dock (hotkey: Super) based on it’s position (hotkey: Alt+1/2/3/4). So
+    browser is just Alt+1, Terminal Alt+2, etc. Additionally, Ulauncher provides
+    an app launcher ala Raycast, which you trigger with Super+Space. And you can
+    quickly enter emojis with the compose key (which is mapped to Caps Lock) m
+    and then a single letter representing the emoji. Run omakub, pick hotkeys,
+    and there you can see it all.
 ** Contact Me
 If you have any interesting information to share please let me know. [[mailto:david.rrrrrr@yandex.com][Email Dave]]
