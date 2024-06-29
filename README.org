@@ -64,7 +64,6 @@ brew install git
 brew install hyfetch
 brew install isync
 brew install newsboat
-brew install notmuch
 brew services start isync
 cd /usr/bin/
 distrobox create --init --image docker.io/library/ubuntu:22.04 --name
@@ -82,7 +81,19 @@ https://www.masteringemacs.org/article/speed-up-emacs-libjansson-native-elisp-co
 git clone https://git.savannah.gnu.org/git/emacs.git
 apt-get update
 apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-edit /etc/apt/sources.list
+nvim /etc/apt/sources.list
+newer ubuntu location:
+nvim # Ubuntu sources have moved to /etc/apt/sources.list.d/ubuntu.sources
+Types: deb deb-src
+URIs: http://us.archive.ubuntu.com/ubuntu/
+Suites: noble noble-updates noble-backports
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+Types: deb deb-src
+URIs: http://security.ubuntu.com/ubuntu/
+Suites: noble-security
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 add-apt-repository ppa:ubuntu-toolchain-r/ppa
 apt-get update
 apt-get install gcc-10 libgccjit0 libgccjit-10-dev
@@ -262,20 +273,16 @@ Read more about this behavior here: <https://peps.python.org/pep-0668/>
 - terminal
   - sudo pacman -Syyu
 - open graphical pamac
-  - ttf-ms-fonts (or yay -S ttf-ms-fonts or ttf-ms-win10-auto)
 - terminal
   - sudo pacman -S base-devel
   - sudo pacman -S yay
-  - lsb_release -drc
-  - yay -S vmware-horizon-client
   - sudo pacman -S espeak-ng
-  - sudo pacman -S espeak-ng-compat
   - sudo pacman -S texlive-core texlive-bin texlive-latexextra
     - this is for exporting to pdf from org mode emacs command pdflatex
     - alternative for larger install: sudo pacman -S texlive-most texlive-lang
       - note this is a large install
     - to find additional packages: pacman -Ss texlive
-  - sudo pacman -S isync notmuch #mbsync
+  - sudo pacman -S isync #mbsync
 *** openSUSE Linux Leap 15.5 x86_64 Plasma KDE
 - [[https://www.opensuse.org/#Leap][openSUSE Leap]]
 - [[https://snapcraft.io/install/snap-store/opensuse][Install Snap on openSUSE]]
@@ -314,7 +321,7 @@ Here are a bunch of commands I have run recently just for future reference. I
 may or may not have continued using some of these, but you have to sometimes
 play around and try different options to find out what is helpful. Some of this
 is general command line and some is openSUSE or Manjaro specific.
-#+begin_src sh
+#+begin_src example
   cat /etc/os-release
   sudo zypper refresh
   # if you are running tumbleweed sudo zypper dup
@@ -326,6 +333,7 @@ is general command line and some is openSUSE or Manjaro specific.
   cnf <command>
   # compiling and linking applications needed for make, make install commands
   sudo zypper install patterns-devel-base-devel_basis # minimal set of tools for
+  sudo apt install autoconf automake bison flex gcc make pkg-config
   # install command detox for fixing filenames https://github.com/dharple/detox
   mkdir ~/build
   cd ~/build
@@ -370,7 +378,6 @@ is general command line and some is openSUSE or Manjaro specific.
   find ~ -type f \( -name ".emacs" -o -name ".emacs.el" -o -name "init.el" \)
   -print
   sudo zypper install pandoc
-  sudo zypper install notmuch
   sudo zypper install isync # mbsync
   sudo zypper install espeak-ng
   sudo zypper install espeak-ng-compat
@@ -437,6 +444,43 @@ is general command line and some is openSUSE or Manjaro specific.
   This will check for updates and tell you if there are any that need applying. To apply any updates, type:
   sudo apt upgrade
   Type Y, then press ENTER to confirm to finish the update process.
+  sudo apt update
+  sudo apt install python3.12-venv
+  sudo apt install python3.12-dev (I don't think I need this?)
+        python3.12 -m venv myenv
+        source myenv/bin/activate
+        deactivate
+        python -m ensurepip --upgrade
+        pip install pandas
+        wget -qO- https://omakub.org/install | bash
+      sudo apt install gnutls-bin (not confident I need this)
+      sudo apt-get install meson libgmime-3.0-dev libxapian-dev
+      cd projects/
+      git clone https://github.com/djcb/mu.git
+      ./autogen.sh && make
+      sudo make install
+      git clone -b main https://github.com/dharple/detox.git
+      autoreconf --install
+      ./configure
+      make
+      sudo make install
+      man detox
+      emacs
+      pacman to install libgccjit and mailutils (gnu)
+      ./autogen.sh
+      ./configure --without-compress-install --with-native-compilation --with-mailutils
+      make
+      sudo make install
+      for python
+      use pacman to install python-virtualenv
+      pamac install base-devel
+      sudo pacman -S github-cli
+  gh auth
+  gh auth login
+  gh auth setup-git
+  gh auth status
+     sudo pacman -Syu
+     sudo pacman -S base-devel git texinfo
 #+end_src
 **** Trash-cli commands
 - trash-put           trash files and directories.
@@ -444,7 +488,7 @@ is general command line and some is openSUSE or Manjaro specific.
 - trash-list          list trashed files.
 - trash-restore       restore a trashed file.
 - trash-rm            remove individual files from the trashcan.
-#+begin_src bash
+#+begin_src example
   # add to .bashrc
   alias rm='echo "use trash-put or backslash rm to use rm normally"; false'
 #+end_src
@@ -494,8 +538,6 @@ there are many more.
   - [[https://github.com/neovim/neovim/blob/master/INSTALL.md]]
 - Newsboat
   - installed from snap - [[https://snapcraft.io/newsboat]]
-- Notmuch
-  - installed from system package manager
 - Opera Browser
   - [[https://www.opera.com/download]]
   - RPM is hidden further down on page or can be installed from snap
@@ -1013,11 +1055,11 @@ easier to use that tool in place of Emacs.
 - [[https://www.gnu.org/software/emacs/refcards/index.html][GNU Emacs Reference Cards]]
 - [[https://www.gnu.org/doc/other-free-books.html][Free Books from Other Publishers]]
 -
-    [[https://github.com/SilverSnake0/File-Automated-Assistant-Mover][SilverSnake0/File-Automated-Assistant-Mover
-    Excellent Python Toolkit for Organizing and Searching Files - You can run it
-    on a folder and it will sort all of the loose files into file type sub folders
-    and it will not mess with your existing subfolders - it also has tools for
-    searching and finding through sets of files uses python 3]]
+  [[https://github.com/SilverSnake0/File-Automated-Assistant-Mover][SilverSnake0/File-Automated-Assistant-Mover
+  Excellent Python Toolkit for Organizing and Searching Files - You can run it
+  on a folder and it will sort all of the loose files into file type sub folders
+  and it will not mess with your existing subfolders - it also has tools for
+  searching and finding through sets of files uses python 3]]
 - [[https://www.youtube.com/@cantucodes/videos][Cantu Codes - Weekly Neovim Plugin Series]]
 - [[https://github.com/alextricity25/nvim_weekly_plugin_configs][Alex Cantu Github for Code from the Weekly Neovim Plugin Series]]
 - [[https://www.youtube.com/watch?v=jgogUgeuBPo][goparism youtube channel video: Where To Learn Emacs in 2024]]
