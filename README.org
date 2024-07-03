@@ -58,6 +58,7 @@
 - [[https://docs.fedoraproject.org/en-US/docs/][User Documentation - Fedora Linux]]
 - [[https://universal-blue.discourse.group/docs][Welcome to Universal Blue General Documentation]]
 
+#+begin_example
 -$ cat ~/.distroboxrc
 /home/linuxbrew/.linuxbrew/opt/isync/bin/mbsync -a
 aspell dicts - lists dictionaries installed - en_US worked in emacs
@@ -643,11 +644,10 @@ and they pair well with either god mode or devil mode.
 
 Xah Fly Keys is the most efficient system for programmers, but only readily
 available for Emacs. I would only consider learning Xah Fly Keys if you program
-more than 70% of your time and you are ok being locked into emacs. The author
-asks for donations for folks who use his tools. Of course it is requested that
-people donate to all open source projects that help them if they can afford to
-do so. Below are links to YouTube videos, you have to watch multiple videos to
-see the real benefit of this system.
+more than 70% of your time and you are ok being locked into emacs. Below are
+links to YouTube videos, you have to watch multiple videos to see the real
+benefit of this system. Here is a great article about the pros and cons of this
+approach: https://www.deusinmachina.net/p/modal-editing-with-emacs-using-xah
 
 Boon is a well thought out system, again only for emacs. I like some of the
 thoughts and layouts that are in the system. It is clearly a smart design. The
