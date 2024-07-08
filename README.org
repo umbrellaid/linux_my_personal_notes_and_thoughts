@@ -1,6 +1,6 @@
 * Linux My Personal Notes and Thoughts :TOC_9:
   - [[#linux-notes--thoughts][Linux Notes / Thoughts]]
-    - [[#fedora-silverblue-and-bluefin-customized-version-of-fedora-silverblue][Fedora Silverblue and bluefin customized version of Fedora Silverblue]]
+    - [[#fedora-silverblue-and-bluefin-customized-version-of-fedora-silverblue-plus-fedora-kinoite-and-aurora-customized-version-of-fedora-kinoite][Fedora Silverblue and bluefin customized version of Fedora Silverblue, plus Fedora Kinoite and Aurora customized version of Fedora Kinoite]]
     - [[#doom-emacs][doom emacs]]
     - [[#cheat-sheet-links][Cheat Sheet Links]]
     - [[#manjaro-linux-plasma-kde][Manjaro Linux Plasma KDE]]
@@ -53,7 +53,7 @@
     - [[#zellij-configkdl][zellij config.kdl]]
 
 ** Linux Notes / Thoughts
-*** Fedora Silverblue and bluefin customized version of Fedora Silverblue
+*** Fedora Silverblue and bluefin customized version of Fedora Silverblue, plus Fedora Kinoite and Aurora customized version of Fedora Kinoite
 - [[https://docs.fedoraproject.org/en-US/quick-docs/fonts/][Adding New Fonts in Fedora]]
 - [[https://docs.fedoraproject.org/en-US/fedora/latest/][Fedora Linux User Documentation]]
 - [[https://docs.fedoraproject.org/en-US/quick-docs/][Fedora Quick Docs]]
@@ -63,7 +63,8 @@
 - [[https://projectbluefin.io/][Project Bluefin home]]
 - [[https://docs.fedoraproject.org/en-US/docs/][User Documentation - Fedora Linux]]
 - [[https://universal-blue.discourse.group/docs][Welcome to Universal Blue General Documentation]]
-
+- [[https://getaurora.dev/][Get Aurora home]]
+- [[https://fedoraproject.org/atomic-desktops/kinoite/][Fedora Kinoite]]
 #+begin_example
 -$ cat ~/.distroboxrc
 /home/linuxbrew/.linuxbrew/opt/isync/bin/mbsync -a
@@ -79,9 +80,6 @@ brew install isync
 brew install newsboat
 brew services start isync
 cd /usr/bin/
-distrobox create --init --image docker.io/library/ubuntu:22.04 --name
-ubuntu_box_22_04_new_2 --pre-init-hooks "apt-get update && apt-get install -y
-systemd"
 distrobox enter ubuntu_box_22_04_new_2
 sudo apt-get update
 sudo apt-get install -y xfce4 xfce4-goodies
@@ -129,8 +127,6 @@ the system-managed directories. A common alternative is to use $HOME/.local or
 ./configure step: ./configure --prefix=$HOME/.local
 make
 sudo make install
-distrobox create --init --image quay.io/fedora/fedora:39 --name fedora_box_39
---pre-init-hooks "dnf install -y systemd"
 distrobox enter fedora_box_39
 dnf group list -v --available | grep desktop
 sudo dnf check-update
@@ -194,6 +190,221 @@ fc-list | grep -i <partial-font-name>
 # Aliases to use nvim instead of vi or vim
 alias vi='nvim'
 alias vim='nvim'
+distrobox create --init --image docker.io/library/archlinux:latest --name arch_box_latest --pre-init-hooks "pacman -Syu --noconfirm"
+distrobox enter arch_box_latest
+sudo pacman -S xfce4 xfce4-goodies
+sudo pacman -Syu - update system
+distrobox create --init --image docker.io/library/ubuntu:22.04 --name ubuntu_box_22_04_new_2 --pre-init-hooks "apt-get update && apt-get upgrade -y"
+distrobox create --init --image quay.io/fedora/fedora:39 --name fedora_box_39 --pre-init-hooks "dnf update -y"
+sudo pacman -Rs php - remove a package (manually delete config files left behind)
+sudo pacman -Ss php - search for package
+sudo pacman -Qs php - search for an already installed package
+sudo pacman -Qm php - search for an already installed package that is from outside of the offical repositories like the AUR
+https://aur.archlinux.org
+sudo pacman -S --needed base-devel
+sudo pacman -S git
+git clone <url>
+yay.git
+makepkg -si
+sudo pacman -U yay-ver.pkg.tar.zst
+yay --version
+yay -Syu - run update with packages installed from AUR
+https://github.com/Jguer/yay
+First Use
+Development packages upgrade
+
+    Use yay -Y --gendb to generate a development package database for *-git packages that were installed without yay. This command should only be run once.
+
+    yay -Syu --devel will then check for development package updates
+
+    Use yay -Y --devel --save to make development package updates permanently enabled (yay and yay -Syu will then always check dev packages)
+check latest version of google chrome using this command
+curl -sSf https://dl.google.com/linux/chrome/deb/dists/stable/main/binary-amd64/Packages | \
+     grep -A1 "Package: google-chrome-stable" | \
+     awk '/Version/{print $2}' | \
+     cut -d '-' -f1
+from: https://aur.archlinux.org/packages/google-chrome
+yay -S google-chrome
+==> NOTE: Custom flags should be put directly in: ~/.config/chrome-flags.conf
+==> NOTE: The launcher is called: 'google-chrome-stable'
+yay -S brave-bin
+Flatpak
+Brave is available as a Flatpak package from Flathub. While it is maintained by Brave Software, it is not yet working as well as our native packages. We currently recommend that users who are able to use our official package repositories do so instead of using the Flatpak.
+brave-bin
+https://cli.github.com/
+https://github.com/cli/cli#installation
+sudo pacman -S github-cli
+sudo pacman -S aspell
+sudo pacman -S aspell-en
+sudo pacman -S espeak-ng
+detox install for cleaning up filenames
+pacman -S --needed base-devel gcc git mingw-w64-x86_64-toolchain
+# install command detox for fixing filenames https://github.com/dharple/detox
+git clone -b main https://github.com/dharple/detox.git
+cd detox
+autoreconf --install
+./configure
+make
+sudo make install
+sudo pacman -S isync #mbsync
+git clone https://git.savannah.gnu.org/git/emacs.git
+sudo pacman -Syu base-devel git libjpeg-turbo libpng libtiff giflib gnutls jansson libxml2 libxpm libxaw librsvg gcc cmake
+sudo pacman -S libgccjit
+# Configure the build
+./autogen.sh
+./configure --prefix=/home/david/.local --without-compress-install --with-native-compilation --with-mailutils
+# Build and install
+make
+sudo make install
+sudo pacman -S meson
+sudo pacman -S cmake
+sudo pacman -S gmime3
+sudo pacman -S xapian-core
+yay -S cld2-git
+git clone https://github.com/djcb/mu.git
+./autogen.sh
+make
+sudo make install
+notmuch
+sudo pacman -S notmuch
+dependencies for arch for wezterm
+https://github.com/wez/wezterm/blob/main/get-deps
+arch_deps() {
+  PACMAN="$SUDO pacman"
+  $PACMAN -S --noconfirm --needed \
+    'base-devel' \
+    'cargo' \
+    'cmake' \
+    'fontconfig' \
+    'git' \
+    'hicolor-icon-theme' \
+    'libx11' \
+    'libxkbcommon-x11' \
+    'pkgconf' \
+    'python3' \
+    'wayland' \
+    'xcb-util' \
+    'xcb-util-image' \
+    'xcb-util-keysyms' \
+    'xcb-util-wm'
+
+  if test_flag; then
+    $PACMAN -S --noconfirm --needed \
+      'openssh'
+  fi
+}
+https://github.com/wez/wezterm
+https://wezfurlong.org/wezterm/installation
+User facing docs and guide at: https://wezfurlong.org/wezterm/
+sudo pacman -S wezterm
+Go ahead and install rust to give you the cargo option and some additional neovim compatibility
+https://www.rust-lang.org/tools/install
+sudo pacman -S neovim
+lazyvim
+live grep: ripgrep
+If you're a Rust programmer, ripgrep can be installed with cargo.
+
+    Note that the minimum supported version of Rust for ripgrep is 1.72.0, although ripgrep may work with older versions.
+    Note that the binary may be bigger than expected because it contains debug symbols. This is intentional. To remove debug symbols and therefore reduce the file size, run strip on the binary.
+
+$ cargo install ripgrep
+
+Alternatively, one can use cargo binstall to install a ripgrep binary directly from GitHub:
+
+$ cargo binstall ripgrep
+https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation
+find files: fd
+https://github.com/sharkdp/fd
+From source
+
+With Rust's package manager cargo, you can install fd via:
+
+cargo install fd-find
+
+Note that rust version 1.77.2 or later is required.
+Development
+git clone https://github.com/sharkdp/fd
+
+# Build
+cd fd
+cargo build
+
+# Run unit tests and integration tests
+cargo test
+
+# Install
+cargo install --path .
+pacman -S fd
+lazygit requirements
+a terminal that support true color and undercurl:
+    kitty (Linux & Macos)
+    wezterm (Linux, Macos & Windows)
+    alacritty (Linux, Macos & Windows)
+    iterm2 (Macos)
+# required
+mv ~/.config/nvim{,.bak}
+
+# optional but recommended
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+nvim
+chat with ChatGPT
+my question: if I want neovim and vim on the same system, where can I put my vim config for original vim where neovim won't look for it
+answer from ChatGPT:
+To have both Vim and Neovim on the same system with separate configurations, you can place your Vim configuration in the default location (`~/.vimrc` and `~/.vim/`) and Neovim will not use these files by default. Neovim uses a different location for its configuration files (`~/.config/nvim/init.vim` or `~/.config/nvim` for the directory). Here's how you can set it up:
+
+### Vim Configuration
+1. Place your Vim configuration in `~/.vimrc`.
+2. Put any Vim-specific configuration files or plugins in `~/.vim/`.
+
+### Neovim Configuration
+1. Place your Neovim configuration in `~/.config/nvim/init.vim`.
+2. Put any Neovim-specific configuration files or plugins in `~/.config/nvim/`.
+
+### Example Setup
+
+- **Vim**
+  - Configuration file: `~/.vimrc`
+  - Directory for plugins and other configurations: `~/.vim/`
+
+- **Neovim**
+  - Configuration file: `~/.config/nvim/init.vim`
+  - Directory for plugins and other configurations: `~/.config/nvim/`
+
+### Sample Directories and Files
+
+#### Vim
+```plaintext
+~/.vimrc
+~/.vim/
+  ├── autoload/
+  ├── colors/
+  ├── plugin/
+  └── ...
+```
+
+#### Neovim
+```plaintext
+~/.config/nvim/init.vim
+~/.config/nvim/
+  ├── lua/
+  ├── plugin/
+  └── ...
+```
+
+By keeping your Vim configuration files in `~/.vimrc` and `~/.vim/`, and your Neovim configuration files in `~/.config/nvim/init.vim` and `~/.config/nvim/`, you ensure that each editor uses its respective configuration files without conflict.
+sudo pacman -S python-pip
+sudo pacman -S python-virtualenv
+python3.12 -m venv ~/myenv
+source ~/myenv/bin/activate
+pip install --upgrade pip
+pip install --upgrade setuptools wheel
+pip install pynvim
+deactivate
+sudo pacman -S python-pynvim
 ============================================================
 python3.12 -m pip install exifread
 error: externally-managed-environment
@@ -356,7 +567,7 @@ tar xzvf detox-2.0.0.tar.gz
 cd detox-2.0.0
 ./configure
 make
-sudo make install
+sudo sudo make install
 # tool for hp printer
 sudo zypper install hplip
 sudo zypper install git-core
@@ -510,6 +721,24 @@ hello-world
 sudo apt-get install -s ffmpeg (to see what version would be
 installed) -s does a simulated install without actually installing
 anything
+[david@arch_box_latest applications]$ ls -la
+total 4
+drwxr-xr-x 1 david david  46 Jul  8 00:55 .
+drwxr-xr-x 1 david david 672 Jul  8 00:50 ..
+-rw-r--r-- 1 david david 357 Jul  7 01:07 arch_box_latest.desktop
+[david@arch_box_latest applications]$ pwd
+/var/home/david/.local/share/applications
+[david@arch_box_latest applications]$ mv /var/home/david/.local/share/applications/arch_box_latest.desktop /var/home/david/.local/share/applications/arch_box_latest.desktop.bak
+[david@arch_box_latest applications]$ ls
+arch_box_latest.desktop.bak
+[david@arch_box_latest applications]$
+I had to remove extra emacs shortcuts from the above folder that were not needed and did not work after manually installing emacs
+I was not sure if I needed the one so I renamed it, but I probably do not need it.
+git config --global core.editor "nvim"
+git config --global --get core.editor (should return nvim)
+sudo pacman -S tmux
+sudo pacman -S lazygit
+
 #+end_example
 **** Trash-cli commands
 - trash-put           trash files and directories.
@@ -1505,8 +1734,8 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 
-config.font = wezterm.font("VictorMono Nerd Font")
-config.font_size = 14
+config.font = wezterm.font("FiraCode Nerd Font")
+config.font_size = 12
 
 -- config.enable_tab_bar = false
 
