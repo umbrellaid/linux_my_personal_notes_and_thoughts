@@ -687,6 +687,10 @@ rsync
   some complex nuances to it for difference scenarios, but for my backup to
   external hard drive use this is a good option
 - --exclude - exclude something from being synced
+sudo dnf install kde-gtk-config
+sudo dnf install vim-X11
+sudo dnf remove nano-default-editor
+sudo dnf install vim-default-editor
 *** Random Linux Commands
 Here are a bunch of commands I have run recently just for future reference. I
 may or may not have continued using some of these, but you have to sometimes
@@ -1508,6 +1512,7 @@ editor /usr/bin/vim
 map ctrl+shift+alt+cmd+q quit
 include current-theme.conf
 #+end_example
+#+begin_example
 Random Notes:
 https://sw.kovidgoyal.net/kitty/
 https://sw.kovidgoyal.net/kitty/_downloads/433dadebd0bf504f8b008985378086ce/kitty.conf
@@ -1677,7 +1682,7 @@ focus
 # Make the current OS Window the globally active window (not supported on Wayland)
 focus_os_window
 launch emacs
-
+#+end_example
 *** mailcap .mailcap (for use with alot that works with notmuch)
 #+begin_example
 text/html; elinks -dump '%s'; nametemplate=%s.html; copiousoutput
