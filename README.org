@@ -691,6 +691,77 @@ sudo dnf install kde-gtk-config
 sudo dnf install vim-X11
 sudo dnf remove nano-default-editor
 sudo dnf install vim-default-editor
+https://forums.fedoraforum.org/showthread.php?323000-Fedora-31-installing
+Yes and no. There are package groups, installed with the dnf group
+install "<package_name>" command.
+Code:
+$ sudo dnf group list hidden | grep Development
+   Development and Creative Workstation
+   C Development Tools and Libraries
+   D Development Tools and Libraries
+   Development Libraries
+   Development Tools
+   GNOME Software Development
+   Java Development
+   KDE Software Development
+   KDE Frameworks 5 Software Development
+   Legacy Software Development
+   LibreOffice Development
+   Perl Development
+   RPM Development Tools
+   X Software Development
+   Xfce Software Development
+You can preview what packages are included in a group. For example:
+Code:
+$ sudo dnf group info "C Development Tools and Libraries"
+Last metadata expiration check: 0:10:20 ago on Fri 03 Jan 2020 09:14:21 AM EST.
+Group: C Development Tools and Libraries
+ Description: These tools include core development tools such as
+automake, gcc and debuggers.
+ Mandatory Packages:
+   autoconf
+   automake
+   binutils
+   bison
+   flex
+   gcc
+   gcc-c++
+   gdb
+   glibc-devel
+   libtool
+   make
+   pkgconf
+   strace
+ Default Packages:
+   byacc
+   ccache
+   cscope
+   ctags
+   elfutils
+   indent
+   ltrace
+   perf
+   valgrind
+ Optional Packages:
+   ElectricFence
+   astyle
+   cbmc
+   check
+   cmake
+   coan
+   cproto
+   insight
+   nasm
+   pscan
+   python2-scons
+   remake
+   scorep
+   splint
+   trinity
+   yasm
+   zzuf
+https://github.com/openssl/openssl/issues/13761
+dnf install perl
 *** Random Linux Commands
 Here are a bunch of commands I have run recently just for future reference. I
 may or may not have continued using some of these, but you have to sometimes
@@ -2005,7 +2076,16 @@ Far :gmail-remote:
 Near :gmail-local:
 Patterns * "[Gmail]/Sent Mail" "[Gmail]/Trash" "[Gmail]/All Mail" !"[Gmail]/Starred"
 Create Near
+Expunge Both
 SyncState *
+#+end_example
+other notes:
+#+begin_example
+mu init --maildir=/var/mnt/25b369a9-cff5-47ef-9512-3b135fce7ef6/Maildir/ --my-address=@gmail.com --my-address=@gmail.com
+pacman -Qs ca-certificates
+local/ca-certificates 20211016-4
+    Common CA certificates (default providers)
+sudo pacman -S ca-certificates
 #+end_example
 *** git config .gitconfig
 #+begin_example
