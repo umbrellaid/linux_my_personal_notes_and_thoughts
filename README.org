@@ -552,6 +552,50 @@ yay -S vieb-bin (or yay -S vieb-git)
 sudo pacman -S eza
 sudo pacman -S zoxide
 do not use: sudo pacman -S tldr (this gives and error so install directly python pip)
+modern tools for command line from this video:
+https://www.youtube.com/watch?v=H8-rLe6fXYw
+Atuin: https://atuin.sh/
+Bat: https://github.com/sharkdp/bat
+direnv: https://direnv.net/
+eza: https://github.com/eza-community/eza
+fd: https://github.com/sharkdp/fd
+gh: https://cli.github.com/
+glab: https://docs.gitlab.com/ee/editor_ext...
+ripgrep: https://github.com/BurntSushi/ripgrep
+ugrep: https://github.com/Genivia/ugrep
+yq: https://github.com/mikefarah/yq
+Zoxide: https://github.com/ajeetdsouza/zoxide
+default aliases from here:
+https://github.com/ublue-os/bluefin/blob/main/system_files/shared/usr/share/ublue-os/bluefin-cli/bling.sh
+#!/usr/bin/env sh
+
+# ls aliases
+if [ "$(command -v eza)" ]; then
+    alias ll='eza -l --icons=auto --group-directories-first'
+    alias l.='eza -d .*'
+    alias ls='eza'
+    alias l1='eza -1'
+fi
+
+# ugrep for grep
+if [ "$(command -v ug)" ]; then
+    alias grep='ug'
+    alias egrep='ug -E'
+    alias fgrep='ug -F'
+    alias xzgrep='ug -z'
+    alias xzegrep='ug -zE'
+    alias xzfgrep='ug -zF'
+fi
+
+if [ "$(basename "$SHELL")" = "bash" ]; then
+    #shellcheck disable=SC1091
+    . /usr/share/bash-prexec
+    [ "$(command -v atuin)" ] && eval "$(atuin init bash)"
+    [ "$(command -v zoxide)" ] && eval "$(zoxide init bash)"
+elif [ "$(basename "$SHELL")" = "zsh" ]; then
+    [ "$(command -v atuin)" ] && eval "$(atuin init zsh)"
+    [ "$(command -v zoxide)" ] && eval "$(zoxide init zsh)"
+fi
 ============================================================
 python3.12 -m pip install exifread
 error: externally-managed-environment
