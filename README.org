@@ -195,6 +195,7 @@ alias vim='nvim'
 distrobox create --init --image docker.io/library/archlinux:latest --name arch_box_latest --pre-init-hooks "pacman -Syu --noconfirm"
 distrobox enter arch_box_latest
 sudo pacman -S  mate mate-extra (file manager name caja)
+sudo pacman -S xfce4 xfce4-goodies
 https://wiki.archlinux.org/title/MATE
 sudo pacman -Syu - update system
 to fix error:
