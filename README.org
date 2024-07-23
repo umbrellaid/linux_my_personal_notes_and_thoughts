@@ -1501,6 +1501,7 @@ text/html; elinks -dump '%s'; nametemplate=%s.html; copiousoutput
 alot --notmuch-config=/home/david/.notmuch-config search "tag:archived date:06-2024"
 #+end_example
 **** reference links for searching notmuch
+#+begin_example
 https://alot.readthedocs.io/en/latest/usage/index.html
 https://notmuchmail.org/doc/latest/man1/notmuch-search.html
 https://notmuchmail.org/doc/latest/man7/notmuch-search-terms.html#notmuch-search-terms-7
@@ -1509,6 +1510,7 @@ https://notmuchmail.org/screenshots/
 https://notmuchmail.org/emacstips/
 http://elinks.or.cz/
 https://github.com/rkd77/elinks - elinks is a text based browser for the terminal
+#+end_example
 **** alot config theme
 #+begin_example
 ###############################################################################
