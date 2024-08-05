@@ -583,6 +583,249 @@ elif [ "$(basename "$SHELL")" = "zsh" ]; then
     [ "$(command -v atuin)" ] && eval "$(atuin init zsh)"
     [ "$(command -v zoxide)" ] && eval "$(zoxide init zsh)"
 fi
+default aliases running alias command inn terminal in bluefin
+alias egrep='grep -E --color=auto'
+alias fgrep='grep -F --color=auto'
+alias grep='grep --color=auto'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias which='(alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot'
+alias xzegrep='xzegrep --color=auto'
+alias xzfgrep='xzfgrep --color=auto'
+alias xzgrep='xzgrep --color=auto'
+alias zegrep='zegrep --color=auto'
+alias zfgrep='zfgrep --color=auto'
+alias zgrep='zgrep --color=auto'
+results of running printenv | sort -i > printenv_results.txt
+BREW_BASH_COMPLETION=1
+COLORTERM=truecolor
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+DEBUGINFOD_URLS=https://debuginfod.fedoraproject.org/
+DESKTOP_SESSION=gnome
+DISPLAY=:0
+EDITOR=vim
+GDM_LANG=en_US.UTF-8
+GDMSESSION=gnome
+GNOME_SETUP_DISPLAY=:1
+HISTCONTROL=ignoredups
+HISTSIZE=1000
+HOMEBREW_CELLAR=/home/linuxbrew/.linuxbrew/Cellar
+HOMEBREW_PREFIX=/home/linuxbrew/.linuxbrew
+HOMEBREW_REPOSITORY=/home/linuxbrew/.linuxbrew/Homebrew
+HOME=/var/home/david
+HOSTNAME=fedora-laptop
+INFOPATH=/home/linuxbrew/.linuxbrew/share/info:
+INVOCATION_ID=f0a787312e0742d08f1ba3e3e06c6f0f
+JOURNAL_STREAM=8:5184485
+LANG=en_US.UTF-8
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LOGNAME=david
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:
+MAIL=/var/spool/mail/david
+MANAGERPID=5694
+MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/dbus-:1.2-org.gnome.Ptyxis@5.service/memory.pressure
+MEMORY_PRESSURE_WRITE=c29tZSAyMDAwMDAgMjAwMDAwMAA=
+MUTTER_DEBUG_FORCE_KMS_MODE=simple
+MUTTER_DEBUG_KMS_THREAD_TYPE=user
+PATH=/var/home/david/.local/kitty.app/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/var/home/david/.local/kitty.app/bin:/var/home/david/.local/bin:/var/home/david/bin:/usr/lib64/ccache:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin
+PTYXIS_PROFILE=2871e8027773ae74d6c87a5f659bbc74
+PTYXIS_VERSION=47.alpha
+PWD=/var/home/david
+QT_IM_MODULE=ibus
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/6042,unix/unix:/tmp/.ICE-unix/6042
+SHELL=/bin/bash
+SHLVL=1
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+STARSHIP_SESSION_KEY=2693514851785816
+STARSHIP_SHELL=bash
+SUDO_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SUDO_EDITOR=vim
+SYSTEMD_EXEC_PID=617942
+TERM=xterm-256color
+USER=david
+USERNAME=david
+_=/usr/bin/printenv
+VISUAL=vim
+VTE_VERSION=7601
+WAYLAND_DISPLAY=wayland-0
+XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.E0QVR2
+XDG_CURRENT_DESKTOP=GNOME
+XDG_DATA_DIRS=/var/home/david/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/
+XDG_MENU_PREFIX=gnome-
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_SESSION_CLASS=user
+XDG_SESSION_DESKTOP=gnome
+XDG_SESSION_TYPE=wayland
+XMODIFIERS=@im=ibus
+fix for DISPLAY issue distrobox arch linux
+It looks like there are still issues with the DISPLAY variable and xhost authorization. Let's take a few additional steps to resolve this:
+
+1. **Ensure DISPLAY Variable is Correct:**
+   The DISPLAY variable might not always be `:0`. You should check what the DISPLAY variable is set to on your host system and use that value.
+
+   On your host system (outside the container):
+
+   ```sh
+   echo $DISPLAY
+   ```
+
+   Let's assume the output is `:0`. If it's different, replace `:0` with the correct value in the steps below.
+
+2. **Pass DISPLAY Variable to Container:**
+   When starting the container, you can pass the DISPLAY variable from the host to the container.
+
+   ```sh
+   distrobox-enter -n arch_box -- env DISPLAY=$DISPLAY xhost +local:$(whoami)
+   ```
+
+   If that works, you can add the DISPLAY export and xhost command to your `.distroboxrc`.
+
+3. **Update `.distroboxrc` File:**
+   Update your `.distroboxrc` to ensure the DISPLAY variable is set correctly:
+
+   ```sh
+   echo 'export DISPLAY=:0' >> ~/.distroboxrc
+   echo 'xhost +local:$USER' >> ~/.distroboxrc
+   ```
+
+   Replace `:0` with the correct value if it's different.
+
+4. **Try Running GUI Application:**
+   Now, try running the Brave browser again:
+
+   ```sh
+   distrobox-enter -n arch_box
+   brave &
+   ```
+
+If these steps still don't resolve the issue, here is an alternative approach using SSH with X11 forwarding:
+
+### Alternative Approach: SSH with X11 Forwarding
+
+1. **Enable X11 Forwarding in SSH:**
+   Ensure your SSH server is configured to allow X11 forwarding. In your `sshd_config` file (usually located at `/etc/ssh/sshd_config`), ensure the following lines are present and not commented out:
+
+   ```
+   X11Forwarding yes
+   X11DisplayOffset 10
+   X11UseLocalhost yes
+   ```
+
+   Restart the SSH service if you made changes:
+
+   ```sh
+   sudo systemctl restart sshd
+   ```
+
+2. **Connect with X11 Forwarding:**
+   Connect to your host system with X11 forwarding enabled:
+
+   ```sh
+   ssh -X user@host
+   ```
+
+3. **Set DISPLAY Variable:**
+   Set the DISPLAY variable in your Distrobox container:
+
+   ```sh
+   export DISPLAY=$DISPLAY
+   ```
+
+4. **Run GUI Application:**
+   Now, try running the Brave browser:
+
+   ```sh
+   brave &
+   ```
+
+These steps should help you resolve the issue with DISPLAY and xhost in your Distrobox container.
+The error indicates that the DISPLAY environment variable is not set within your Distrobox container, and as a result, applications like Brave cannot connect to the X server. Your `.distroboxrc` file should theoretically set this up, but let's ensure everything is correctly configured.
+
+Here are a few steps to troubleshoot and potentially fix the issue:
+
+1. **Verify `.distroboxrc` Execution:**
+   Ensure that the `.distroboxrc` script is being executed properly when you start your container.
+
+   ```sh
+   distrobox-enter -n arch_box -- echo "source ~/.distroboxrc"
+   ```
+
+2. **Set DISPLAY Variable Manually:**
+   Try setting the DISPLAY variable manually in the container session.
+
+   ```sh
+   export DISPLAY=:0
+   xhost +local:$(whoami)
+   brave &
+   ```
+
+3. **Install `xhost` Package:**
+   Ensure the `xorg-xhost` package is installed in your Arch Linux container.
+
+   ```sh
+   sudo pacman -S xorg-xhost
+   ```
+
+4. **Check Host X Server:**
+   Make sure your host X server is running and accessible. You can verify this by running an X application directly on the host.
+
+   ```sh
+   xclock
+   ```
+
+5. **Distrobox Environment Variables:**
+   Confirm that the necessary environment variables are set when entering the Distrobox container.
+
+   ```sh
+   distrobox-enter -n arch_box -- printenv | grep DISPLAY
+   ```
+
+   If `DISPLAY` is not set, you can add it to your `.distroboxrc` file:
+
+   ```sh
+   echo 'export DISPLAY=:0' >> ~/.distroboxrc
+   echo 'xhost +local:$USER' >> ~/.distroboxrc
+   ```
+
+6. **Check X11 Forwarding:**
+   If you are using SSH with X11 forwarding, ensure that the forwarding is properly configured.
+
+   ```sh
+   ssh -X user@host
+   ```
+
+### Example `.distroboxrc`
+
+Here is a comprehensive example of what your `.distroboxrc` might look like:
+
+```sh
+# Ensure DISPLAY is set
+export DISPLAY=:0
+# Allow local user to connect to X server
+xhost +si:localuser:$USER >/dev/null
+```
+
+### Restart the Container
+
+After making these changes, restart your Distrobox container to ensure all settings are applied:
+
+```sh
+distrobox-stop arch_box
+distrobox-enter arch_box
+```
+
+After these steps, try running Brave again within your Distrobox container.
+Haruna video player linux
+https://apps.kde.org/haruna/
+If you push s it takes a screenshot and labels that it came from haruna
+brackets [ ] increase playback speed
+clapper video player linux
+https://github.com/Rafostar/clapper
+powered by gstreamer
+< > increase playback speed
+
 ============================================================
 python3.12 -m pip install exifread
 error: externally-managed-environment
@@ -801,6 +1044,27 @@ may or may not have continued using some of these, but you have to sometimes
 play around and try different options to find out what is helpful. Some of this
 is general command line and some is openSUSE or Manjaro specific.
 #+begin_example
+In Vim, when you search for a term, you can use the `:noh` command to clear the highlighting, and then use the following steps to see how many results there are:
+
+1. **Search for the term:**
+   Use the `/` command followed by the term you want to search for, then press `Enter`. For example, to search for the term "example," you would type `/example` and press `Enter`.
+
+2. **Count the matches:**
+   After performing the search, use the following command to count the matches:
+   ```vim
+   :%s//&/gn
+   ```
+   - The `:%s` command performs a substitution over the entire file (`%`).
+   - The `//&/` part means "substitute the search term (`//`) with itself (`&`) but don't change anything."
+   - The `gn` flag at the end stands for "global" and "count matches only," which counts the number of matches without making any substitutions.
+
+After running this command, Vim will display the number of matches found in the command-line area at the bottom.
+
+For example, if you searched for the term "example" and ran `:%s//&/gn`, you might see something like:
+```
+8 matches on 8 lines
+```
+This indicates that there are 8 matches of the term "example" in your file.
 cat /etc/os-release
 sudo zypper refresh
 # if you are running tumbleweed sudo zypper dup
@@ -1767,7 +2031,7 @@ SubFolders Verbatim
 Channel gmail
 Far :gmail-remote:
 Near :gmail-local:
-Patterns * "[Gmail]/Sent Mail" "[Gmail]/Trash" "[Gmail]/All Mail" !"[Gmail]/Starred"
+Patterns * !INBOX !"[Gmail]/Sent Mail" !"[Gmail]/Trash" "[Gmail]/All Mail" !"[Gmail]/Starred" !"[Gmail]/Important" !"[Gmail]/Drafts" !"[Gmail]/Spam"
 Create Near
 Expunge Both
 SyncState *
