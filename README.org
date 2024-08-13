@@ -23,6 +23,7 @@
     - [[#urls][urls]]
   - [[#additional-links][Additional Links]]
   - [[#additional-configuration-file-notes][Additional Configuration File Notes]]
+    - [[#dot-distroboxrc-file][dot distroboxrc file]]
     - [[#kitty-general-notes][kitty general notes]]
     - [[#mailcap-mailcap-for-use-with-alot-that-works-with-notmuch][mailcap .mailcap (for use with alot that works with notmuch)]]
       - [[#alot-example-command][alot example command]]
@@ -825,7 +826,9 @@ clapper video player linux
 https://github.com/Rafostar/clapper
 powered by gstreamer
 < > increase playback speed
-
+yay -S vieb-bin
+notmuch search from:name
+google-chrome > /dev/null 2>&1 &
 ============================================================
 python3.12 -m pip install exifread
 error: externally-managed-environment
@@ -1584,6 +1587,11 @@ you do =C-r SPACE= and to have it stop you do =SPACE=.
     and there you can see it all.
 - [[https://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/][Dotfiles Are Meant to Be Forked by Zach Holman]]
 ** Additional Configuration File Notes
+*** dot distroboxrc file
+#+begin_example
+xhost +si:localuser:$USER >/dev/null
+export DISPLAY=:0
+#+end_example
 *** kitty general notes
 #+begin_example
 Random Notes:
