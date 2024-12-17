@@ -1,5 +1,6 @@
 * Linux My Personal Notes and Thoughts                                              :TOC_9:
   - [[#linux-notes--thoughts][Linux Notes / Thoughts]]
+    - [[#bazzite-most-recent-install-bash-history-notes-dump-fedora-silverblue-and-bluefin-customized-version-of-fedora-silverblue-plus-fedora-kinoite-and-aurora-customized-version-of-fedora-kinoite][bazzite most recent install bash history notes dump Fedora Silverblue and bluefin customized version of Fedora Silverblue, plus Fedora Kinoite and Aurora customized version of Fedora Kinoite]]
     - [[#fedora-silverblue-and-bluefin-customized-version-of-fedora-silverblue-plus-fedora-kinoite-and-aurora-customized-version-of-fedora-kinoite][Fedora Silverblue and bluefin customized version of Fedora Silverblue, plus Fedora Kinoite and Aurora customized version of Fedora Kinoite]]
     - [[#doom-emacs][doom emacs]]
     - [[#cheat-sheet-links][Cheat Sheet Links]]
@@ -37,6 +38,132 @@
     - [[#authinfo][.authinfo]]
 
 ** Linux Notes / Thoughts
+*** bazzite most recent install bash history notes dump Fedora Silverblue and bluefin customized version of Fedora Silverblue, plus Fedora Kinoite and Aurora customized version of Fedora Kinoite
+#+begin_example
+sudo nano /etc/apt/sources.list.d/ubuntu.sources 
+sudo apt-get update
+sudo apt-get build-dep emacs
+sudo apt-get install ubuntu-mate-desktop
+sudo apt-get install mate-desktop-environment-extras
+mkdir manual_programming_builds
+cd manual_programming_builds/
+git clone https://github.com/emacs-mirror/emacs.git
+sudo apt-get install gcc-10 libgccjit0 libgccjit-10-dev libjansson4 libjansson-dev
+export CC="gcc-10"
+cd emacs/
+./autogen.sh 
+./configure --prefix=$HOME/.local --without-compress-install --with-native-compilation --with-mailutils
+sudo make
+sudo make install
+emacs -Q
+git clone https://github.com/dharple/detox.git
+cd detox/
+sudo apt install autoconf automake bison flex gcc make pkg-config
+autoreconf --install
+./configure 
+make
+sudo make install
+git clone git://git.code.sf.net/p/isync/isync isync-isync
+cd isync-isync/
+./autogen.sh 
+./configure 
+make
+sudo make install
+git clone https://github.com/notmuch/notmuch.git
+cd notmuch/
+./configure 
+sudo apt-get install libxapian-dev libgmime-3.0-dev libtalloc-dev zlib1g-dev
+./configure 
+make
+sudo make install
+git clone https://github.com/djcb/mu.git
+cd mu
+sudo apt-get install meson libgmime-3.0-dev libxapian-dev
+./autogen.sh 
+make
+sudo make install
+cd Downloads/
+ujust distrobox-assemble
+distrobox enter ubuntu
+exit
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ~/Downloads/go1.23.4.linux-amd64.tar.gz
+nano .bash_profile 
+nano .bashrc
+go version
+(type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) 	&& sudo mkdir -p -m 755 /etc/apt/keyrings 	&& wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null 	&& sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg 	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null 	&& sudo apt update 	&& sudo apt install gh -y
+sudo apt-get update
+sudo apt-get install gh
+gh auth
+gh auth login
+gh auth setup-git
+gh auth status
+go install github.com/twpayne/chezmoi@latest
+chezmoi --version
+ls $(go env GOPATH)/bin/chezmoi
+nano ~/.bashrc 
+mkdir myenvironment_python
+sudo apt-get install python3.12-venv
+python3 -m venv myenvironment_python/
+. myenvironment_python/bin/activate
+sudo apt-get install ffmpeg
+sudo chown -R david:david /run/media/david/myINTERNAL/
+sudo chmod -R u+rwX /run/media/david/myINTERNAL/
+sudo fc-cache -fv
+nano .gitconfig 
+git config --global user.name "David R Rrrrr"
+git config --global user.email "david.rrrrrr@yandex.com"
+git config --global core.editor "nano"
+sudo apt install libssl-dev
+cd manual_programming_builds/
+cd isync-isync/
+make clean
+./configure 
+sudo apt install libsasl2-dev
+sudo apt install libdb-dev
+make clean
+./configure 
+make
+sudo make install
+cd
+nano .mbsyncrc 
+mbsync -aV
+sudo chown -R david:david /run/media/david/myINTERNAL/99d25f34-a775-4723-b0b7-f7afd58db67b/myINTERNAL/gmail
+sudo chmod -R u+rwX /run/media/david/myINTERNAL/99d25f34-a775-4723-b0b7-f7afd58db67b/myINTERNAL/gmail
+sudo chown -R david:david /run/media/david/myINTERNAL/
+mbsync -aV
+mu init --maildir=/run/media/david/myINTERNAL/99d25f34-a775-4723-b0b7-f7afd58db67b/myINTERNAL/Maildir/ --my-address=@gmail.com --my-address=@.com --my-address=@.info --my-address=@
+sudo dpkg -i ripgrep_14.1.1-1_amd64.deb 
+rg --version
+cd ~; git clone https://github.com/redguardtoo/emacs.d.git .emacs.d
+rm -rf ~/.emacs.d/
+cd ~; git clone https://github.com/redguardtoo/emacs.d.git .emacs.d
+emacs &
+gsettings get org.gnome.desktop.interface font-name
+gsettings get org.gnome.desktop.interface monospace-font-name
+gsettings get org.gnome.desktop.interface document-font-name
+gsettings get org.gnome.desktop.wm.preferences titlebar-font
+sudo apt install hunspell
+emacs -Q ~/.custom.el &
+cd .local/share/
+mkdir fonts
+cd fonts
+mv ~/Downloads/JetBrainsMono.zip .
+mv ~/Downloads/UbuntuSans.zip .
+emacs .custom.el &
+cd .local/share/fonts/
+sudo fc-cache -fv
+fc-list | grep -i 'jetbrains'
+fc-list | grep -i 'ubuntu'
+go install github.com/jesseduffield/lazygit@latest
+chezmoi init https://github.com/umbrellaid/dotfiles.git
+chezmoi diff
+chezmoi cd
+brew install ffmpeg
+detox *
+brew install ffmpeg
+brew install rg
+mkdir bazzite_python_environment
+#+end_example
 *** Fedora Silverblue and bluefin customized version of Fedora Silverblue, plus Fedora Kinoite and Aurora customized version of Fedora Kinoite
 - [[https://docs.fedoraproject.org/en-US/quick-docs/fonts/][Adding New Fonts in Fedora]]
 - [[https://docs.fedoraproject.org/en-US/fedora/latest/][Fedora Linux User Documentation]]
