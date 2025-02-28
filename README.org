@@ -1175,8 +1175,9 @@ play around and try different options to find out what is helpful. Some of this
 is general command line and some is openSUSE or Manjaro specific.
 #+begin_example
 sudo apt-get install restic
-restic init --repo ./restic-repo-ub
-restic --repo restic-repo-ub/ backup /media/david/d25f34-a775-4723-b0b7-f7afd58db67b/
+restic init -r (--repo) ./restic-repo-ub
+restic -r (--repo) restic-repo-ub/ backup /media/david/d25f34-a775-4723-b0b7-f7afd58db67b/
+restic -r (--repo) restic-repo-ub/ snapshots
 #+end_example
 #+begin_example
 In Vim, when you search for a term, you can use the `:noh` command to clear the highlighting, and then use the following steps to see how many results there are:
